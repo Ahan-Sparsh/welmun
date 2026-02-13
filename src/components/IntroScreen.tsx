@@ -62,7 +62,7 @@ const IntroScreen = ({ onEnter }: IntroScreenProps) => {
           color: "hsl(15, 30%, 12%)",
           borderColor: "hsl(15, 30%, 12%)",
           width: 0,
-          animation: "typing 2.5s steps(12) forwards, blink 0.7s infinite",
+          animation: "typing 2.5s steps(14) forwards, blink 0.7s infinite",
         }}
       >
         WELMUN 2026

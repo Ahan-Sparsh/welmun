@@ -7,13 +7,20 @@ import HeroSection from "@/components/HeroSection";
 import SecretariatSection from "@/components/SecretariatSection";
 
 const Index = () => {
-  const [introVisible, setIntroVisible] = useState(true);
+  const [introVisible, setIntroVisible] = useState(() => {
+    return !sessionStorage.getItem("welmun-intro-seen");
+  });
+
+  const handleEnter = () => {
+    sessionStorage.setItem("welmun-intro-seen", "true");
+    setIntroVisible(false);
+  };
 
   return (
     <>
       <CustomCursor isIntroVisible={introVisible} />
       <ParticleCanvas />
-      <IntroScreen onEnter={() => setIntroVisible(false)} />
+      {introVisible && <IntroScreen onEnter={handleEnter} />}
       <Navbar />
       <HeroSection />
       <SecretariatSection />
