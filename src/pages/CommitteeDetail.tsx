@@ -27,7 +27,7 @@ const CommitteeDetail = () => {
   }
 
   return (
-    <PageLayout>
+    <PageLayout backgroundImage="/images/committees-bg.jpg">
       <Link
         to="/committees"
         className="text-muted-foreground hover:text-primary transition-colors cursor-none self-start mb-8"
