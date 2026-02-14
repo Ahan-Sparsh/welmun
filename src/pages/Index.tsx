@@ -19,33 +19,34 @@ const Index = () => {
 
   return (
     <>
+      {/* Schedule banner fixed at the bottom, revealed when content scrolls away */}
       <ScheduleBanner />
+      {/* Main content sits above the fixed banner */}
       <div className="relative z-10">
         <CustomCursor isIntroVisible={introVisible} />
         <ParticleCanvas />
         {introVisible && <IntroScreen onEnter={handleEnter} />}
         <Navbar />
-        <div className="relative bg-background">
-          <HeroSection />
-          <div className="relative">
-            <div
-              className="absolute inset-0 z-0"
-              style={{
-                backgroundImage: "url(/images/home-bg.jpg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div className="absolute inset-0 bg-background/80" />
-            </div>
-            <div className="relative z-10">
-              <SecretariatSection />
-            </div>
+        <HeroSection />
+        <div className="relative">
+          <div
+            className="fixed inset-0 z-0"
+            style={{
+              backgroundImage: "url(/images/home-bg.jpg)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundAttachment: "fixed",
+            }}
+          >
+            <div className="absolute inset-0 bg-background/80" />
+          </div>
+          <div className="relative z-10">
+            <SecretariatSection />
           </div>
         </div>
-        {/* Spacer to reveal the fixed ScheduleBanner behind */}
-        <div className="h-screen" />
       </div>
+      {/* Spacer: when user scrolls past content, this transparent space reveals the fixed ScheduleBanner */}
+      <div className="relative z-0 h-screen" />
     </>
   );
 };
