@@ -39,10 +39,10 @@ const Index = () => {
           </div>
           <div className="relative z-10">
             <SecretariatSection />
-            <ScheduleBanner />
           </div>
         </div>
       </div>
+      <ScheduleBanner />
     </>
   );
 };
