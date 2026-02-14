@@ -7,7 +7,7 @@ const Committees = () => {
   const gridRef = useStaggerReveal<HTMLDivElement>(120);
 
   return (
-    <PageLayout>
+    <PageLayout backgroundImage="/images/committees-bg.jpg">
       <h1 className="font-display text-5xl text-primary mb-4 tracking-[6px] uppercase">
         Committees
       </h1>
