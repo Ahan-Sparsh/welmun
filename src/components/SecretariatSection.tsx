@@ -5,9 +5,9 @@ import underSecPhoto from "@/assets/under-sec.png";
 import dirGenPhoto from "@/assets/dir-gen.png";
 
 const members = [
-  { role: "Secretary General", img: secGenPhoto },
-  { role: "Director General", img: dirGenPhoto },
-  { role: "Under Secretary", img: underSecPhoto },
+  { role: "Secretary General", name: "Ahan Sparsh", img: secGenPhoto },
+  { role: "Director General", name: "Tanveer S. Madan", img: dirGenPhoto },
+  { role: "Under Secretary", name: "Koustabh Gupta", img: underSecPhoto },
 ];
 
 const techDirectors = [
@@ -33,8 +33,9 @@ const SecretariatSection = () => {
               className="hover-lift img-zoom bg-card p-8 text-center cursor-none overflow-hidden"
               onClick={() => setModalRole(m.role)}
             >
-              <img src={m.img} alt={m.role} className="w-full h-[300px] object-cover mb-5" loading="lazy" />
-              <h3 className="font-display text-xl text-primary">{m.role}</h3>
+              <img src={m.img} alt={m.name} className="w-full h-[300px] object-cover mb-5" loading="lazy" />
+              <h3 className="font-display text-xl text-primary">{m.name}</h3>
+              <p className="text-muted-foreground text-sm mt-1">{m.role}</p>
             </div>
           ))}
         </div>
