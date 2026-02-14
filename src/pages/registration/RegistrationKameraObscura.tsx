@@ -22,9 +22,9 @@ const RegistrationKameraObscura = () => (
         {[
           { label: "Registration Deadline", value: "Sunday, April 20, 2025" },
           { label: "Travel Details Submission", value: "Thursday, July 10, 2025" },
-          { label: "Orientation & Topic Announcement", value: "Wednesday, July 30, 2025" },
-          { label: "Submission of Entries", value: "Thursday, July 31, 2025" },
-          { label: "Declaration of Results", value: "Friday, August 1, 2025" },
+          { label: "Orientation & Topic Announcement", value: "Monday, July 28, 2025" },
+          { label: "Submission of Entries", value: "Tuesday, July 29, 2025" },
+          { label: "Declaration of Results", value: "Wednesday, July 30, 2025" },
         ].map((item) => (
           <div key={item.label} className="flex items-start gap-3 p-3 bg-primary/5 rounded-lg border border-primary/10">
             <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
