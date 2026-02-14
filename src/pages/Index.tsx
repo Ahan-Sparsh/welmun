@@ -37,24 +37,23 @@ const Index = () => {
 
         {/* Main content — top layer */}
         <div className="relative z-10" style={{ clipPath: "inset(0)" }}>
+          {/* Single shared background for hero + secretariat */}
+          <div
+            className="fixed inset-0 z-0"
+            style={{
+              backgroundImage: "url(/images/welmun-home-bg.jpg)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="absolute inset-0 bg-background/50" />
+          </div>
           <ParticleCanvas />
           {introVisible && <IntroScreen onEnter={handleEnter} />}
           <Navbar />
           <HeroSection />
-          <div className="relative">
-            <div
-              className="absolute inset-0 z-0"
-              style={{
-                backgroundImage: "url(/images/welmun-home-bg.jpg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div className="absolute inset-0 bg-background/50" />
-            </div>
-            <div className="relative z-10">
-              <SecretariatSection />
-            </div>
+          <div className="relative z-10">
+            <SecretariatSection />
           </div>
         </div>
         {/* Spacer reveals the fixed ScheduleBanner */}
