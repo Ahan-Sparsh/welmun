@@ -8,16 +8,7 @@ const HeroSection = () => {
       className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden"
     >
       {/* Background image */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: "url(/images/hero-bg.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-background/50" />
-      </div>
+      <div className="absolute inset-0 z-0 bg-background" />
 
       {/* Center content */}
       <div className="relative z-10 flex flex-col items-center text-center px-6">
