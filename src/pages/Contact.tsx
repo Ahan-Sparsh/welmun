@@ -34,7 +34,7 @@ const Contact = () => {
                       type="text"
                       value={form.firstName}
                       onChange={(e) => setForm({ ...form, firstName: e.target.value })}
-                      className="w-full bg-beige text-dark-brown border-b-2 border-secondary px-3 py-2 focus:outline-none focus:border-primary cursor-none"
+                      className="w-full bg-card border border-primary/30 text-foreground px-3 py-2 focus:outline-none focus:border-primary cursor-none"
                     />
                   </div>
                   <div>
@@ -43,7 +43,7 @@ const Contact = () => {
                       type="text"
                       value={form.lastName}
                       onChange={(e) => setForm({ ...form, lastName: e.target.value })}
-                      className="w-full bg-beige text-dark-brown border-b-2 border-secondary px-3 py-2 focus:outline-none focus:border-primary cursor-none"
+                      className="w-full bg-card border border-primary/30 text-foreground px-3 py-2 focus:outline-none focus:border-primary cursor-none"
                     />
                   </div>
                 </div>
@@ -54,7 +54,7 @@ const Contact = () => {
                     required
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className="w-full bg-beige text-dark-brown border-b-2 border-secondary px-3 py-2 focus:outline-none focus:border-primary cursor-none"
+                    className="w-full bg-card border border-primary/30 text-foreground px-3 py-2 focus:outline-none focus:border-primary cursor-none"
                   />
                 </div>
                 <div>
@@ -63,7 +63,7 @@ const Contact = () => {
                     rows={5}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full bg-beige text-dark-brown border-b-2 border-secondary px-3 py-2 focus:outline-none focus:border-primary resize-none cursor-none"
+                    className="w-full bg-card border border-primary/30 text-foreground px-3 py-2 focus:outline-none focus:border-primary resize-none cursor-none"
                   />
                 </div>
                 <button
