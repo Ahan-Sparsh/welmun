@@ -50,10 +50,9 @@ const SecretariatSection = () => {
         <h2 className="font-display text-4xl text-primary">Technical Directors</h2>
         <div className="gold-divider" />
         <div className="w-full mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
-          {techDirectors.map((t, i) => (
+          {techDirectors.map((t) => (
             <div
               key={t.role}
-              data-reveal={i}
               className="hover-lift img-zoom bg-card p-8 text-center cursor-none overflow-hidden"
               onClick={() => setModalRole(t.role)}
             >
