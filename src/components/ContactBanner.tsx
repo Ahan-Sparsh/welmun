@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
-import welhamLogo from "@/assets/welham-logo.png";
-import welmunLogo from "@/assets/welmun-logo.png";
-
 const ContactBanner = () => {
   return (
     <section
@@ -10,13 +7,9 @@ const ContactBanner = () => {
     >
       {/* Top — Logos + Contact Us title + button */}
       <div className="flex flex-col items-center pt-8">
-        <div className="flex items-center gap-8 md:gap-16">
-          <img src={welhamLogo} alt="Welham Boys' School" className="w-20 h-20 md:w-28 md:h-28 object-contain" />
-          <h2 className="font-display text-5xl md:text-7xl lg:text-9xl text-primary tracking-wide leading-none uppercase">
-            Contact Us
-          </h2>
-          <img src={welmunLogo} alt="WELMUN" className="w-20 h-20 md:w-28 md:h-28 object-contain" />
-        </div>
+        <h2 className="font-display text-6xl md:text-8xl lg:text-9xl text-primary tracking-wide leading-none uppercase">
+          Contact Us
+        </h2>
         <Link
           to="/contact"
           className="mt-8 px-10 py-3 border border-primary/60 rounded-full text-primary font-display text-sm md:text-base tracking-[4px] uppercase hover:bg-primary hover:text-primary-foreground transition-colors duration-300 cursor-none"
