@@ -46,7 +46,7 @@ const Index = () => {
               backgroundPosition: "center",
             }}
           >
-            <div className="absolute inset-0 bg-background/50" />
+            <div className="absolute inset-0 bg-background/75" />
           </div>
           <ParticleCanvas />
           {introVisible && <IntroScreen onEnter={handleEnter} />}
