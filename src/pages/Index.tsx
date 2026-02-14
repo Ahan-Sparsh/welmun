@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import SecretariatSection from "@/components/SecretariatSection";
 import ScheduleBanner from "@/components/ScheduleBanner";
+import ContactBanner from "@/components/ContactBanner";
 
 const Index = () => {
   const [introVisible, setIntroVisible] = useState(() => {
@@ -19,33 +20,39 @@ const Index = () => {
 
   return (
     <>
-      {/* Schedule banner fixed behind everything */}
-      <ScheduleBanner />
-      {/* Main content on top */}
-      <div className="relative z-10" style={{ clipPath: "inset(0)" }}>
-        <CustomCursor isIntroVisible={introVisible} />
-        <ParticleCanvas />
-        {introVisible && <IntroScreen onEnter={handleEnter} />}
-        <Navbar />
-        <HeroSection />
-        <div className="relative">
-          <div
-            className="fixed inset-0 z-0"
-            style={{
-              backgroundImage: "url(/images/home-bg.jpg)",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundAttachment: "fixed",
-            }}
-          >
-            <div className="absolute inset-0 bg-background/80" />
-          </div>
-          <div className="relative z-10">
-            <SecretariatSection />
+      {/* Contact banner — lowest layer, revealed last */}
+      <ContactBanner />
+      {/* Schedule banner — middle layer, revealed after main content */}
+      <div className="relative z-[1]" style={{ clipPath: "inset(0)" }}>
+        <ScheduleBanner />
+        {/* Main content — top layer */}
+        <div className="relative z-10" style={{ clipPath: "inset(0)" }}>
+          <CustomCursor isIntroVisible={introVisible} />
+          <ParticleCanvas />
+          {introVisible && <IntroScreen onEnter={handleEnter} />}
+          <Navbar />
+          <HeroSection />
+          <div className="relative">
+            <div
+              className="fixed inset-0 z-0"
+              style={{
+                backgroundImage: "url(/images/home-bg.jpg)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundAttachment: "fixed",
+              }}
+            >
+              <div className="absolute inset-0 bg-background/80" />
+            </div>
+            <div className="relative z-10">
+              <SecretariatSection />
+            </div>
           </div>
         </div>
+        {/* Spacer reveals the fixed ScheduleBanner */}
+        <div className="relative z-0 h-screen" />
       </div>
-      {/* Transparent spacer reveals the fixed ScheduleBanner underneath */}
+      {/* Spacer reveals the fixed ContactBanner */}
       <div className="relative z-0 h-screen" />
     </>
   );

@@ -10,7 +10,7 @@ const navLinks = [
   { label: "Committees", to: "/committees" },
   { label: "Conference Details", to: "/conference-details" },
   { label: "Photo Gallery", to: "/gallery" },
-  { label: "Contact Us", to: "/contact" },
+  
 ];
 
 const Navbar = memo(() => {
