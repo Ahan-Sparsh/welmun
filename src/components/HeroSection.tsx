@@ -1,40 +1,77 @@
 import CountdownTimer from "./CountdownTimer";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
-  const ref = useScrollReveal<HTMLDivElement>(0.1);
-
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center items-center px-[5%] md:px-[8%] lg:px-[10%] py-24 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden"
     >
-      <div ref={ref} className="relative z-[2] flex flex-col items-center reveal-section">
-        <h1 className="font-display text-6xl md:text-8xl lg:text-9xl text-center text-primary tracking-wide">
-          WELMUN 2026
-        </h1>
-        <p className="mt-4 text-light-gold text-lg md:text-xl italic font-display">
-          Welham Boys' School Model United Nations Conference
-        </p>
-        <div className="gold-divider" />
-        <p className="mt-2 text-primary text-xl md:text-2xl italic font-display">
-          "Orbis Vox"
-        </p>
-        <CountdownTimer />
-        <p className="mt-10 text-light-gold text-lg md:text-xl tracking-[3px] uppercase text-center">
-          The Twelfth Edition | July 28th–30th, 2026
-        </p>
-
-        {/* Deadline banner */}
-        <div className="mt-16 w-full max-w-2xl bg-muted/60 py-6 px-8 text-center">
-          <h2 className="font-display text-2xl md:text-3xl text-primary mb-1">
-            Deadline For Submitting The Position Papers
-          </h2>
-          <p className="font-display text-xl md:text-2xl text-light-gold">
-            July 20th, 2026
-          </p>
-        </div>
+      {/* Background image */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url(/images/hero-bg.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-background/50" />
       </div>
+
+      {/* Center content */}
+      <div className="relative z-10 flex flex-col items-center text-center px-6">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" as const }}
+          className="font-display text-7xl md:text-9xl lg:text-[10rem] text-primary tracking-wide leading-none uppercase"
+        >
+          WELMUN
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" as const }}
+          className="mt-4 text-primary text-xl md:text-3xl italic font-display tracking-wider"
+        >
+          'Orbis Vox'
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-10"
+        >
+          <CountdownTimer />
+        </motion.div>
+      </div>
+
+      {/* Bottom left — School name */}
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" as const }}
+        className="absolute bottom-12 left-8 md:left-16 z-10"
+      >
+        <h2 className="font-display text-3xl md:text-5xl text-primary leading-tight uppercase tracking-wide">
+          Welham<br />Boys'<br />School
+        </h2>
+      </motion.div>
+
+      {/* Bottom right — Date */}
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" as const }}
+        className="absolute bottom-12 right-8 md:right-16 z-10 text-right"
+      >
+        <h2 className="font-display text-3xl md:text-5xl text-primary leading-tight uppercase tracking-wide">
+          28–30<br />July<br />2026
+        </h2>
+      </motion.div>
     </section>
   );
 };
