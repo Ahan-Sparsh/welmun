@@ -21,21 +21,25 @@ const Index = () => {
       <CustomCursor isIntroVisible={introVisible} />
       <ParticleCanvas />
       {introVisible && <IntroScreen onEnter={handleEnter} />}
-      <div
-        className="fixed inset-0 z-0"
-        style={{
-          backgroundImage: "url(/images/home-bg.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
-      >
-        <div className="absolute inset-0 bg-background/80" />
-      </div>
       <Navbar />
       <div className="relative z-10">
         <HeroSection />
-        <SecretariatSection />
+        <div className="relative">
+          <div
+            className="fixed inset-0 z-0"
+            style={{
+              backgroundImage: "url(/images/home-bg.jpg)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundAttachment: "fixed",
+            }}
+          >
+            <div className="absolute inset-0 bg-background/80" />
+          </div>
+          <div className="relative z-10">
+            <SecretariatSection />
+          </div>
+        </div>
       </div>
     </>
   );
