@@ -31,6 +31,7 @@ const Addressals = () => (
             src="https://static.wixstatic.com/media/9bbbe8_794ddc299c444cddab7caf98ad6d1e16~mv2.jpg/v1/crop/x_0,y_55,w_576,h_603/fill/w_268,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Principal's%20Photo%20for%20WELMUM%2022_JPG.jpg"
             alt="Ms. Sangeeta Kain"
             className="w-56 h-56 object-cover rounded"
+            loading="lazy"
           />
           <h3 className="font-display text-xl text-primary">Ms. Sangeeta Kain</h3>
           <p className="text-accent italic">Principal</p>
@@ -79,6 +80,7 @@ const Addressals = () => (
             src="https://static.wixstatic.com/media/9bbbe8_57bdd2e6b13a4e78aff920c9bfe4531d~mv2.jpg/v1/crop/x_36,y_0,w_1799,h_1871/fill/w_273,h_284,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5587_edited_edited.jpg"
             alt="Atharva Agarwal"
             className="w-56 h-56 object-cover rounded"
+            loading="lazy"
           />
           <h3 className="font-display text-xl text-primary">Atharva Agarwal</h3>
           <p className="text-accent italic">Secretary-General</p>
