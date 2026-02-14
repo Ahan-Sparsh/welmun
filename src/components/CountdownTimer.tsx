@@ -29,20 +29,24 @@ const CountdownTimer = () => {
   ];
 
   return (
-    <div className="flex gap-6 md:gap-10 mt-10">
-      {boxes.map((b) => (
-        <div
-          key={b.label}
-          className="flex flex-col items-center justify-center w-20 h-20 md:w-28 md:h-28 border-2 border-primary/80 text-center"
-        >
-          <span className="text-primary text-3xl md:text-5xl font-display leading-none">
-            {b.val}
-          </span>
-          <span className="text-xs md:text-sm text-light-gold mt-1 tracking-wider">
-            {b.label}
-          </span>
-        </div>
-      ))}
+    <div className="mt-10 px-10 py-6 bg-background/60 backdrop-blur-sm">
+      <div className="flex gap-10 md:gap-16">
+        {boxes.map((b, i) => (
+          <div key={b.label} className="flex items-baseline gap-10 md:gap-16">
+            <div className="text-center">
+              <span className="text-primary text-4xl md:text-6xl font-display leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
+                {b.val}
+              </span>
+              <p className="text-xs md:text-sm text-light-gold mt-2 tracking-[3px]">
+                {b.label}
+              </p>
+            </div>
+            {i < boxes.length - 1 && (
+              <span className="text-primary/40 text-4xl md:text-6xl font-display select-none">:</span>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
