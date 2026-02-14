@@ -164,7 +164,7 @@ const ConferenceDetails = () => {
   const docsRef = useScrollReveal<HTMLDivElement>(0.1);
 
   return (
-    <PageLayout>
+    <PageLayout backgroundImage="/images/conference-bg.jpg">
       <div ref={headerRef} className="reveal-section flex flex-col items-center">
         <h1 className="font-display text-4xl md:text-5xl text-primary mb-4 text-center">
           Conference Details
