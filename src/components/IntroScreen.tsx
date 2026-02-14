@@ -87,7 +87,7 @@ const IntroScreen = ({ onEnter }: IntroScreenProps) => {
             animation: "fadeIn 1s forwards 2.8s",
           }}
         >
-          SWIPE UP
+          SCROLL DOWN
         </button>
         <span
           className="text-3xl"
