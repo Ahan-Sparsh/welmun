@@ -5,6 +5,7 @@ import IntroScreen from "@/components/IntroScreen";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import SecretariatSection from "@/components/SecretariatSection";
+import ScheduleBanner from "@/components/ScheduleBanner";
 
 const Index = () => {
   const [introVisible, setIntroVisible] = useState(() => {
@@ -38,6 +39,7 @@ const Index = () => {
           </div>
           <div className="relative z-10">
             <SecretariatSection />
+            <ScheduleBanner />
           </div>
         </div>
       </div>
