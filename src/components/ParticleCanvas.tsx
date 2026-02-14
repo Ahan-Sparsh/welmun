@@ -1,42 +1,49 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, memo } from "react";
 
-const ParticleCanvas = () => {
+const ParticleCanvas = memo(() => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
 
+    let w = 0, h = 0;
     const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      w = window.innerWidth;
+      h = window.innerHeight;
+      canvas.width = w;
+      canvas.height = h;
     };
     resize();
-    window.addEventListener("resize", resize);
+    window.addEventListener("resize", resize, { passive: true });
 
-    const particles = Array.from({ length: 35 }, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      r: Math.random() * 2,
-    }));
+    const COUNT = 25;
+    const px = Float32Array.from({ length: COUNT }, () => Math.random() * w);
+    const py = Float32Array.from({ length: COUNT }, () => Math.random() * h);
+    const pr = Float32Array.from({ length: COUNT }, () => Math.random() * 2);
 
     let animId: number;
-    let lastTime = 0;
-    const animate = (time: number) => {
+    let last = 0;
+    const FPS_INTERVAL = 1000 / 15; // 15 fps is plenty for slow particles
+
+    const animate = (now: number) => {
       animId = requestAnimationFrame(animate);
-      if (time - lastTime < 50) return; // ~20fps is enough for slow particles
-      lastTime = time;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "rgba(198, 167, 94, 0.5)";
-      particles.forEach((p) => {
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fill();
-        p.y += 0.3;
-        if (p.y > canvas.height) p.y = 0;
-      });
+      const delta = now - last;
+      if (delta < FPS_INTERVAL) return;
+      last = now - (delta % FPS_INTERVAL);
+
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = "rgba(198,167,94,0.4)";
+      ctx.beginPath();
+      for (let i = 0; i < COUNT; i++) {
+        ctx.moveTo(px[i] + pr[i], py[i]);
+        ctx.arc(px[i], py[i], pr[i], 0, 6.283);
+        py[i] += 0.25;
+        if (py[i] > h) { py[i] = 0; px[i] = Math.random() * w; }
+      }
+      ctx.fill();
     };
     animId = requestAnimationFrame(animate);
 
@@ -46,7 +53,8 @@ const ParticleCanvas = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="fixed inset-0 z-[-1]" style={{ willChange: "auto" }} />;
-};
+  return <canvas ref={canvasRef} className="fixed inset-0 z-[-1] pointer-events-none" />;
+});
 
+ParticleCanvas.displayName = "ParticleCanvas";
 export default ParticleCanvas;

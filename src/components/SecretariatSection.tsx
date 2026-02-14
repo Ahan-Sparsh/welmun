@@ -31,11 +31,11 @@ const SecretariatSection = () => {
           {members.map((m) => (
             <div
               key={m.role}
-              className="card-hover bg-card p-8 text-center cursor-none transition-all duration-400 hover:-translate-y-2.5 hover:shadow-[0_0_40px_rgba(198,167,94,0.3)] overflow-hidden"
+              className="card-hover bg-card p-8 text-center cursor-none transition-transform duration-300 hover:-translate-y-2 overflow-hidden"
               style={{ gridArea: m.area }}
               onClick={() => setModalRole(m.role)}
             >
-              <img src={m.img} alt={m.role} className="w-full h-[300px] object-cover mb-5" />
+              <img src={m.img} alt={m.role} className="w-full h-[300px] object-cover mb-5" loading="lazy" />
               <h3 className="font-display text-xl text-primary">{m.role}</h3>
             </div>
           ))}
@@ -50,10 +50,10 @@ const SecretariatSection = () => {
           {techDirectors.map((t) => (
             <div
               key={t.role}
-              className="card-hover bg-card p-8 text-center cursor-none transition-all duration-400 hover:-translate-y-2.5 hover:shadow-[0_0_40px_rgba(198,167,94,0.3)] overflow-hidden"
+              className="card-hover bg-card p-8 text-center cursor-none transition-transform duration-300 hover:-translate-y-2 overflow-hidden"
               onClick={() => setModalRole(t.role)}
             >
-              <img src={t.img} alt={t.role} className="w-full h-[300px] object-cover mb-5" />
+              <img src={t.img} alt={t.role} className="w-full h-[300px] object-cover mb-5" loading="lazy" />
               <h3 className="font-display text-xl text-primary">{t.role}</h3>
             </div>
           ))}

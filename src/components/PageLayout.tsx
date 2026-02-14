@@ -1,3 +1,4 @@
+import { memo } from "react";
 import Navbar from "@/components/Navbar";
 import ParticleCanvas from "@/components/ParticleCanvas";
 import CustomCursor from "@/components/CustomCursor";
@@ -6,7 +7,7 @@ interface PageLayoutProps {
   children: React.ReactNode;
 }
 
-const PageLayout = ({ children }: PageLayoutProps) => {
+const PageLayout = memo(({ children }: PageLayoutProps) => {
   return (
     <>
       <CustomCursor isIntroVisible={false} />
@@ -17,6 +18,7 @@ const PageLayout = ({ children }: PageLayoutProps) => {
       </main>
     </>
   );
-};
+});
 
+PageLayout.displayName = "PageLayout";
 export default PageLayout;

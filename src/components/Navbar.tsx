@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
@@ -13,12 +13,12 @@ const navLinks = [
   { label: "Contact Us", to: "/contact" },
 ];
 
-const Navbar = () => {
+const Navbar = memo(() => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full px-[5%] lg:px-[8%] py-5 flex justify-between items-center bg-background/95 backdrop-blur-sm z-[100]">
+    <nav className="fixed w-full px-[5%] lg:px-[8%] py-5 flex justify-between items-center bg-background/95 z-[100]">
       <Link to="/" className="font-display text-2xl font-bold text-primary cursor-none no-underline">
         WELMUN
       </Link>
@@ -71,6 +71,7 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
+});
 
+Navbar.displayName = "Navbar";
 export default Navbar;
