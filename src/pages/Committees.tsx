@@ -56,7 +56,7 @@ const Committees = () => {
               <Link
                 to={`/committees/${c.id}`}
                 style={isIPC ? { width: "calc(33.333% - 14px)" } : undefined}
-                className="group relative block aspect-[16/10] overflow-hidden cursor-none"
+                className="group relative block aspect-[16/10] overflow-hidden rounded-sm cursor-none transition-transform duration-500 hover:scale-[1.03] hover:shadow-[0_8px_30px_-8px_hsl(var(--gold)/0.25)]"
               >
                 <img
                   src={c.cardImage}
@@ -64,9 +64,9 @@ const Committees = () => {
                   loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-background/40 group-hover:bg-background/60 transition-all duration-500" />
+                <div className="absolute inset-0 bg-background/50 group-hover:bg-background/30 transition-all duration-500" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                  <h2 className="font-display text-2xl md:text-3xl text-primary tracking-[4px] uppercase">
+                  <h2 className="font-display text-2xl md:text-3xl text-primary tracking-[4px] uppercase drop-shadow-lg">
                     {c.shortName}
                   </h2>
                 </div>
