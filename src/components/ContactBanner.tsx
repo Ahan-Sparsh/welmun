@@ -1,48 +1,55 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
 
 const ContactBanner = () => {
   return (
     <section
-      className="w-full h-full flex flex-col justify-center items-center overflow-hidden"
-      style={{
-        background: "linear-gradient(135deg, hsl(var(--muted)) 0%, hsl(var(--muted)) 45%, hsl(var(--background)) 55%, hsl(var(--background)) 100%)",
-      }}
+      className="w-full h-full flex flex-col justify-between overflow-hidden bg-background px-8 md:px-16 py-12"
     >
-      <motion.h2
-        initial={{ opacity: 0, rotateX: 65, y: 80, scale: 0.85 }}
-        whileInView={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-        style={{ transformOrigin: "bottom center" }}
-        className="font-display text-7xl md:text-9xl lg:text-[10rem] text-primary tracking-wide leading-none uppercase"
-      >
-        Contact Us
-      </motion.h2>
-
-      <motion.p
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="mt-6 font-display text-xl md:text-3xl text-primary/80 tracking-widest uppercase"
-      >
-        Get in Touch
-      </motion.p>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-      >
+      {/* Top — Contact Us title + button */}
+      <div className="flex flex-col items-center pt-8">
+        <h2 className="font-display text-6xl md:text-8xl lg:text-9xl text-primary tracking-wide leading-none uppercase">
+          Contact Us
+        </h2>
         <Link
           to="/contact"
-          className="mt-10 inline-block px-10 py-3 border border-primary/60 rounded-full text-primary font-display text-sm md:text-base tracking-[4px] uppercase hover:bg-primary hover:text-primary-foreground transition-colors duration-300 cursor-none"
+          className="mt-8 px-10 py-3 border border-primary/60 rounded-full text-primary font-display text-sm md:text-base tracking-[4px] uppercase hover:bg-primary hover:text-primary-foreground transition-colors duration-300 cursor-none"
         >
           Contact Us
         </Link>
-      </motion.div>
+      </div>
+
+      {/* Bottom — Footer-style info */}
+      <div className="mt-auto pt-12 border-t border-primary/20">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          {/* School info */}
+          <div className="space-y-1">
+            <p className="font-display text-lg text-primary uppercase tracking-wider">Welham Boys' School</p>
+            <p className="text-muted-foreground">5, Circular Road Dalanwala</p>
+            <p className="text-muted-foreground">Dehradun – 248001</p>
+            <p className="text-muted-foreground">Tel: 0135-2657120</p>
+            <a href="mailto:secretarygeneral@welhamboys.org" className="text-primary hover:underline cursor-none">
+              secretarygeneral@welhamboys.org
+            </a>
+          </div>
+
+          {/* Social icons */}
+          <div className="flex gap-5 items-center">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/70 transition-colors cursor-none">
+              <Instagram className="w-6 h-6" />
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/70 transition-colors cursor-none">
+              <Facebook className="w-6 h-6" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/70 transition-colors cursor-none">
+              <Linkedin className="w-6 h-6" />
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/70 transition-colors cursor-none">
+              <Youtube className="w-6 h-6" />
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
