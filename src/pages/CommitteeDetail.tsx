@@ -2,6 +2,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import PageLayout from "@/components/PageLayout";
 import { committees } from "@/data/committees";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useScrollReveal, useStaggerReveal } from "@/hooks/useScrollReveal";
 
 const CommitteeDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -10,6 +11,9 @@ const CommitteeDetail = () => {
   const committee = currentIndex !== -1 ? committees[currentIndex] : null;
   const prevCommittee = currentIndex > 0 ? committees[currentIndex - 1] : null;
   const nextCommittee = currentIndex < committees.length - 1 ? committees[currentIndex + 1] : null;
+
+  const headerRef = useScrollReveal<HTMLDivElement>(0.1);
+  const ebRef = useStaggerReveal<HTMLDivElement>(100);
 
   if (!committee) {
     return (
@@ -54,7 +58,7 @@ const CommitteeDetail = () => {
       </div>
 
       {/* Header */}
-      <div className="flex flex-col md:flex-row items-start gap-8 w-full max-w-5xl mb-12">
+      <div ref={headerRef} className="flex flex-col md:flex-row items-start gap-8 w-full max-w-5xl mb-12 reveal-section">
         <img src={committee.logo} alt={committee.name} className="w-40 h-auto shrink-0" />
         <div>
           <h1 className="font-display text-3xl md:text-4xl text-primary mb-3">
@@ -132,13 +136,14 @@ const CommitteeDetail = () => {
 
       {/* Executive Board */}
       <h2 className="font-display text-2xl text-primary mb-8">Executive Board</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 w-full max-w-5xl">
-        {committee.eb.map((member) => (
-          <div key={member.name} className="flex flex-col items-center text-center gap-2">
+      <div ref={ebRef} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 w-full max-w-5xl">
+        {committee.eb.map((member, i) => (
+          <div key={member.name} data-reveal={i} className="flex flex-col items-center text-center gap-2">
             <img
               src={member.image}
               alt={member.name}
               className="w-32 h-32 object-cover rounded"
+              loading="lazy"
             />
             <p className="text-primary text-sm font-medium leading-tight">{member.name}</p>
             <p className="text-accent text-xs italic">{member.role}</p>

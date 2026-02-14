@@ -1,6 +1,7 @@
 import PageLayout from "@/components/PageLayout";
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useStaggerReveal } from "@/hooks/useScrollReveal";
 
 const PDF_URL = "https://www.welhammun.org/_files/ugd/9bbbe8_6219df9038704fdcb163b0ce688182a2.pdf";
 
@@ -42,55 +43,59 @@ const days = [
   { label: "Day 3 — Friday, July 30, 2026", rows: day3 },
 ];
 
-const Schedule = () => (
-  <PageLayout>
-    <h1 className="font-display text-5xl text-primary mb-4">Conference Schedule</h1>
-    <div className="gold-divider" />
+const Schedule = () => {
+  const ref = useStaggerReveal<HTMLDivElement>(200);
 
-    <div className="mt-12 w-full max-w-4xl mx-auto space-y-12">
-      {days.map((day) => (
-        <div key={day.label}>
-          <h2 className="font-display text-2xl md:text-3xl text-primary mb-6 text-center">
-            {day.label}
-          </h2>
-          <div className="overflow-x-auto rounded-lg border border-primary/30">
-            <table className="w-full text-left">
-              <thead>
-                <tr className="bg-primary/20">
-                  <th className="px-4 py-3 text-primary font-display text-sm uppercase tracking-wider">Time</th>
-                  <th className="px-4 py-3 text-primary font-display text-sm uppercase tracking-wider">Event</th>
-                  <th className="px-4 py-3 text-primary font-display text-sm uppercase tracking-wider">Venue</th>
-                </tr>
-              </thead>
-              <tbody>
-                {day.rows.map((row, i) => (
-                  <tr
-                    key={i}
-                    className={`border-t border-primary/10 ${
-                      i % 2 === 0 ? "bg-secondary/30" : "bg-secondary/10"
-                    } hover:bg-primary/10 transition-colors`}
-                  >
-                    <td className="px-4 py-3 text-muted-foreground text-sm whitespace-nowrap">{row.time}</td>
-                    <td className="px-4 py-3 text-foreground font-medium text-sm">{row.event}</td>
-                    <td className="px-4 py-3 text-muted-foreground text-sm">{row.venue}</td>
+  return (
+    <PageLayout>
+      <h1 className="font-display text-5xl text-primary mb-4">Conference Schedule</h1>
+      <div className="gold-divider" />
+
+      <div ref={ref} className="mt-12 w-full max-w-4xl mx-auto space-y-12">
+        {days.map((day, i) => (
+          <div key={day.label} data-reveal={i}>
+            <h2 className="font-display text-2xl md:text-3xl text-primary mb-6 text-center">
+              {day.label}
+            </h2>
+            <div className="overflow-x-auto rounded-lg border border-primary/30">
+              <table className="w-full text-left">
+                <thead>
+                  <tr className="bg-primary/20">
+                    <th className="px-4 py-3 text-primary font-display text-sm uppercase tracking-wider">Time</th>
+                    <th className="px-4 py-3 text-primary font-display text-sm uppercase tracking-wider">Event</th>
+                    <th className="px-4 py-3 text-primary font-display text-sm uppercase tracking-wider">Venue</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {day.rows.map((row, j) => (
+                    <tr
+                      key={j}
+                      className={`border-t border-primary/10 ${
+                        j % 2 === 0 ? "bg-secondary/30" : "bg-secondary/10"
+                      } hover:bg-primary/10 transition-colors`}
+                    >
+                      <td className="px-4 py-3 text-muted-foreground text-sm whitespace-nowrap">{row.time}</td>
+                      <td className="px-4 py-3 text-foreground font-medium text-sm">{row.event}</td>
+                      <td className="px-4 py-3 text-muted-foreground text-sm">{row.venue}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
 
-    <div className="mt-12 mb-8">
-      <a href={PDF_URL} target="_blank" rel="noopener noreferrer">
-        <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 gap-2">
-          <Download className="w-4 h-4" />
-          Download Schedule (PDF)
-        </Button>
-      </a>
-    </div>
-  </PageLayout>
-);
+      <div className="mt-12 mb-8">
+        <a href={PDF_URL} target="_blank" rel="noopener noreferrer">
+          <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 gap-2">
+            <Download className="w-4 h-4" />
+            Download Schedule (PDF)
+          </Button>
+        </a>
+      </div>
+    </PageLayout>
+  );
+};
 
 export default Schedule;

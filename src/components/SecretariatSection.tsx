@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useScrollReveal, useStaggerReveal } from "@/hooks/useScrollReveal";
 
 const members = [
   { role: "Secretary General", img: "https://www.welhammun.org/assets/images/sec1.jpg", area: "sg" },
@@ -14,11 +15,13 @@ const techDirectors = [
 
 const SecretariatSection = () => {
   const [modalRole, setModalRole] = useState<string | null>(null);
+  const secRef = useScrollReveal<HTMLElement>(0.1);
+  const techRef = useStaggerReveal<HTMLElement>(150);
 
   return (
     <>
       {/* Secretariat */}
-      <section id="secretariat" className="min-h-screen flex flex-col justify-center items-center px-[10%] py-24">
+      <section ref={secRef} id="secretariat" className="min-h-screen flex flex-col justify-center items-center px-[10%] py-24 reveal-section">
         <h2 className="font-display text-4xl text-primary">Secretariat</h2>
         <div className="gold-divider" />
         <div
@@ -31,7 +34,7 @@ const SecretariatSection = () => {
           {members.map((m) => (
             <div
               key={m.role}
-              className="card-hover bg-card p-8 text-center cursor-none transition-transform duration-300 hover:-translate-y-2 overflow-hidden"
+              className="hover-lift img-zoom bg-card p-8 text-center cursor-none overflow-hidden"
               style={{ gridArea: m.area }}
               onClick={() => setModalRole(m.role)}
             >
@@ -43,14 +46,15 @@ const SecretariatSection = () => {
       </section>
 
       {/* Tech Directors */}
-      <section id="tech-directors" className="min-h-screen flex flex-col justify-center items-center px-[10%] py-24">
+      <section ref={techRef} id="tech-directors" className="min-h-screen flex flex-col justify-center items-center px-[10%] py-24 reveal-section">
         <h2 className="font-display text-4xl text-primary">Technical Directors</h2>
         <div className="gold-divider" />
         <div className="w-full mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
-          {techDirectors.map((t) => (
+          {techDirectors.map((t, i) => (
             <div
               key={t.role}
-              className="card-hover bg-card p-8 text-center cursor-none transition-transform duration-300 hover:-translate-y-2 overflow-hidden"
+              data-reveal={i}
+              className="hover-lift img-zoom bg-card p-8 text-center cursor-none overflow-hidden"
               onClick={() => setModalRole(t.role)}
             >
               <img src={t.img} alt={t.role} className="w-full h-[300px] object-cover mb-5" loading="lazy" />
@@ -63,10 +67,11 @@ const SecretariatSection = () => {
       {/* Modal */}
       {modalRole && (
         <div
-          className="fixed inset-0 z-[200] flex items-center justify-center bg-black/70 transition-opacity cursor-none"
+          className="fixed inset-0 z-[200] flex items-center justify-center bg-black/70 cursor-none"
+          style={{ animation: "fadeIn 0.3s ease-out" }}
           onClick={() => setModalRole(null)}
         >
-          <div className="bg-card p-10 max-w-lg text-center" onClick={(e) => e.stopPropagation()}>
+          <div className="bg-card p-10 max-w-lg text-center" style={{ animation: "fadeIn 0.3s ease-out" }} onClick={(e) => e.stopPropagation()}>
             <h2 className="font-display text-3xl text-primary mb-4">{modalRole}</h2>
             <p className="text-light-gold">Biography content here.</p>
           </div>

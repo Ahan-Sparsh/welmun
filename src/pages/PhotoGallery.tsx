@@ -1,4 +1,5 @@
 import PageLayout from "@/components/PageLayout";
+import { useStaggerReveal } from "@/hooks/useScrollReveal";
 
 const photos = [
   "https://static.wixstatic.com/media/9bbbe8_ff32436f4a324f8684cadec9d813af31~mv2.jpg/v1/fit/w_480,h_320,q_90,enc_avif,quality_auto/9bbbe8_ff32436f4a324f8684cadec9d813af31~mv2.jpg",
@@ -15,22 +16,27 @@ const photos = [
   "https://static.wixstatic.com/media/9bbbe8_92e98852093342d48927bc259af7437d~mv2_d_5472_3648_s_4_2.jpg/v1/fill/w_337,h_225,q_90,enc_avif,quality_auto/9bbbe8_92e98852093342d48927bc259af7437d~mv2_d_5472_3648_s_4_2.jpg",
 ];
 
-const PhotoGallery = () => (
-  <PageLayout>
-    <h1 className="font-display text-5xl text-primary mb-4">WELMUN Gallery</h1>
-    <div className="gold-divider mb-12" />
-    <div className="columns-2 md:columns-3 lg:columns-4 gap-3 w-full max-w-6xl">
-      {photos.map((src, i) => (
-        <img
-          key={i}
-          src={src}
-          alt={`WELMUN Gallery ${i + 1}`}
-          className="w-full mb-3 object-cover hover:opacity-80 transition-opacity"
-          loading="lazy"
-        />
-      ))}
-    </div>
-  </PageLayout>
-);
+const PhotoGallery = () => {
+  const ref = useStaggerReveal<HTMLDivElement>(80);
+
+  return (
+    <PageLayout>
+      <h1 className="font-display text-5xl text-primary mb-4">WELMUN Gallery</h1>
+      <div className="gold-divider mb-12" />
+      <div ref={ref} className="columns-2 md:columns-3 lg:columns-4 gap-3 w-full max-w-6xl">
+        {photos.map((src, i) => (
+          <div key={i} data-reveal={i} className="mb-3 img-zoom rounded overflow-hidden">
+            <img
+              src={src}
+              alt={`WELMUN Gallery ${i + 1}`}
+              className="w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        ))}
+      </div>
+    </PageLayout>
+  );
+};
 
 export default PhotoGallery;
