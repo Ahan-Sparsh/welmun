@@ -77,24 +77,42 @@ const Contact = () => {
           )}
         </div>
 
-        {/* Map */}
+        {/* Map + Address + Secretary General */}
         <div>
           <h2 className="font-display text-3xl text-primary mb-8 text-center">Find Us</h2>
           <div className="w-full aspect-[4/3] border border-primary/20 overflow-hidden">
             <iframe
               title="Welham Boys' School Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.54!2d78.0322!3d30.3255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c78bce1111%3A0x5c0f1b0f26e6!2sWelham%20Boys&#39;%20School!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.0!2d78.032!3d30.326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929da37ddd0c7%3A0x3c15a1e386b7e3b5!2sWelham%20Boys'%20School!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
               className="w-full h-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen
             />
           </div>
+
+          {/* Our Address */}
+          <div className="text-center mt-8">
+            <h2 className="font-display text-2xl text-primary underline mb-3">Our Address</h2>
+            <p className="font-display text-lg text-primary">Welham Boys' School</p>
+            <p className="text-muted-foreground text-lg">5, Circular Road Dalanwala, Dehradun - 248001</p>
+            <p className="text-muted-foreground text-lg">0135-2657120</p>
+          </div>
+
+          {/* Secretary General */}
+          <div className="text-center mt-8">
+            <h2 className="font-display text-2xl text-primary underline mb-3">Secretary-General</h2>
+            <p className="text-muted-foreground text-lg">Atharva Agarwal</p>
+            <p className="text-muted-foreground text-lg">+91-8709633816</p>
+            <a href="mailto:secretarygeneral@welhamboys.org" className="text-primary hover:underline cursor-none text-lg">
+              secretarygeneral@welhamboys.org
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* Bottom section: Conference Director + Address */}
-      <div ref={bottomRef} className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 mt-20 reveal-section">
+      {/* Conference Director */}
+      <div ref={bottomRef} className="w-full max-w-5xl mt-16 reveal-section">
         <div className="text-center">
           <h2 className="font-display text-2xl text-primary underline mb-3">Conference Director</h2>
           <p className="text-muted-foreground text-lg">Ms. Kiran Tripathi</p>
@@ -102,12 +120,6 @@ const Contact = () => {
           <a href="mailto:kirantripathi@welhamboys.org" className="text-primary hover:underline cursor-none text-lg">
             kirantripathi@welhamboys.org
           </a>
-        </div>
-        <div className="text-center">
-          <h2 className="font-display text-2xl text-primary underline mb-3">Our Address</h2>
-          <p className="font-display text-lg text-primary">Welham Boys' School</p>
-          <p className="text-muted-foreground text-lg">5, Circular Road Dalanwala, Dehradun - 248001</p>
-          <p className="text-muted-foreground text-lg">0135-2657120</p>
         </div>
       </div>
     </PageLayout>
