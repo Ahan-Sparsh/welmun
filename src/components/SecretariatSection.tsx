@@ -13,8 +13,8 @@ const members = [
 ];
 
 const techDirectors = [
-  { role: "Technical Director 1", name: "Arnav Mittal", img: techDirector1Photo },
-  { role: "Technical Director 2", name: "Stavya Kumar", img: techDirector2Photo },
+  { role: "Technical Director", name: "Arnav Mittal", img: techDirector1Photo },
+  { role: "Technical Director", name: "Stavya Kumar", img: techDirector2Photo },
 ];
 
 const SecretariatSection = () => {
