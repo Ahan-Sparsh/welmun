@@ -1,9 +1,12 @@
 import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Contact = () => {
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const formRef = useScrollReveal<HTMLDivElement>(0.1);
+  const contactRef = useScrollReveal<HTMLDivElement>(0.1);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -15,7 +18,7 @@ const Contact = () => {
       <h1 className="font-display text-5xl text-primary mb-4">Contact Us</h1>
       <div className="gold-divider mb-12" />
 
-      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-16">
+      <div ref={formRef} className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-16 reveal-section">
         {/* Email Form */}
         <div>
           <h2 className="font-display text-2xl text-primary mb-6">Email Us</h2>
@@ -85,7 +88,7 @@ const Contact = () => {
       </div>
 
       {/* Contact People */}
-      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">
+      <div ref={contactRef} className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 mt-16 reveal-section">
         <div className="text-center">
           <h2 className="font-display text-2xl text-primary underline mb-2">Conference Director</h2>
           <p className="text-muted-foreground">Ms. Kiran Tripathi</p>

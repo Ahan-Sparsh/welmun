@@ -24,6 +24,7 @@ import {
   Clock,
   Scale,
 } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const PDF_URLS = {
   charter:
@@ -141,7 +142,7 @@ const DownloadCard = ({
   icon: React.ReactNode;
 }) => (
   <a href={url} target="_blank" rel="noopener noreferrer" className="block group">
-    <Card className="bg-secondary/40 border-primary/20 hover:border-primary/50 hover:bg-secondary/60 transition-all duration-300 group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.15)]">
+    <Card className="bg-secondary/40 border-primary/20 hover:border-primary/50 hover:bg-secondary/60 transition-colors duration-300 hover-lift">
       <CardContent className="p-6 flex items-center gap-4">
         <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0 group-hover:bg-primary/20 transition-colors">
           {icon}
@@ -158,201 +159,208 @@ const DownloadCard = ({
   </a>
 );
 
-const ConferenceDetails = () => (
-  <PageLayout>
-    <h1 className="font-display text-4xl md:text-5xl text-primary mb-4 text-center">
-      Conference Details
-    </h1>
-    <div className="gold-divider" />
-    <p className="text-muted-foreground text-lg mt-4 text-center max-w-2xl mb-12">
-      Everything you need to know about WELMUN 2026 — policies, rules of
-      procedure, and foundational documents.
-    </p>
+const ConferenceDetails = () => {
+  const headerRef = useScrollReveal<HTMLDivElement>(0.1);
+  const docsRef = useScrollReveal<HTMLDivElement>(0.1);
 
-    <div className="w-full max-w-4xl mx-auto">
-      <Tabs defaultValue="policy" className="w-full">
-        <TabsList className="w-full grid grid-cols-3 bg-secondary/50 border border-primary/20 h-auto p-1">
-          <TabsTrigger
-            value="policy"
-            className="font-display text-xs md:text-sm py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-          >
-            <Shield className="w-4 h-4 mr-1.5 hidden md:inline-block" />
-            Conference Policy
-          </TabsTrigger>
-          <TabsTrigger
-            value="charter"
-            className="font-display text-xs md:text-sm py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-          >
-            <Scale className="w-4 h-4 mr-1.5 hidden md:inline-block" />
-            UN Charter
-          </TabsTrigger>
-          <TabsTrigger
-            value="rop"
-            className="font-display text-xs md:text-sm py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-          >
-            <BookOpen className="w-4 h-4 mr-1.5 hidden md:inline-block" />
-            Rules of Procedure
-          </TabsTrigger>
-        </TabsList>
+  return (
+    <PageLayout>
+      <div ref={headerRef} className="reveal-section flex flex-col items-center">
+        <h1 className="font-display text-4xl md:text-5xl text-primary mb-4 text-center">
+          Conference Details
+        </h1>
+        <div className="gold-divider" />
+        <p className="text-muted-foreground text-lg mt-4 text-center max-w-2xl mb-12">
+          Everything you need to know about WELMUN 2026 — policies, rules of
+          procedure, and foundational documents.
+        </p>
+      </div>
 
-        {/* Conference Policy Tab */}
-        <TabsContent value="policy" className="mt-8">
-          <div className="mb-6 p-4 rounded-lg bg-primary/5 border border-primary/15">
-            <p className="text-foreground text-sm leading-relaxed">
-              The following describes the policies of WELMUN 2026. All delegates,
-              faculty advisors, and participants are expected to adhere to these
-              guidelines throughout the duration of the conference.
-            </p>
-          </div>
+      <div className="w-full max-w-4xl mx-auto">
+        <Tabs defaultValue="policy" className="w-full">
+          <TabsList className="w-full grid grid-cols-3 bg-secondary/50 border border-primary/20 h-auto p-1">
+            <TabsTrigger
+              value="policy"
+              className="font-display text-xs md:text-sm py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+            >
+              <Shield className="w-4 h-4 mr-1.5 hidden md:inline-block" />
+              Conference Policy
+            </TabsTrigger>
+            <TabsTrigger
+              value="charter"
+              className="font-display text-xs md:text-sm py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+            >
+              <Scale className="w-4 h-4 mr-1.5 hidden md:inline-block" />
+              UN Charter
+            </TabsTrigger>
+            <TabsTrigger
+              value="rop"
+              className="font-display text-xs md:text-sm py-3 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+            >
+              <BookOpen className="w-4 h-4 mr-1.5 hidden md:inline-block" />
+              Rules of Procedure
+            </TabsTrigger>
+          </TabsList>
 
-          <Accordion type="single" collapsible className="space-y-2">
-            {policyItems.map((item, i) => (
-              <AccordionItem
-                key={i}
-                value={`policy-${i}`}
-                className="border border-primary/15 rounded-lg px-4 bg-secondary/20 hover:bg-secondary/30 transition-colors data-[state=open]:bg-secondary/40"
-              >
-                <AccordionTrigger className="hover:no-underline py-4">
-                  <span className="flex items-center gap-3 text-left">
-                    <span className="text-primary">{item.icon}</span>
-                    <span className="font-display text-base text-foreground">
-                      {item.title}
+          {/* Conference Policy Tab */}
+          <TabsContent value="policy" className="mt-8">
+            <div className="mb-6 p-4 rounded-lg bg-primary/5 border border-primary/15">
+              <p className="text-foreground text-sm leading-relaxed">
+                The following describes the policies of WELMUN 2026. All delegates,
+                faculty advisors, and participants are expected to adhere to these
+                guidelines throughout the duration of the conference.
+              </p>
+            </div>
+
+            <Accordion type="single" collapsible className="space-y-2">
+              {policyItems.map((item, i) => (
+                <AccordionItem
+                  key={i}
+                  value={`policy-${i}`}
+                  className="border border-primary/15 rounded-lg px-4 bg-secondary/20 hover:bg-secondary/30 transition-colors data-[state=open]:bg-secondary/40"
+                >
+                  <AccordionTrigger className="hover:no-underline py-4">
+                    <span className="flex items-center gap-3 text-left">
+                      <span className="text-primary">{item.icon}</span>
+                      <span className="font-display text-base text-foreground">
+                        {item.title}
+                      </span>
                     </span>
-                  </span>
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-4">
-                  {item.content}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </TabsContent>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-4">
+                    {item.content}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </TabsContent>
 
-        {/* UN Charter Tab */}
-        <TabsContent value="charter" className="mt-8">
-          <div className="mb-6 p-4 rounded-lg bg-primary/5 border border-primary/15">
-            <p className="text-foreground text-sm leading-relaxed">
-              The Charter of the United Nations is the foundational treaty of the
-              United Nations. It was signed on 26 June 1945 in San Francisco. Key
-              chapters are summarized below.
-            </p>
-          </div>
+          {/* UN Charter Tab */}
+          <TabsContent value="charter" className="mt-8">
+            <div className="mb-6 p-4 rounded-lg bg-primary/5 border border-primary/15">
+              <p className="text-foreground text-sm leading-relaxed">
+                The Charter of the United Nations is the foundational treaty of the
+                United Nations. It was signed on 26 June 1945 in San Francisco. Key
+                chapters are summarized below.
+              </p>
+            </div>
 
-          <div className="grid gap-4 md:grid-cols-2">
-            {charterHighlights.map((chapter, i) => (
-              <Card
-                key={i}
-                className="bg-secondary/20 border-primary/15 hover:border-primary/30 transition-colors"
-              >
-                <CardContent className="p-5">
-                  <h3 className="font-display text-sm text-primary mb-2">
-                    {chapter.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {chapter.content}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="mt-6 text-center">
-            <p className="text-muted-foreground text-sm mb-4">
-              Download the full UN Charter & Statute of the ICJ for complete
-              reference.
-            </p>
-          </div>
-        </TabsContent>
-
-        {/* Rules of Procedure Tab */}
-        <TabsContent value="rop" className="mt-8">
-          <div className="mb-6 p-4 rounded-lg bg-primary/5 border border-primary/15">
-            <p className="text-foreground text-sm leading-relaxed">
-              The Rules of Procedure (ROP) govern how committee sessions are
-              conducted. Delegates are expected to familiarize themselves with
-              these rules before the conference. The document covers motions,
-              points, voting procedures, and debate formats.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {[
-              {
-                title: "Motions & Points",
-                desc: "Understand the difference between procedural motions (Point of Order, Point of Inquiry) and substantive motions (moderated/unmoderated caucus).",
-              },
-              {
-                title: "Debate Format",
-                desc: "Learn about the General Speakers' List, moderated caucuses, unmoderated caucuses, and how to introduce draft resolutions.",
-              },
-              {
-                title: "Voting Procedures",
-                desc: "Understand roll call voting, simple majority vs two-thirds majority, and the right of veto in the Security Council.",
-              },
-              {
-                title: "Working Papers & Draft Resolutions",
-                desc: "Guidelines for drafting, sponsoring, and signatories of working papers and draft resolutions in committee.",
-              },
-            ].map((item, i) => (
-              <Card
-                key={i}
-                className="bg-secondary/20 border-primary/15 hover:border-primary/30 transition-colors"
-              >
-                <CardContent className="p-5 flex items-start gap-4">
-                  <div className="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-0.5">
-                    <BookOpen className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-sm text-primary mb-1">
-                      {item.title}
+            <div className="grid gap-4 md:grid-cols-2">
+              {charterHighlights.map((chapter, i) => (
+                <Card
+                  key={i}
+                  className="bg-secondary/20 border-primary/15 hover:border-primary/30 transition-colors hover-lift"
+                >
+                  <CardContent className="p-5">
+                    <h3 className="font-display text-sm text-primary mb-2">
+                      {chapter.title}
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      {item.desc}
+                      {chapter.content}
                     </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
 
-          <div className="mt-6 text-center">
-            <p className="text-muted-foreground text-sm mb-4">
-              Download the complete Rules of Procedure document for detailed
-              reference.
-            </p>
-          </div>
-        </TabsContent>
-      </Tabs>
+            <div className="mt-6 text-center">
+              <p className="text-muted-foreground text-sm mb-4">
+                Download the full UN Charter & Statute of the ICJ for complete
+                reference.
+              </p>
+            </div>
+          </TabsContent>
 
-      {/* Download Section */}
-      <div className="mt-16 mb-8">
-        <h2 className="font-display text-2xl text-primary mb-6 text-center">
-          Download Documents
-        </h2>
-        <div className="gold-divider mx-auto" />
-        <div className="grid gap-4 mt-8 md:grid-cols-1">
-          <DownloadCard
-            title="Conference Policy"
-            description="Discipline, dress code, electronics policy, awards, and more."
-            url={PDF_URLS.policy}
-            icon={<FileText className="w-6 h-6" />}
-          />
-          <DownloadCard
-            title="Charter of the United Nations"
-            description="Full text of the UN Charter & Statute of the International Court of Justice."
-            url={PDF_URLS.charter}
-            icon={<Scale className="w-6 h-6" />}
-          />
-          <DownloadCard
-            title="Rules of Procedure"
-            description="Complete UNA-USA Rules of Procedure for all committees."
-            url={PDF_URLS.rop}
-            icon={<BookOpen className="w-6 h-6" />}
-          />
+          {/* Rules of Procedure Tab */}
+          <TabsContent value="rop" className="mt-8">
+            <div className="mb-6 p-4 rounded-lg bg-primary/5 border border-primary/15">
+              <p className="text-foreground text-sm leading-relaxed">
+                The Rules of Procedure (ROP) govern how committee sessions are
+                conducted. Delegates are expected to familiarize themselves with
+                these rules before the conference. The document covers motions,
+                points, voting procedures, and debate formats.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {[
+                {
+                  title: "Motions & Points",
+                  desc: "Understand the difference between procedural motions (Point of Order, Point of Inquiry) and substantive motions (moderated/unmoderated caucus).",
+                },
+                {
+                  title: "Debate Format",
+                  desc: "Learn about the General Speakers' List, moderated caucuses, unmoderated caucuses, and how to introduce draft resolutions.",
+                },
+                {
+                  title: "Voting Procedures",
+                  desc: "Understand roll call voting, simple majority vs two-thirds majority, and the right of veto in the Security Council.",
+                },
+                {
+                  title: "Working Papers & Draft Resolutions",
+                  desc: "Guidelines for drafting, sponsoring, and signatories of working papers and draft resolutions in committee.",
+                },
+              ].map((item, i) => (
+                <Card
+                  key={i}
+                  className="bg-secondary/20 border-primary/15 hover:border-primary/30 transition-colors hover-lift"
+                >
+                  <CardContent className="p-5 flex items-start gap-4">
+                    <div className="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-0.5">
+                      <BookOpen className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-sm text-primary mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="mt-6 text-center">
+              <p className="text-muted-foreground text-sm mb-4">
+                Download the complete Rules of Procedure document for detailed
+                reference.
+              </p>
+            </div>
+          </TabsContent>
+        </Tabs>
+
+        {/* Download Section */}
+        <div ref={docsRef} className="mt-16 mb-8 reveal-section">
+          <h2 className="font-display text-2xl text-primary mb-6 text-center">
+            Download Documents
+          </h2>
+          <div className="gold-divider mx-auto" />
+          <div className="grid gap-4 mt-8 md:grid-cols-1">
+            <DownloadCard
+              title="Conference Policy"
+              description="Discipline, dress code, electronics policy, awards, and more."
+              url={PDF_URLS.policy}
+              icon={<FileText className="w-6 h-6" />}
+            />
+            <DownloadCard
+              title="Charter of the United Nations"
+              description="Full text of the UN Charter & Statute of the International Court of Justice."
+              url={PDF_URLS.charter}
+              icon={<Scale className="w-6 h-6" />}
+            />
+            <DownloadCard
+              title="Rules of Procedure"
+              description="Complete UNA-USA Rules of Procedure for all committees."
+              url={PDF_URLS.rop}
+              icon={<BookOpen className="w-6 h-6" />}
+            />
+          </div>
         </div>
       </div>
-    </div>
-  </PageLayout>
-);
+    </PageLayout>
+  );
+};
 
 export default ConferenceDetails;
