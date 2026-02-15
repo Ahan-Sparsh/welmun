@@ -96,7 +96,7 @@ const Contact = () => {
             <h2 className="font-display text-2xl text-primary underline mb-3">Our Address</h2>
             <p className="font-display text-lg text-primary">Welham Boys' School</p>
             <p className="text-muted-foreground text-lg">5, Circular Road Dalanwala, Dehradun - 248001</p>
-            <p className="text-muted-foreground text-lg">0135-2657120</p>
+            <p className="text-muted-foreground text-lg">+91-7409809908</p>
           </div>
 
         </div>
