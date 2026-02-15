@@ -64,9 +64,13 @@ const Committees = () => {
                   loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-background/50 group-hover:bg-background/30 transition-all duration-500" />
+                <div className="absolute inset-0 bg-background/60 group-hover:bg-background/40 transition-all duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/40" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                  <h2 className="font-display text-2xl md:text-3xl text-primary tracking-[4px] uppercase drop-shadow-lg">
+                  <h2
+                    className="font-display text-2xl md:text-3xl text-primary tracking-[4px] uppercase"
+                    style={{ textShadow: "0 2px 12px hsl(15 30% 12% / 0.9), 0 0 30px hsl(15 30% 12% / 0.6)" }}
+                  >
                     {c.shortName}
                   </h2>
                 </div>
