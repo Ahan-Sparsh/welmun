@@ -77,7 +77,7 @@ const IntroScreen = ({ onEnter }: IntroScreenProps) => {
           textShadow: "0 0 40px hsl(15 30% 12% / 0.3)",
         }}
       >
-        WELMUN '26
+        WELMUN 26'
       </h1>
       <div className="mt-12 flex flex-col items-center gap-3">
         <button
