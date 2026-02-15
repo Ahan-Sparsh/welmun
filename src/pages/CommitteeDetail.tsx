@@ -90,7 +90,7 @@ const CommitteeDetail = () => {
           </div>
 
           {/* 3-column layout: Logo | Content | Chairperson */}
-          <div ref={headerRef} className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] gap-8 lg:gap-12 mb-16 reveal-section">
+          <div ref={headerRef} className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] gap-8 lg:gap-12 items-start mb-16 reveal-section">
             {/* Left — Committee Logo */}
             <div className="flex justify-center lg:justify-start">
               <img
@@ -195,24 +195,26 @@ const CommitteeDetail = () => {
             </div>
           </div>
 
-          {/* Executive Board — remaining members */}
-          <div className="w-full max-w-6xl">
-            <h2 className="font-display text-2xl text-primary mb-8">Executive Board</h2>
-            <div ref={ebRef} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {committee.eb.slice(1).map((member, i) => (
-                <div key={member.name} data-reveal={i} className="flex flex-col items-center text-center gap-2">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-32 h-32 object-cover rounded-full"
-                    loading="lazy"
-                  />
-                  <p className="text-primary text-sm font-medium leading-tight">{member.name}</p>
-                  <p className="text-accent text-xs italic">{member.role}</p>
-                </div>
-              ))}
+          {/* Executive Board — all members */}
+          {committee.eb.length > 0 && (
+            <div className="w-full max-w-6xl">
+              <h2 className="font-display text-2xl text-primary mb-8">Executive Board</h2>
+              <div ref={ebRef} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                {committee.eb.map((member, i) => (
+                  <div key={member.name} data-reveal={i} className="flex flex-col items-center text-center gap-2">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-32 h-32 object-cover rounded-full"
+                      loading="lazy"
+                    />
+                    <p className="text-primary text-sm font-medium leading-tight">{member.name}</p>
+                    <p className="text-accent text-xs italic">{member.role}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </main>
       </div>
     </>
