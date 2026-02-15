@@ -67,14 +67,14 @@ const IntroScreen = ({ onEnter }: IntroScreenProps) => {
         transform: hiding ? "translateY(-100%)" : "translateY(0)",
       }}
     >
-      <div className="flex justify-center">
+      <div className="flex justify-center w-full text-center">
         <h1
-          className="font-display text-5xl md:text-8xl tracking-[6px] whitespace-nowrap overflow-hidden border-r-4"
+          className="font-display text-5xl md:text-8xl tracking-[6px] whitespace-nowrap overflow-hidden border-r-4 inline-block"
           style={{
             color: "hsl(20, 30%, 18%)",
             borderColor: "hsl(20, 30%, 18%)",
-            width: 0,
-            animation: "typing 1.8s steps(12) forwards, blink 0.5s infinite",
+            maxWidth: 0,
+            animation: "typing 1.8s steps(11) forwards, blink 0.5s infinite",
             textShadow: "0 0 40px hsl(20 30% 18% / 0.3)",
           }}
         >
