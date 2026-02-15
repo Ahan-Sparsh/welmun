@@ -1,12 +1,15 @@
+import { useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import PageLayout from "@/components/PageLayout";
 import { committees } from "@/data/committees";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useScrollReveal, useStaggerReveal } from "@/hooks/useScrollReveal";
+import CommitteeIntro from "@/components/CommitteeIntro";
 
 const CommitteeDetail = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const [introComplete, setIntroComplete] = useState(false);
   const currentIndex = committees.findIndex((c) => c.id === id);
   const committee = currentIndex !== -1 ? committees[currentIndex] : null;
   const prevCommittee = currentIndex > 0 ? committees[currentIndex - 1] : null;
@@ -27,6 +30,14 @@ const CommitteeDetail = () => {
   }
 
   return (
+    <>
+      {!introComplete && (
+        <CommitteeIntro
+          committeeId={committee.id}
+          committeeName={committee.shortName}
+          onComplete={() => setIntroComplete(true)}
+        />
+      )}
     <PageLayout backgroundImage="/images/committees-bg.jpg">
       <Link
         to="/committees"
@@ -151,6 +162,7 @@ const CommitteeDetail = () => {
         ))}
       </div>
     </PageLayout>
+    </>
   );
 };
 
