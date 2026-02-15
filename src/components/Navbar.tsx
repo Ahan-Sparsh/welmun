@@ -38,13 +38,13 @@ const Navbar = memo(() => {
             </Link>
           </li>
         ))}
-        <li>
+        <li className="ml-4">
           <img
             src={welmunCrest}
             alt="WELMUN Crest"
-            className="h-10 w-10 object-contain"
+            className="h-12 w-12 object-contain opacity-90"
             style={{
-              filter: "brightness(0) saturate(100%) invert(68%) sepia(30%) saturate(400%) hue-rotate(10deg) brightness(90%)",
+              filter: "brightness(0) saturate(100%) invert(75%) sepia(40%) saturate(500%) hue-rotate(10deg) brightness(95%)",
             }}
           />
         </li>
