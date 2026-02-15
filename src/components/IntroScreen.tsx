@@ -63,7 +63,7 @@ const IntroScreen = ({ onEnter }: IntroScreenProps) => {
     <div
       className="fixed inset-0 z-[10000] flex flex-col items-center justify-center transition-transform duration-1000"
       style={{
-        backgroundColor: "hsl(42, 30%, 55%)",
+        backgroundColor: "hsl(40, 40%, 80%)",
         transform: hiding ? "translateY(-100%)" : "translateY(0)",
       }}
     >
