@@ -59,105 +59,159 @@ const CommitteeDetail = () => {
         </div>
 
         <main className="relative z-10 pt-20 min-h-screen px-[5%] md:px-[8%] lg:px-[10%] py-24 flex flex-col items-center">
-          <Link
-            to="/committees"
-            className="text-muted-foreground hover:text-primary transition-colors cursor-none self-start mb-8"
-          >
-            ← Back to Committees
-          </Link>
-
-          <div className="flex justify-between w-full max-w-5xl mb-8">
-            {prevCommittee ? (
-              <button
-                onClick={() => navigate(`/committees/${prevCommittee.id}`)}
-                className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors cursor-none"
-              >
-                <ChevronLeft className="w-4 h-4" />
-                {prevCommittee.shortName}
-              </button>
-            ) : <span />}
-            {nextCommittee ? (
-              <button
-                onClick={() => navigate(`/committees/${nextCommittee.id}`)}
-                className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors cursor-none"
-              >
-                {nextCommittee.shortName}
-                <ChevronRight className="w-4 h-4" />
-              </button>
-            ) : <span />}
+          {/* Back + Prev/Next nav */}
+          <div className="w-full max-w-6xl flex items-center justify-between mb-10">
+            <Link
+              to="/committees"
+              className="text-muted-foreground hover:text-primary transition-colors cursor-none"
+            >
+              ← Back to Committees
+            </Link>
+            <div className="flex gap-4">
+              {prevCommittee ? (
+                <button
+                  onClick={() => navigate(`/committees/${prevCommittee.id}`)}
+                  className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors cursor-none"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                  {prevCommittee.shortName}
+                </button>
+              ) : <span />}
+              {nextCommittee ? (
+                <button
+                  onClick={() => navigate(`/committees/${nextCommittee.id}`)}
+                  className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors cursor-none"
+                >
+                  {nextCommittee.shortName}
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              ) : <span />}
+            </div>
           </div>
 
-          <div ref={headerRef} className="flex flex-col md:flex-row items-start gap-8 w-full max-w-5xl mb-12 reveal-section">
-            <img src={committee.logo} alt={committee.name} className="w-40 h-auto shrink-0" />
-            <div>
-              <h1 className="font-display text-3xl md:text-4xl text-primary mb-3">
+          {/* 3-column layout: Logo | Content | Chairperson */}
+          <div ref={headerRef} className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] gap-8 lg:gap-12 mb-16 reveal-section">
+            {/* Left — Committee Logo */}
+            <div className="flex justify-center lg:justify-start">
+              <img
+                src={committee.logo}
+                alt={committee.name}
+                className="w-48 h-auto lg:w-56 object-contain"
+              />
+            </div>
+
+            {/* Center — Name, Agenda, Letter */}
+            <div className="flex flex-col">
+              <h1 className="font-display text-3xl md:text-4xl text-primary mb-4">
                 {committee.name}
               </h1>
               {committee.agenda && (
-                <p className="text-muted-foreground italic mb-2">
-                  <span className="text-primary font-medium">Agenda: </span>"{committee.agenda}"
+                <p className="text-muted-foreground italic mb-3">
+                  Agenda: "{committee.agenda}"
                 </p>
               )}
               {committee.freezeDate && (
-                <p className="text-muted-foreground">
-                  <span className="text-primary font-medium">Freeze Date: </span>
+                <p className="text-muted-foreground mb-6">
+                  <span className="text-primary font-medium">Freeze Date : </span>
                   {committee.freezeDate}
                 </p>
               )}
               {committee.note && (
-                <p className="text-accent font-medium mt-2">{committee.note}</p>
+                <p className="text-accent font-medium mb-4">{committee.note}</p>
               )}
+
+              <div className="space-y-5 text-muted-foreground leading-relaxed">
+                {committee.chairLetter.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+                <p className="mt-4">
+                  {committee.chairName}
+                  <br />
+                  {committee.chairRole}, {committee.name}
+                  <br />
+                  <a
+                    href={`mailto:${committee.chairEmail}`}
+                    className="text-primary hover:underline cursor-none"
+                  >
+                    {committee.chairEmail}
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            {/* Right — Chairperson Photo & Resource Links */}
+            <div className="flex flex-col items-center gap-4 lg:min-w-[200px]">
+              {committee.eb[0] && (
+                <>
+                  <img
+                    src={committee.eb[0].image}
+                    alt={committee.eb[0].name}
+                    className="w-40 h-40 lg:w-48 lg:h-48 object-cover rounded-full border-2 border-primary/30"
+                  />
+                  <div className="text-center">
+                    <p className="text-primary font-display text-lg font-medium">
+                      {committee.eb[0].name}
+                    </p>
+                    <p className="text-accent italic text-sm">
+                      {committee.eb[0].role}
+                    </p>
+                  </div>
+                </>
+              )}
+
+              {/* Resource buttons */}
+              <div className="flex flex-col gap-3 w-full mt-4">
+                {committee.bgLink && (
+                  <a
+                    href={committee.bgLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-2.5 border border-primary text-primary text-sm text-center hover:bg-primary hover:text-primary-foreground transition-colors cursor-none"
+                  >
+                    Background Guide
+                  </a>
+                )}
+                {committee.matrixLink && (
+                  <a
+                    href={committee.matrixLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-2.5 border border-primary text-primary text-sm text-center hover:bg-primary hover:text-primary-foreground transition-colors cursor-none"
+                  >
+                    Matrix
+                  </a>
+                )}
+                {committee.ropLink && (
+                  <a
+                    href={committee.ropLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-2.5 border border-primary text-primary text-sm text-center hover:bg-primary hover:text-primary-foreground transition-colors cursor-none"
+                  >
+                    Rules of Procedure
+                  </a>
+                )}
+              </div>
             </div>
           </div>
 
-          <div className="w-full max-w-5xl space-y-5 text-muted-foreground leading-relaxed mb-12">
-            {committee.chairLetter.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-            <p className="mt-4">
-              {committee.chairName}
-              <br />
-              {committee.chairRole}, {committee.name}
-              <br />
-              <a
-                href={`mailto:${committee.chairEmail}`}
-                className="text-primary hover:underline cursor-none"
-              >
-                {committee.chairEmail}
-              </a>
-            </p>
-          </div>
-
-          <div className="flex flex-wrap gap-3 mb-12">
-            {committee.bgLink && (
-              <a href={committee.bgLink} target="_blank" rel="noopener noreferrer"
-                className="px-6 py-2.5 border border-primary text-primary text-sm hover:bg-primary hover:text-primary-foreground transition-colors cursor-none">
-                Background Guide
-              </a>
-            )}
-            {committee.matrixLink && (
-              <a href={committee.matrixLink} target="_blank" rel="noopener noreferrer"
-                className="px-6 py-2.5 border border-primary text-primary text-sm hover:bg-primary hover:text-primary-foreground transition-colors cursor-none">
-                Matrix
-              </a>
-            )}
-            {committee.ropLink && (
-              <a href={committee.ropLink} target="_blank" rel="noopener noreferrer"
-                className="px-6 py-2.5 border border-primary text-primary text-sm hover:bg-primary hover:text-primary-foreground transition-colors cursor-none">
-                Rules of Procedure
-              </a>
-            )}
-          </div>
-
-          <h2 className="font-display text-2xl text-primary mb-8">Executive Board</h2>
-          <div ref={ebRef} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 w-full max-w-5xl">
-            {committee.eb.map((member, i) => (
-              <div key={member.name} data-reveal={i} className="flex flex-col items-center text-center gap-2">
-                <img src={member.image} alt={member.name} className="w-32 h-32 object-cover rounded" loading="lazy" />
-                <p className="text-primary text-sm font-medium leading-tight">{member.name}</p>
-                <p className="text-accent text-xs italic">{member.role}</p>
-              </div>
-            ))}
+          {/* Executive Board — remaining members */}
+          <div className="w-full max-w-6xl">
+            <h2 className="font-display text-2xl text-primary mb-8">Executive Board</h2>
+            <div ref={ebRef} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+              {committee.eb.slice(1).map((member, i) => (
+                <div key={member.name} data-reveal={i} className="flex flex-col items-center text-center gap-2">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-32 h-32 object-cover rounded-full"
+                    loading="lazy"
+                  />
+                  <p className="text-primary text-sm font-medium leading-tight">{member.name}</p>
+                  <p className="text-accent text-xs italic">{member.role}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </main>
       </div>
