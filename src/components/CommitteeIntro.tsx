@@ -1,5 +1,5 @@
-import { useState, useRef, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 
 // Video imports for each committee
 import unscVideo from "@/assets/committees/unsc-intro.mp4";
@@ -21,78 +21,66 @@ const committeeVideos: Record<string, string> = {
 interface CommitteeIntroProps {
   committeeId: string;
   committeeName: string;
-  onComplete: () => void;
 }
 
-const CommitteeIntro = ({ committeeId, committeeName, onComplete }: CommitteeIntroProps) => {
-  const [visible, setVisible] = useState(true);
+const CommitteeIntro = ({ committeeId, committeeName }: CommitteeIntroProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
-
   const videoSrc = committeeVideos[committeeId];
 
-  const handleEnd = useCallback(() => {
-    setVisible(false);
-    setTimeout(onComplete, 600);
-  }, [onComplete]);
+  // Loop the video so it keeps playing when user scrolls back up
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.loop = true;
+    }
+  }, []);
 
-  const handleSkip = useCallback(() => {
-    if (videoRef.current) videoRef.current.pause();
-    handleEnd();
-  }, [handleEnd]);
-
-  if (!videoSrc) {
-    onComplete();
-    return null;
-  }
+  if (!videoSrc) return null;
 
   return (
-    <AnimatePresence>
-      {visible && (
-        <motion.div
-          initial={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.6 }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-background"
-          onClick={handleSkip}
+    <div className="relative w-full h-screen flex items-center justify-center bg-background overflow-hidden">
+      <video
+        ref={videoRef}
+        src={videoSrc}
+        autoPlay
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-background/40" />
+
+      {/* Committee name */}
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="relative z-10 font-display text-5xl md:text-7xl lg:text-8xl text-primary tracking-[8px] uppercase text-center"
+        style={{
+          textShadow: "0 4px 20px hsl(15 30% 12% / 0.8), 0 0 60px hsl(15 30% 12% / 0.5)",
+        }}
+      >
+        {committeeName}
+      </motion.h1>
+
+      {/* Scroll hint */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.6 }}
+        transition={{ delay: 1.5 }}
+        className="absolute bottom-8 flex flex-col items-center gap-2 cursor-none"
+      >
+        <p className="text-primary text-sm tracking-[3px] uppercase">
+          Scroll down
+        </p>
+        <span
+          className="text-primary text-2xl"
+          style={{ animation: "bounce-arrow 1.5s infinite" }}
         >
-          <video
-            ref={videoRef}
-            src={videoSrc}
-            autoPlay
-            muted
-            playsInline
-            onEnded={handleEnd}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-background/40" />
-
-          {/* Committee name */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="relative z-10 font-display text-5xl md:text-7xl lg:text-8xl text-primary tracking-[8px] uppercase text-center"
-            style={{
-              textShadow: "0 4px 20px hsl(15 30% 12% / 0.8), 0 0 60px hsl(15 30% 12% / 0.5)",
-            }}
-          >
-            {committeeName}
-          </motion.h1>
-
-          {/* Skip hint */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.6 }}
-            transition={{ delay: 1.5 }}
-            className="absolute bottom-8 text-primary text-sm tracking-[3px] uppercase cursor-none"
-          >
-            Click to skip
-          </motion.p>
-        </motion.div>
-      )}
-    </AnimatePresence>
+          ↓
+        </span>
+      </motion.div>
+    </div>
   );
 };
 
