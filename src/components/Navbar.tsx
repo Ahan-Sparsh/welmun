@@ -1,6 +1,7 @@
 import { useState, memo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import welmunCrest from "@/assets/welmun-crest.png";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -9,7 +10,7 @@ const navLinks = [
   
   { label: "Committees", to: "/committees" },
   { label: "Conference Details", to: "/conference-details" },
-  { label: "Photo Gallery", to: "/gallery" },
+  { label: "Photo Gallery", to: "/gallery", showCrest: true },
   
 ];
 
@@ -29,11 +30,21 @@ const Navbar = memo(() => {
           <li key={link.label}>
             <Link
               to={link.to}
-              className={`relative text-primary no-underline cursor-none text-sm after:content-[''] after:absolute after:h-[2px] after:bg-primary after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full ${
+              className={`relative text-primary no-underline cursor-none text-sm flex items-center gap-1.5 after:content-[''] after:absolute after:h-[2px] after:bg-primary after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full ${
                 location.pathname === link.to ? "after:w-full" : "after:w-0"
               }`}
             >
               {link.label}
+              {(link as any).showCrest && (
+                <img
+                  src={welmunCrest}
+                  alt=""
+                  className="h-5 w-5 object-contain"
+                  style={{
+                    filter: "brightness(0) saturate(100%) invert(68%) sepia(30%) saturate(400%) hue-rotate(10deg) brightness(90%)",
+                  }}
+                />
+              )}
             </Link>
           </li>
         ))}
