@@ -4,7 +4,7 @@ import PageLayout from "@/components/PageLayout";
 import { committees } from "@/data/committees";
 
 // Custom order: UNSC, DISEC, UNHCR | IPC (center) | ECOSOC, Lok Sabha, Roman Senate
-const orderedIds = ["unsc", "disec", "unhcr", "ecosoc", "lok-sabha", "roman-senate", "ipc"];
+const orderedIds = ["unsc", "disec", "unodc", "viceroys-cabinet", "lok-sabha", "ipc"];
 const orderedCommittees = orderedIds
   .map((id) => committees.find((c) => c.id === id))
   .filter(Boolean) as typeof committees;
@@ -35,11 +35,7 @@ const Committees = () => {
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full max-w-6xl"
         style={{ perspective: "1200px" }}
       >
-        {orderedCommittees.map((c, i) => {
-          // IPC is index 3 — center it
-          const isIPC = c.id === "ipc";
-
-          return (
+        {orderedCommittees.map((c, i) => (
             <motion.div
               key={c.id}
               initial={{ opacity: 0, rotateX: 65, y: 80, scale: 0.85 }}
@@ -51,11 +47,9 @@ const Committees = () => {
                 ease: [0.23, 1, 0.32, 1],
               }}
               style={{ transformOrigin: "bottom center" }}
-              className={isIPC ? "col-span-1 sm:col-span-2 lg:col-span-3 flex justify-center" : ""}
             >
               <Link
                 to={`/committees/${c.id}`}
-                style={isIPC ? { width: "calc(33.333% - 14px)" } : undefined}
                 className="group relative block aspect-[16/10] overflow-hidden rounded-sm cursor-none transition-transform duration-500 hover:scale-[1.03] hover:shadow-[0_8px_30px_-8px_hsl(var(--gold)/0.25)]"
               >
                 <img
@@ -76,8 +70,7 @@ const Committees = () => {
                 </div>
               </Link>
             </motion.div>
-          );
-        })}
+        ))}
       </div>
     </PageLayout>
   );

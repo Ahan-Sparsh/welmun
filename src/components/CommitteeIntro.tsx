@@ -4,19 +4,17 @@ import { motion, AnimatePresence } from "framer-motion";
 // Video imports for each committee
 import unscVideo from "@/assets/committees/unsc-intro.mp4";
 import disecVideo from "@/assets/committees/disec-intro.mp4";
-import unhcrVideo from "@/assets/committees/unhcr-intro.mp4";
-import ecosocVideo from "@/assets/committees/ecosoc-intro.mp4";
+import unodcVideo from "@/assets/committees/unodc-intro.mp4";
+import viceroysVideo from "@/assets/committees/viceroys-cabinet-intro.mp4";
 import loksabhaVideo from "@/assets/committees/loksabha-intro.mp4";
-import senateVideo from "@/assets/committees/senate-intro.mp4";
 import ipcVideo from "@/assets/committees/ipc-intro.mp4";
 
 const committeeVideos: Record<string, string> = {
   unsc: unscVideo,
   disec: disecVideo,
-  unhcr: unhcrVideo,
-  ecosoc: ecosocVideo,
+  unodc: unodcVideo,
+  "viceroys-cabinet": viceroysVideo,
   "lok-sabha": loksabhaVideo,
-  "roman-senate": senateVideo,
   ipc: ipcVideo,
 };
 

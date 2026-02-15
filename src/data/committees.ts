@@ -1,9 +1,8 @@
 import unscImg from "@/assets/committees/unsc.jpg";
 import disecImg from "@/assets/committees/disec.jpg";
-import unhcrImg from "@/assets/committees/unhcr.jpg";
-import ecosocImg from "@/assets/committees/ecosoc.jpg";
+import unodcImg from "@/assets/committees/unodc.jpg";
+import viceroysImg from "@/assets/committees/viceroys-cabinet.jpg";
 import loksabhaImg from "@/assets/committees/loksabha.jpg";
-import senateImg from "@/assets/committees/senate.jpg";
 import ipcImg from "@/assets/committees/ipc.jpg";
 
 export interface EBMember {
@@ -87,10 +86,10 @@ export const committees: CommitteeData[] = [
     ],
   },
   {
-    id: "unhcr",
-    name: "United Nations High Commissioner for Refugees",
-    shortName: "UNHCR",
-    cardImage: unhcrImg,
+    id: "unodc",
+    name: "United Nations Office on Drugs and Crime",
+    shortName: "UNODC",
+    cardImage: unodcImg,
     logo: "https://static.wixstatic.com/media/9bbbe8_01011cccbd1c434893d58de2d9b22db0~mv2.png/v1/crop/x_38,y_15,w_620,h_617/fill/w_264,h_262,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/unhcr-logo-png-transparent.png",
     agenda: "The European Refugee crises and the transpiring migration trends due to conflict zones with special emphasis on external actors and role of EU policies.",
     chairLetter: [
@@ -112,10 +111,10 @@ export const committees: CommitteeData[] = [
     ],
   },
   {
-    id: "ecosoc",
-    name: "United Nations Economic and Social Council",
-    shortName: "ECOSOC",
-    cardImage: ecosocImg,
+    id: "viceroys-cabinet",
+    name: "Viceroy's Cabinet",
+    shortName: "Viceroy's Cabinet",
+    cardImage: viceroysImg,
     logo: "https://static.wixstatic.com/media/9bbbe8_7895e5b978fa4c238ab6c4962af9e9fc~mv2.png/v1/fill/w_293,h_239,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/UNSC%20Logo_edited_edited.png",
     agenda: "Deliberating upon the Global Economic Turmoil of the 2008 Great Economic Recession with Special Emphasis on Housing Stabilisation and the Overall Degradation of the Worldwide GDP.",
     freezeDate: "March 8, 2009",
@@ -163,34 +162,6 @@ export const committees: CommitteeData[] = [
       { name: "Hridaiveer Bhati", role: "Scribe", image: "https://static.wixstatic.com/media/9bbbe8_2aa504cf502845d2acf98c7b6619a71d~mv2.jpg/v1/fill/w_203,h_283,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5596_edited.jpg" },
       { name: "Muaz Manzoor", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_9b01a6ba02a7475eadfaee049f46856e~mv2.jpg/v1/crop/x_0,y_678,w_3376,h_4644/fill/w_193,h_273,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WBS07430_JPG.jpg" },
       { name: "Samarth Khirwal", role: "Scribe", image: "https://static.wixstatic.com/media/9bbbe8_57c0fbf1c1504402a312ac02bdd8ce5a~mv2.jpg/v1/crop/x_0,y_97,w_1588,h_2184/fill/w_193,h_273,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5590_edited_edited.jpg" },
-    ],
-  },
-  {
-    id: "roman-senate",
-    name: "The Roman Senate",
-    shortName: "The Roman Senate",
-    cardImage: senateImg,
-    logo: "https://static.wixstatic.com/media/9bbbe8_5769a6b0e0b34315a50c4ff453ef5751~mv2.png/v1/crop/x_27,y_17,w_761,h_761/fill/w_329,h_329,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/RomanSenateLogo.png",
-    agenda: "Deliberating upon Rome's future in light of the assassination of the Dictator Perpetuo, Julius Caesar.",
-    freezeDate: "March 16, 44 BCE",
-    note: "This is a constant crisis committee.",
-    chairLetter: [
-      "The time has come for all of you to prove your allegiance to your motherland and serve the dream that is Rome. After the unprecedented series of events that have taken place, culminating in the assassination of the consul and Dictator Perpetuo, Rome now finds itself in an immensely vulnerable state.",
-      "Following the successful assassination of Julius Caesar by the Liberatores, the Senate now faces the social, political, and military repercussions that this event has unleashed.",
-      "May the Ides of March herald the dawn of a new era in Rome's storied history.",
-    ],
-    chairName: "Shreyas Shah",
-    chairRole: "Chairperson",
-    chairEmail: "chair.senate@welhamboys.org",
-    bgLink: "https://www.welhammun.org/_files/ugd/9bbbe8_3e2a8dd7636c4f608a5f759be7e56a97.pdf",
-    matrixLink: "https://www.welhammun.org/_files/ugd/9bbbe8_fcac14b1ed76486a96952d72e2918bf2.pdf",
-    eb: [
-      { name: "Shreyas Shah", role: "Chairperson", image: "https://static.wixstatic.com/media/9bbbe8_442d03c0824e48bb8ff5080b793c466b~mv2.jpg/v1/fill/w_278,h_278,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5631_edited.jpg" },
-      { name: "Tanveer Singh Madan", role: "Vice Chairperson", image: "https://static.wixstatic.com/media/9bbbe8_1583f5bfafdb4c059a120fbaa7bf6df1~mv2.jpg/v1/crop/x_275,y_0,w_3145,h_4151/fill/w_180,h_244,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5632_JPG.jpg" },
-      { name: "Adhyayan Gupta", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_30c0e294247d4c18a64039ef45db63f6~mv2.jpg/v1/crop/x_422,y_446,w_3002,h_3958/fill/w_180,h_244,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5624_JPG.jpg" },
-      { name: "Daksh Gupta", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_78282eed983d4c4c9d9643bb9b39228b~mv2.jpg/v1/crop/x_171,y_177,w_1724,h_2276/fill/w_180,h_244,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5622_edited.jpg" },
-      { name: "Agastya Gupta", role: "Scribe", image: "https://static.wixstatic.com/media/9bbbe8_ba4c4dbf7c914778be6341c20a90014c~mv2.jpg/v1/crop/x_340,y_177,w_3002,h_3958/fill/w_180,h_244,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5619_JPG.jpg" },
-      { name: "Vihaan Goel", role: "Scribe", image: "https://static.wixstatic.com/media/9bbbe8_4fe4850a5cf540e3b8b54eaaf49d1c30~mv2.jpg/v1/crop/x_436,y_380,w_2817,h_3714/fill/w_180,h_244,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5616_JPG.jpg" },
     ],
   },
   {
