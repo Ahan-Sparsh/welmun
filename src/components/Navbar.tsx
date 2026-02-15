@@ -28,7 +28,7 @@ const Navbar = memo(() => {
         <img
           src={welhamCrest}
           alt="Welham Boys' School"
-          className="h-16 w-16 object-contain"
+          className="h-16 w-16 object-contain mix-blend-screen"
         />
       </Link>
 
