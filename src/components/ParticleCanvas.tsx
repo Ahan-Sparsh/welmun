@@ -35,7 +35,7 @@ const ParticleCanvas = memo(() => {
       last = now - (delta % FPS_INTERVAL);
 
       ctx.clearRect(0, 0, w, h);
-      ctx.fillStyle = "rgba(46,33,21,0.35)";
+      ctx.fillStyle = "rgba(220,210,195,0.35)";
       ctx.beginPath();
       for (let i = 0; i < COUNT; i++) {
         ctx.moveTo(px[i] + pr[i], py[i]);
