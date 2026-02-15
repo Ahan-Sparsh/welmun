@@ -1,6 +1,8 @@
 import { useState, memo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import welhamLogo from "@/assets/welham-logo.png";
+import welmunCrest from "@/assets/welmun-crest.png";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -13,14 +15,22 @@ const navLinks = [
   
 ];
 
+const crestFilter = "brightness(0) saturate(100%) invert(75%) sepia(40%) saturate(500%) hue-rotate(10deg) brightness(95%)";
+
 const Navbar = memo(() => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full px-[5%] lg:px-[8%] py-5 flex justify-between items-center bg-background/95 z-[100]">
-      <Link to="/" className="font-display text-2xl font-bold text-primary cursor-none no-underline">
-        WELMUN
+    <nav className="fixed w-full px-[5%] lg:px-[8%] py-3 flex justify-between items-center bg-background/95 z-[100]">
+      {/* Welham school logo — left */}
+      <Link to="/" className="cursor-none shrink-0">
+        <img
+          src={welhamLogo}
+          alt="Welham Boys' School"
+          className="h-14 w-14 object-contain"
+          style={{ filter: crestFilter }}
+        />
       </Link>
 
       {/* Desktop nav */}
@@ -38,6 +48,14 @@ const Navbar = memo(() => {
           </li>
         ))}
       </ul>
+
+      {/* WELMUN crest — right (desktop) */}
+      <img
+        src={welmunCrest}
+        alt="WELMUN Crest"
+        className="hidden lg:block h-14 w-14 object-contain shrink-0"
+        style={{ filter: crestFilter }}
+      />
 
       {/* Hamburger button */}
       <button
