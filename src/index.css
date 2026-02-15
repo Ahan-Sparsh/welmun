@@ -6,52 +6,52 @@
 
 @layer base {
   :root {
-    --background: 40 20% 90%;
-    --foreground: 20 25% 15%;
+    --background: 20 30% 18%;
+    --foreground: 40 20% 90%;
 
-    --card: 38 18% 86%;
-    --card-foreground: 20 25% 15%;
+    --card: 18 25% 22%;
+    --card-foreground: 40 20% 90%;
 
-    --popover: 38 18% 86%;
-    --popover-foreground: 20 25% 15%;
+    --popover: 18 25% 22%;
+    --popover-foreground: 40 20% 90%;
 
-    --primary: 20 30% 18%;
-    --primary-foreground: 40 20% 90%;
+    --primary: 40 20% 90%;
+    --primary-foreground: 20 30% 18%;
 
-    --secondary: 38 15% 82%;
-    --secondary-foreground: 20 25% 15%;
+    --secondary: 18 20% 28%;
+    --secondary-foreground: 40 20% 90%;
 
-    --muted: 38 12% 84%;
-    --muted-foreground: 20 15% 40%;
+    --muted: 18 15% 25%;
+    --muted-foreground: 40 15% 65%;
 
-    --accent: 20 30% 18%;
-    --accent-foreground: 40 20% 90%;
+    --accent: 40 20% 90%;
+    --accent-foreground: 20 30% 18%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 20 20% 30%;
-    --input: 38 15% 82%;
-    --ring: 20 30% 18%;
+    --border: 40 20% 90%;
+    --input: 18 20% 28%;
+    --ring: 40 20% 90%;
 
     --radius: 0rem;
 
-    --gold: 20 30% 18%;
-    --light-gold: 20 20% 30%;
-    --muted-gold: 20 15% 40%;
+    --gold: 40 20% 90%;
+    --light-gold: 40 18% 80%;
+    --muted-gold: 40 15% 65%;
     --beige: 35 40% 93%;
     --dark-brown: 20 30% 18%;
     --rich-brown: 18 25% 22%;
     --soft-brown: 18 20% 28%;
 
-    --sidebar-background: 40 20% 90%;
-    --sidebar-foreground: 20 25% 15%;
-    --sidebar-primary: 20 30% 18%;
-    --sidebar-primary-foreground: 40 20% 90%;
-    --sidebar-accent: 38 15% 82%;
-    --sidebar-accent-foreground: 20 25% 15%;
-    --sidebar-border: 20 20% 30%;
-    --sidebar-ring: 20 30% 18%;
+    --sidebar-background: 20 30% 18%;
+    --sidebar-foreground: 40 20% 90%;
+    --sidebar-primary: 40 20% 90%;
+    --sidebar-primary-foreground: 20 30% 18%;
+    --sidebar-accent: 18 20% 28%;
+    --sidebar-accent-foreground: 40 20% 90%;
+    --sidebar-border: 40 20% 90%;
+    --sidebar-ring: 40 20% 90%;
   }
 }
 
@@ -80,7 +80,7 @@
   .gold-divider {
     width: 120px;
     height: 3px;
-    background: linear-gradient(to right, transparent, hsl(var(--dark-brown)), transparent);
+    background: linear-gradient(to right, transparent, hsl(var(--gold)), transparent);
     margin: 30px 0;
   }
 
