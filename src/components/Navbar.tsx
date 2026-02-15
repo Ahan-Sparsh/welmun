@@ -1,7 +1,6 @@
 import { useState, memo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import welmunCrest from "@/assets/welmun-crest.png";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -25,7 +24,7 @@ const Navbar = memo(() => {
       </Link>
 
       {/* Desktop nav */}
-      <ul className="hidden lg:flex gap-7 flex-wrap list-none items-center">
+      <ul className="hidden lg:flex gap-7 flex-wrap list-none">
         {navLinks.map((link) => (
           <li key={link.label}>
             <Link
@@ -39,16 +38,6 @@ const Navbar = memo(() => {
           </li>
         ))}
       </ul>
-
-      {/* Crest logo — far right on desktop */}
-      <img
-        src={welmunCrest}
-        alt="WELMUN Crest"
-        className="hidden lg:block h-14 w-14 object-contain"
-        style={{
-          filter: "brightness(0) saturate(100%) invert(75%) sepia(50%) saturate(600%) hue-rotate(10deg) brightness(100%) contrast(110%)",
-        }}
-      />
 
       {/* Hamburger button */}
       <button
