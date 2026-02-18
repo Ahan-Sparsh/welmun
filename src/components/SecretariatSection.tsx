@@ -26,7 +26,7 @@ const SecretariatSection = () => {
   return (
     <>
       {/* Secretariat */}
-      <section ref={secRef} id="secretariat" className="min-h-screen flex flex-col justify-center items-center px-[10%] py-24 reveal-section">
+      <section ref={secRef} id="secretariat" className="min-h-screen flex flex-col justify-center items-center px-4 sm:px-[5%] md:px-[10%] py-16 md:py-24 reveal-section">
         <h2 className="font-display text-4xl text-primary">Secretariat</h2>
         <div className="gold-divider" />
         {/* Secretary General - centered, slightly above */}
@@ -42,7 +42,7 @@ const SecretariatSection = () => {
         </div>
 
         {/* Other members in a single row */}
-        <div className="w-full flex justify-center gap-40 flex-wrap">
+        <div className="w-full flex justify-center gap-8 sm:gap-16 md:gap-24 lg:gap-40 flex-wrap">
           {otherMembers.map((m) => (
             <div
               key={m.role}
@@ -58,7 +58,7 @@ const SecretariatSection = () => {
       </section>
 
       {/* Tech Directors */}
-      <section ref={techRef} id="tech-directors" className="min-h-screen flex flex-col justify-center items-center px-[10%] py-24 reveal-section">
+      <section ref={techRef} id="tech-directors" className="min-h-screen flex flex-col justify-center items-center px-4 sm:px-[5%] md:px-[10%] py-16 md:py-24 reveal-section">
         <h2 className="font-display text-4xl text-primary">Technical Directors</h2>
         <div className="gold-divider" />
         <div className="w-full mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
