@@ -15,19 +15,19 @@ const Contact = () => {
 
   return (
     <PageLayout>
-      <h1 className="font-display text-5xl md:text-6xl text-primary mb-4 text-center">Contact Us</h1>
-      <div className="gold-divider mb-12" />
+      <h1 className="font-display text-4xl sm:text-5xl md:text-6xl text-primary mb-4 text-center">Contact Us</h1>
+      <div className="gold-divider mb-8 md:mb-12" />
 
-      <div ref={topRef} className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 reveal-section">
+      <div ref={topRef} className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 reveal-section">
         {/* Email Form */}
         <div>
-          <h2 className="font-display text-3xl text-primary mb-8 text-center">Email Us</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-primary mb-6 md:mb-8 text-center">Email Us</h2>
           {submitted ? (
             <p className="text-accent text-lg text-center">Thanks for submitting!</p>
           ) : (
-            <div className="bg-card/50 border border-primary/20 p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
+            <div className="bg-card/50 border border-primary/20 p-5 sm:p-8">
+              <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="text-muted-foreground text-sm mb-2 block">First name</label>
                     <input
@@ -77,9 +77,9 @@ const Contact = () => {
           )}
         </div>
 
-        {/* Map + Address + Secretary General */}
+        {/* Map + Address */}
         <div>
-          <h2 className="font-display text-3xl text-primary mb-8 text-center">Find Us</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-primary mb-6 md:mb-8 text-center">Find Us</h2>
           <div className="w-full aspect-[4/3] border border-primary/20 overflow-hidden">
             <iframe
               title="Welham Boys' School Location"
@@ -91,32 +91,30 @@ const Contact = () => {
             />
           </div>
 
-          {/* Our Address */}
-          <div className="text-center mt-8">
-            <h2 className="font-display text-2xl text-primary underline mb-3">Our Address</h2>
-            <p className="font-display text-lg text-primary">Welham Boys' School</p>
-            <p className="text-muted-foreground text-lg">5, Circular Road Dalanwala, Dehradun - 248001</p>
-            <p className="text-muted-foreground text-lg">+91-7409809908</p>
+          <div className="text-center mt-6 md:mt-8">
+            <h2 className="font-display text-xl md:text-2xl text-primary underline mb-3">Our Address</h2>
+            <p className="font-display text-base md:text-lg text-primary">Welham Boys' School</p>
+            <p className="text-muted-foreground text-base md:text-lg">5, Circular Road Dalanwala, Dehradun - 248001</p>
+            <p className="text-muted-foreground text-base md:text-lg">+91-7409809908</p>
           </div>
-
         </div>
       </div>
 
-      {/* Conference Director + Secretary General side by side */}
-      <div ref={bottomRef} className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 mt-16 reveal-section">
+      {/* Conference Director + Secretary General */}
+      <div ref={bottomRef} className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-12 md:mt-16 reveal-section">
         <div className="text-center">
-          <h2 className="font-display text-2xl text-primary underline mb-3">Conference Director</h2>
-          <p className="text-muted-foreground text-lg">Ms. Kiran Tripathi</p>
-          <p className="text-muted-foreground text-lg">+91-7409809908</p>
-          <a href="mailto:kirantripathi@welhamboys.org" className="text-primary hover:underline cursor-none text-lg">
+          <h2 className="font-display text-xl md:text-2xl text-primary underline mb-3">Conference Director</h2>
+          <p className="text-muted-foreground text-base md:text-lg">Ms. Kiran Tripathi</p>
+          <p className="text-muted-foreground text-base md:text-lg">+91-7409809908</p>
+          <a href="mailto:kirantripathi@welhamboys.org" className="text-primary hover:underline cursor-none text-base md:text-lg">
             kirantripathi@welhamboys.org
           </a>
         </div>
         <div className="text-center">
-          <h2 className="font-display text-2xl text-primary underline mb-3">Secretary-General</h2>
-          <p className="text-muted-foreground text-lg">Ahan Sparsh</p>
-          <p className="text-muted-foreground text-lg">+91-8709633816</p>
-          <a href="mailto:secretarygeneral@welhamboys.org" className="text-primary hover:underline cursor-none text-lg">
+          <h2 className="font-display text-xl md:text-2xl text-primary underline mb-3">Secretary-General</h2>
+          <p className="text-muted-foreground text-base md:text-lg">Ahan Sparsh</p>
+          <p className="text-muted-foreground text-base md:text-lg">+91-8709633816</p>
+          <a href="mailto:secretarygeneral@welhamboys.org" className="text-primary hover:underline cursor-none text-base md:text-lg">
             secretarygeneral@welhamboys.org
           </a>
         </div>
