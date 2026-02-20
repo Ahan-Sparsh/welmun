@@ -29,31 +29,37 @@ const SecretariatSection = () => {
       <section ref={secRef} id="secretariat" className="min-h-screen flex flex-col justify-center items-center px-4 sm:px-[5%] md:px-[10%] py-16 md:py-24 reveal-section">
         <h2 className="font-display text-4xl text-primary">Secretariat</h2>
         <div className="gold-divider" />
-        {/* Secretary General - centered, slightly above */}
-        <div className="flex justify-center mt-16 mb-6">
+        {/* All three in one row, Sec Gen slightly raised */}
+        <div className="w-full flex justify-center items-end gap-8 sm:gap-12 md:gap-16 lg:gap-24 flex-wrap mt-12">
+          {/* Left member */}
           <div
             className="hover-lift img-zoom bg-card p-8 text-center cursor-none overflow-hidden max-w-xs w-full"
+            onClick={() => setModalRole(otherMembers[0].role)}
+          >
+            <img src={otherMembers[0].img} alt={otherMembers[0].name} className="w-full h-[300px] object-cover mb-5" loading="lazy" />
+            <h3 className="font-display text-xl text-primary">{otherMembers[0].name}</h3>
+            <p className="text-muted-foreground text-sm mt-1">{otherMembers[0].role}</p>
+          </div>
+
+          {/* Secretary General - raised */}
+          <div
+            className="hover-lift img-zoom bg-card p-8 text-center cursor-none overflow-hidden max-w-xs w-full -translate-y-8 md:-translate-y-12"
             onClick={() => setModalRole(secGen.role)}
           >
             <img src={secGen.img} alt={secGen.name} className="w-full h-[300px] object-cover mb-5" loading="lazy" />
             <h3 className="font-display text-xl text-primary">{secGen.name}</h3>
             <p className="text-muted-foreground text-sm mt-1">{secGen.role}</p>
           </div>
-        </div>
 
-        {/* Other members in a single row */}
-        <div className="w-full flex justify-center gap-8 sm:gap-16 md:gap-24 lg:gap-40 flex-wrap">
-          {otherMembers.map((m) => (
-            <div
-              key={m.role}
-              className="hover-lift img-zoom bg-card p-8 text-center cursor-none overflow-hidden max-w-xs w-full"
-              onClick={() => setModalRole(m.role)}
-            >
-              <img src={m.img} alt={m.name} className="w-full h-[300px] object-cover mb-5" loading="lazy" />
-              <h3 className="font-display text-xl text-primary">{m.name}</h3>
-              <p className="text-muted-foreground text-sm mt-1">{m.role}</p>
-            </div>
-          ))}
+          {/* Right member */}
+          <div
+            className="hover-lift img-zoom bg-card p-8 text-center cursor-none overflow-hidden max-w-xs w-full"
+            onClick={() => setModalRole(otherMembers[1].role)}
+          >
+            <img src={otherMembers[1].img} alt={otherMembers[1].name} className="w-full h-[300px] object-cover mb-5" loading="lazy" />
+            <h3 className="font-display text-xl text-primary">{otherMembers[1].name}</h3>
+            <p className="text-muted-foreground text-sm mt-1">{otherMembers[1].role}</p>
+          </div>
         </div>
       </section>
 
