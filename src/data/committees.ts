@@ -4,6 +4,7 @@ import unodcImg from "@/assets/committees/unodc.jpg";
 import viceroysImg from "@/assets/committees/viceroys-cabinet.jpg";
 import loksabhaImg from "@/assets/committees/loksabha.jpg";
 import ipcImg from "@/assets/committees/ipc.jpg";
+import unhcrImg from "@/assets/committees/unhcr.jpg";
 
 export interface EBMember {
   name: string;
@@ -163,6 +164,21 @@ export const committees: CommitteeData[] = [
       { name: "Muaz Manzoor", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_9b01a6ba02a7475eadfaee049f46856e~mv2.jpg/v1/crop/x_0,y_678,w_3376,h_4644/fill/w_193,h_273,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WBS07430_JPG.jpg" },
       { name: "Samarth Khirwal", role: "Scribe", image: "https://static.wixstatic.com/media/9bbbe8_57c0fbf1c1504402a312ac02bdd8ce5a~mv2.jpg/v1/crop/x_0,y_97,w_1588,h_2184/fill/w_193,h_273,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5590_edited_edited.jpg" },
     ],
+  },
+  {
+    id: "unhrc",
+    name: "United Nations Human Rights Council",
+    shortName: "UNHRC",
+    cardImage: unhcrImg,
+    logo: "https://static.wixstatic.com/media/9bbbe8_01011cccbd1c434893d58de2d9b22db0~mv2.png/v1/crop/x_38,y_15,w_620,h_617/fill/w_264,h_262,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/unhcr-logo-png-transparent.png",
+    agenda: "To be announced.",
+    chairLetter: [
+      "Details for the United Nations Human Rights Council will be updated soon. Stay tuned for more information about the agenda, executive board, and background guides.",
+    ],
+    chairName: "TBA",
+    chairRole: "Chairperson",
+    chairEmail: "chair.unhrc@welhamboys.org",
+    eb: [],
   },
   {
     id: "ipc",
