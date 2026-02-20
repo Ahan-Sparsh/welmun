@@ -30,35 +30,35 @@ const SecretariatSection = () => {
         <h2 className="font-display text-4xl text-primary">Secretariat</h2>
         <div className="gold-divider" />
         {/* All three in one row, Sec Gen slightly raised */}
-        <div className="w-full flex justify-center items-end gap-8 sm:gap-12 md:gap-16 lg:gap-24 flex-wrap mt-12">
+        <div className="w-full grid grid-cols-3 gap-4 sm:gap-6 md:gap-10 lg:gap-16 mt-12 max-w-5xl mx-auto">
           {/* Left member */}
           <div
-            className="hover-lift img-zoom bg-card p-8 text-center cursor-none overflow-hidden max-w-xs w-full"
+            className="hover-lift img-zoom bg-card p-4 sm:p-6 md:p-8 text-center cursor-none overflow-hidden self-end"
             onClick={() => setModalRole(otherMembers[0].role)}
           >
-            <img src={otherMembers[0].img} alt={otherMembers[0].name} className="w-full h-[300px] object-cover mb-5" loading="lazy" />
-            <h3 className="font-display text-xl text-primary">{otherMembers[0].name}</h3>
-            <p className="text-muted-foreground text-sm mt-1">{otherMembers[0].role}</p>
+            <img src={otherMembers[0].img} alt={otherMembers[0].name} className="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover mb-5" loading="lazy" />
+            <h3 className="font-display text-base sm:text-lg md:text-xl text-primary">{otherMembers[0].name}</h3>
+            <p className="text-muted-foreground text-xs sm:text-sm mt-1">{otherMembers[0].role}</p>
           </div>
 
           {/* Secretary General - raised */}
           <div
-            className="hover-lift img-zoom bg-card p-8 text-center cursor-none overflow-hidden max-w-xs w-full -translate-y-8 md:-translate-y-12"
+            className="hover-lift img-zoom bg-card p-4 sm:p-6 md:p-8 text-center cursor-none overflow-hidden self-end -translate-y-8 md:-translate-y-12"
             onClick={() => setModalRole(secGen.role)}
           >
-            <img src={secGen.img} alt={secGen.name} className="w-full h-[300px] object-cover mb-5" loading="lazy" />
-            <h3 className="font-display text-xl text-primary">{secGen.name}</h3>
-            <p className="text-muted-foreground text-sm mt-1">{secGen.role}</p>
+            <img src={secGen.img} alt={secGen.name} className="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover mb-5" loading="lazy" />
+            <h3 className="font-display text-base sm:text-lg md:text-xl text-primary">{secGen.name}</h3>
+            <p className="text-muted-foreground text-xs sm:text-sm mt-1">{secGen.role}</p>
           </div>
 
           {/* Right member */}
           <div
-            className="hover-lift img-zoom bg-card p-8 text-center cursor-none overflow-hidden max-w-xs w-full"
+            className="hover-lift img-zoom bg-card p-4 sm:p-6 md:p-8 text-center cursor-none overflow-hidden self-end"
             onClick={() => setModalRole(otherMembers[1].role)}
           >
-            <img src={otherMembers[1].img} alt={otherMembers[1].name} className="w-full h-[300px] object-cover mb-5" loading="lazy" />
-            <h3 className="font-display text-xl text-primary">{otherMembers[1].name}</h3>
-            <p className="text-muted-foreground text-sm mt-1">{otherMembers[1].role}</p>
+            <img src={otherMembers[1].img} alt={otherMembers[1].name} className="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover mb-5" loading="lazy" />
+            <h3 className="font-display text-base sm:text-lg md:text-xl text-primary">{otherMembers[1].name}</h3>
+            <p className="text-muted-foreground text-xs sm:text-sm mt-1">{otherMembers[1].role}</p>
           </div>
         </div>
       </section>
