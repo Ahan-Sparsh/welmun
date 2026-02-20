@@ -35,7 +35,10 @@ const Committees = () => {
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full max-w-6xl"
         style={{ perspective: "1200px" }}
       >
-        {orderedCommittees.map((c, i) => (
+        {orderedCommittees.map((c, i) => {
+          // Center IPC (last item) when it's alone in its row
+          const isLastAlone = i === orderedCommittees.length - 1 && orderedCommittees.length % 3 === 1;
+          return (
             <motion.div
               key={c.id}
               initial={{ opacity: 0, rotateX: 65, y: 80, scale: 0.85 }}
@@ -47,6 +50,7 @@ const Committees = () => {
                 ease: [0.23, 1, 0.32, 1],
               }}
               style={{ transformOrigin: "bottom center" }}
+              className={isLastAlone ? "lg:col-start-2" : ""}
             >
               <Link
                 to={`/committees/${c.id}`}
@@ -70,7 +74,8 @@ const Committees = () => {
                 </div>
               </Link>
             </motion.div>
-        ))}
+          );
+        })}
       </div>
     </PageLayout>
   );
