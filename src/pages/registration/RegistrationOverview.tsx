@@ -9,7 +9,7 @@ const RegistrationOverview = () => (
     <Card className="bg-secondary/30 border-primary/20">
       <CardContent className="p-6 space-y-4">
         <p className="text-muted-foreground leading-relaxed">
-          The eleventh edition of the Welham Boys' School Model United Nations Conference (WELMUN 2025) will be held at Welham Boys' School, Dehradun from <span className="text-primary font-medium">Monday, July 28 to Wednesday, July 30, 2025</span>. The theme this year is <span className="text-primary font-medium italic">Orbis Vox — "Voice of the World"</span>.
+          The eleventh edition of the Welham Boys' School Model United Nations Conference (WELMUN 2025) will be held at Welham Boys' School, Dehradun from <span className="text-primary font-medium">Monday, July 28 to Wednesday, July 30, 2025</span>. The theme this year is <span className="text-primary font-medium italic">Ordo ab Chao — "Order from Chaos"</span>.
         </p>
         <div className="grid md:grid-cols-2 gap-4 mt-6">
           {[
