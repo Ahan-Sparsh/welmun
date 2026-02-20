@@ -5,8 +5,8 @@ const ContactBanner = () => {
     <section
       className="w-full h-full flex flex-col justify-between overflow-hidden bg-background px-8 md:px-16 py-12"
     >
-      {/* Top — Logos + Contact Us title + button */}
-      <div className="flex flex-col items-center justify-center text-center w-full pt-8">
+      {/* Top — Contact Us title + button centered */}
+      <div className="flex-1 flex flex-col items-center justify-center text-center">
         <h2 className="font-display text-6xl md:text-8xl lg:text-9xl text-primary tracking-wide leading-none uppercase">
           Contact Us
         </h2>
