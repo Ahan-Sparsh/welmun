@@ -26,7 +26,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" as const }}
           className="mt-4 text-primary text-xl md:text-3xl italic font-display tracking-wider"
         >
-          'Orbis Vox'
+          'Ordo ab Chao'
         </motion.p>
 
         <motion.div
