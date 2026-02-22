@@ -51,7 +51,7 @@ const Index = () => {
           <ParticleCanvas />
           {introVisible && <IntroScreen onEnter={handleEnter} />}
           <Navbar />
-          <HeroSection />
+          <HeroSection animateIn={!introVisible} />
           <div className="relative z-10">
             <SecretariatSection />
           </div>
