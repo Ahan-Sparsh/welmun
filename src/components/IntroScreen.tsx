@@ -89,7 +89,7 @@ const IntroScreen = ({ onEnter }: IntroScreenProps) => {
             textShadow: "0 0 40px hsl(40 20% 90% / 0.2)",
           }}
         >
-          WELMUN
+          WELMUN '26
         </h1>
         <p
           className="mt-3 text-lg md:text-2xl font-display italic tracking-wider text-muted-foreground"
