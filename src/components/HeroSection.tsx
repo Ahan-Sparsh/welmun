@@ -23,14 +23,18 @@ const fadeUp = {
   show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: "easeOut" as const } },
 };
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  animateIn?: boolean;
+}
+
+const HeroSection = ({ animateIn = true }: HeroSectionProps) => {
   return (
     <motion.section
       id="hero"
       className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden"
       variants={container}
       initial="hidden"
-      animate="show"
+      animate={animateIn ? "show" : "hidden"}
     >
       {/* Center content */}
       <div className="relative z-10 flex flex-col items-center text-center px-6">
