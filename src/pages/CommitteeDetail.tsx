@@ -89,18 +89,84 @@ const CommitteeDetail = () => {
             </div>
           </div>
 
-          {/* 3-column layout: Logo | Content | Chairperson */}
-          <div ref={headerRef} className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] gap-8 lg:gap-12 items-start mb-16 reveal-section">
-            {/* Left — Committee Logo */}
-            <div className="flex justify-center lg:justify-start">
+          {/* Layout: Photos | Content */}
+          <div ref={headerRef} className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 items-start mb-16 reveal-section">
+            {/* Left — Chair & Vice Chair Photos + Logo */}
+            <div className="flex flex-col items-center gap-6 lg:min-w-[280px]">
               <img
                 src={committee.logo}
                 alt={committee.name}
-                className="w-48 h-auto lg:w-56 object-contain"
+                className="w-36 h-auto object-contain mb-2"
               />
+              <div className="flex gap-4">
+                {committee.eb[0] && (
+                  <div className="flex flex-col items-center gap-2">
+                    <img
+                      src={committee.eb[0].image}
+                      alt={committee.eb[0].name}
+                      className="w-32 h-44 lg:w-36 lg:h-48 object-cover rounded-sm border border-primary/30"
+                    />
+                    <p className="text-primary font-display text-sm font-medium text-center leading-tight">
+                      {committee.eb[0].name}
+                    </p>
+                    <p className="text-accent italic text-xs text-center">
+                      {committee.eb[0].role}
+                    </p>
+                  </div>
+                )}
+                {committee.eb[1] && (
+                  <div className="flex flex-col items-center gap-2">
+                    <img
+                      src={committee.eb[1].image}
+                      alt={committee.eb[1].name}
+                      className="w-32 h-44 lg:w-36 lg:h-48 object-cover rounded-sm border border-primary/30"
+                    />
+                    <p className="text-primary font-display text-sm font-medium text-center leading-tight">
+                      {committee.eb[1].name}
+                    </p>
+                    <p className="text-accent italic text-xs text-center">
+                      {committee.eb[1].role}
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {/* Resource buttons */}
+              <div className="flex flex-col gap-3 w-full mt-2">
+                {committee.bgLink && (
+                  <a
+                    href={committee.bgLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-2.5 border border-primary text-primary text-sm text-center hover:bg-primary hover:text-primary-foreground transition-colors cursor-none"
+                  >
+                    Background Guide
+                  </a>
+                )}
+                {committee.matrixLink && (
+                  <a
+                    href={committee.matrixLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-2.5 border border-primary text-primary text-sm text-center hover:bg-primary hover:text-primary-foreground transition-colors cursor-none"
+                  >
+                    Matrix
+                  </a>
+                )}
+                {committee.ropLink && (
+                  <a
+                    href={committee.ropLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-2.5 border border-primary text-primary text-sm text-center hover:bg-primary hover:text-primary-foreground transition-colors cursor-none"
+                  >
+                    Rules of Procedure
+                  </a>
+                )}
+              </div>
             </div>
 
-            {/* Center — Name, Agenda, Letter */}
+            {/* Right — Name, Agenda, Letter */}
             <div className="flex flex-col">
               <h1 className="font-display text-3xl md:text-4xl text-primary mb-4">
                 {committee.name}
@@ -138,61 +204,6 @@ const CommitteeDetail = () => {
                 </p>
               </div>
             </div>
-
-            {/* Right — Chairperson Photo & Resource Links */}
-            <div className="flex flex-col items-center gap-4 lg:min-w-[200px]">
-              {committee.eb[0] && (
-                <>
-                  <img
-                    src={committee.eb[0].image}
-                    alt={committee.eb[0].name}
-                    className="w-40 h-40 lg:w-48 lg:h-48 object-cover rounded-full border-2 border-primary/30"
-                  />
-                  <div className="text-center">
-                    <p className="text-primary font-display text-lg font-medium">
-                      {committee.eb[0].name}
-                    </p>
-                    <p className="text-accent italic text-sm">
-                      {committee.eb[0].role}
-                    </p>
-                  </div>
-                </>
-              )}
-
-              {/* Resource buttons */}
-              <div className="flex flex-col gap-3 w-full mt-4">
-                {committee.bgLink && (
-                  <a
-                    href={committee.bgLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-2.5 border border-primary text-primary text-sm text-center hover:bg-primary hover:text-primary-foreground transition-colors cursor-none"
-                  >
-                    Background Guide
-                  </a>
-                )}
-                {committee.matrixLink && (
-                  <a
-                    href={committee.matrixLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-2.5 border border-primary text-primary text-sm text-center hover:bg-primary hover:text-primary-foreground transition-colors cursor-none"
-                  >
-                    Matrix
-                  </a>
-                )}
-                {committee.ropLink && (
-                  <a
-                    href={committee.ropLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-2.5 border border-primary text-primary text-sm text-center hover:bg-primary hover:text-primary-foreground transition-colors cursor-none"
-                  >
-                    Rules of Procedure
-                  </a>
-                )}
-              </div>
-            </div>
           </div>
 
           {/* Executive Board — all members */}
@@ -205,7 +216,7 @@ const CommitteeDetail = () => {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-32 h-32 object-cover rounded-full"
+                      className="w-28 h-36 object-cover rounded-sm border border-primary/20"
                       loading="lazy"
                     />
                     <p className="text-primary text-sm font-medium leading-tight">{member.name}</p>
