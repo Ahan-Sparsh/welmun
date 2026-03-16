@@ -207,7 +207,26 @@ const CommitteeDetail = () => {
             ) : <div />}
           </div>
 
-
+          {/* Executive Board — remaining members */}
+          {committee.eb.length > 2 && (
+            <div className="w-full max-w-6xl">
+              <h2 className="font-display text-2xl text-primary mb-8 text-center">Executive Board</h2>
+              <div ref={ebRef} className="flex flex-wrap justify-center gap-8">
+                {committee.eb.slice(2).map((member, i) => (
+                  <div key={member.name} data-reveal={i} className="flex flex-col items-center text-center gap-3 w-36">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-32 h-44 object-cover rounded-sm border-2 border-primary/40 shadow-[0_0_12px_hsl(var(--primary)/0.15)]"
+                      loading="lazy"
+                    />
+                    <p className="text-primary text-sm font-display font-medium leading-tight">{member.name}</p>
+                    <p className="text-accent text-xs italic">{member.role}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </main>
       </div>
     </>
