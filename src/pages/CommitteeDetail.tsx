@@ -210,7 +210,9 @@ const CommitteeDetail = () => {
                         loading="lazy"
                       />
                     ) : (
-                      <div className="w-28 h-36 rounded-sm border border-primary/20 bg-muted" />
+                      <div className="w-28 h-36 rounded-sm border border-primary/20 bg-muted/50 flex items-center justify-center">
+                        <span className="text-muted-foreground/60 font-display text-xs">TBA</span>
+                      </div>
                     )}
                     <p className="text-primary text-sm font-medium leading-tight">{member.name}</p>
                     <p className="text-accent text-xs italic">{member.role}</p>
