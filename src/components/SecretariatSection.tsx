@@ -73,7 +73,6 @@ const techContainer = {
 };
 
 const SecretariatSection = () => {
-  const [modalRole, setModalRole] = useState<string | null>(null);
 
   return (
     <>
