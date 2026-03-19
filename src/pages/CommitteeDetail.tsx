@@ -201,19 +201,19 @@ const CommitteeDetail = () => {
               <h2 className="font-display text-2xl text-primary mb-8">Executive Board</h2>
               <div ref={ebRef} className="flex flex-wrap justify-center gap-6">
                 {committee.eb.map((member, i) => (
-                  <div key={`${member.role}-${i}`} data-reveal={i} className="flex flex-col items-center text-center gap-2">
-                    {member.image ? (
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-28 h-36 object-cover rounded-sm border border-primary/20"
-                        loading="lazy"
-                      />
-                    ) : (
-                      <div className="w-28 h-36 rounded-sm border border-primary/20 bg-muted/50 flex items-center justify-center">
+                  <div key={`${member.role}-${i}`} data-reveal={i} className="flex flex-col items-center text-center gap-2 w-28">
+                    <div className="w-28 h-36 rounded-sm border border-primary/20 bg-muted/50 flex items-center justify-center overflow-hidden">
+                      {member.image ? (
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      ) : (
                         <span className="text-muted-foreground/60 font-display text-xs">TBA</span>
-                      </div>
-                    )}
+                      )}
+                    </div>
                     <p className="text-primary text-sm font-medium leading-tight">{member.name}</p>
                     <p className="text-accent text-xs italic">{member.role}</p>
                   </div>
