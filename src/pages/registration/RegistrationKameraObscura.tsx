@@ -1,8 +1,10 @@
 import { Camera, Video, CheckCircle, Mail, Phone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import PageLayout from "@/components/PageLayout";
 
 const RegistrationKameraObscura = () => (
-  <section className="space-y-8">
+  <PageLayout>
+  <section className="space-y-8 w-full max-w-4xl">
     <h2 className="font-display text-3xl text-primary mb-6 flex items-center gap-3">
       <Camera className="w-7 h-7" /> Kamera Obscura 8.0
     </h2>
