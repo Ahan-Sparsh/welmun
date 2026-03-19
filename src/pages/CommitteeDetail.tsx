@@ -100,11 +100,15 @@ const CommitteeDetail = () => {
               />
               {committee.eb[0] && (
                 <div className="flex flex-col items-center gap-2">
-                  <img
-                    src={committee.eb[0].image}
-                    alt={committee.eb[0].name}
-                    className="w-32 h-44 lg:w-36 lg:h-48 object-cover rounded-sm border border-primary/30"
-                  />
+                  {committee.eb[0].image ? (
+                    <img
+                      src={committee.eb[0].image}
+                      alt={committee.eb[0].name}
+                      className="w-32 h-44 lg:w-36 lg:h-48 object-cover rounded-sm border border-primary/30"
+                    />
+                  ) : (
+                    <div className="w-32 h-44 lg:w-36 lg:h-48 rounded-sm border border-primary/30 bg-muted" />
+                  )}
                   <p className="text-primary font-display text-sm font-medium text-center leading-tight">
                     {committee.eb[0].name}
                   </p>
@@ -196,12 +200,16 @@ const CommitteeDetail = () => {
               <div ref={ebRef} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center">
                 {committee.eb.map((member, i) => (
                   <div key={member.name} data-reveal={i} className="flex flex-col items-center text-center gap-2">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-28 h-36 object-cover rounded-sm border border-primary/20"
-                      loading="lazy"
-                    />
+                    {member.image ? (
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-28 h-36 object-cover rounded-sm border border-primary/20"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="w-28 h-36 rounded-sm border border-primary/20 bg-muted" />
+                    )}
                     <p className="text-primary text-sm font-medium leading-tight">{member.name}</p>
                     <p className="text-accent text-xs italic">{member.role}</p>
                   </div>
