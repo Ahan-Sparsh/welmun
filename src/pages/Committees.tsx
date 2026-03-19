@@ -36,13 +36,13 @@ const Committees = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
-        className="mb-12 w-full max-w-6xl p-5 rounded-lg border border-primary/20 bg-primary/5"
+        className="mb-12 w-full max-w-6xl p-5 rounded-lg border border-red-500/30 bg-red-500/10"
       >
         <div className="flex items-start gap-3">
-          <AlertCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-          <p className="text-muted-foreground text-sm leading-relaxed">
-            <span className="text-primary font-display font-medium">Important:</span> All delegates must submit their Position Papers by{" "}
-            <span className="text-primary font-medium">July 20, 2025</span>. Guidelines are provided in each committee's Background Guide. Late submissions will not be considered for Best Position Paper awards.
+          <AlertCircle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
+          <p className="text-red-300/90 text-sm leading-relaxed">
+            <span className="text-red-400 font-display font-semibold">Important:</span> All delegates must submit their Position Papers by{" "}
+            <span className="text-red-300 font-semibold">July 20, 2025</span>. Guidelines are provided in each committee's Background Guide. Late submissions will not be considered for Best Position Paper awards.
           </p>
         </div>
       </motion.div>
