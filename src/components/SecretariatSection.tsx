@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { motion } from "framer-motion";
 import { motion } from "framer-motion";
 import secGenPhoto from "@/assets/sec-gen.png";
 import underSecPhoto from "@/assets/under-sec.png";
