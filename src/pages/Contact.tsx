@@ -1,17 +1,9 @@
-import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Contact = () => {
-  const [form, setForm] = useState({ firstName: "", lastName: "", email: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
   const topRef = useScrollReveal<HTMLDivElement>(0.1);
   const bottomRef = useScrollReveal<HTMLDivElement>(0.1);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
 
   return (
     <PageLayout>
