@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { AlertCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import { committees } from "@/data/committees";
