@@ -58,6 +58,7 @@ export const committees: CommitteeData[] = [
       { name: "Shubh Sachet Prakash", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_d3dbdf1141d0436c848cbc73b6315544~mv2.jpg/v1/crop/x_0,y_261,w_3648,h_4800/fill/w_175,h_237,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5544_JPG.jpg" },
       { name: "Kushagra Gupta", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_dca912a8075b4a5a8a72983d08e78d56~mv2.jpg/v1/crop/x_293,y_0,w_3355,h_4422/fill/w_175,h_237,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5536_JPG.jpg" },
       { name: "Angad Singh", role: "Rapporteur", image: "https://static.wixstatic.com/media/9bbbe8_3b04f66283824ca69a4b95861821fa7e~mv2.jpg/v1/crop/x_293,y_0,w_3355,h_4422/fill/w_175,h_237,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5533_JPG.jpg" },
+      { name: "TBA", role: "Rapporteur", image: "" },
     ],
   },
   {
@@ -84,6 +85,7 @@ export const committees: CommitteeData[] = [
       { name: "Yash Jalan", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_73b771d631c54462b2b2c91efcb2b349~mv2.jpg/v1/crop/x_243,y_0,w_3231,h_4328/fill/w_189,h_260,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5485_JPG.jpg" },
       { name: "Aarav Bhimsaria", role: "Rapporteur", image: "https://static.wixstatic.com/media/9bbbe8_96b469b620f440019448f179c2f90fcd~mv2.jpg/v1/crop/x_537,y_222,w_3040,h_4068/fill/w_190,h_261,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5491_JPG.jpg" },
       { name: "Eshaan Tiwari", role: "Rapporteur", image: "https://static.wixstatic.com/media/9bbbe8_ccd59c71a93b4181bcdc2928895da001~mv2.jpg/v1/crop/x_288,y_130,w_3274,h_4381/fill/w_190,h_261,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5554_JPG.jpg" },
+      { name: "TBA", role: "Director", image: "" },
     ],
   },
   {
@@ -109,6 +111,8 @@ export const committees: CommitteeData[] = [
       { name: "Keshav Bhatia", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_5fc7ee5b049149a391194f7bcbe39b72~mv2.jpg/v1/crop/x_729,y_163,w_2631,h_3449/fill/w_205,h_275,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5498_JPG.jpg" },
       { name: "Angad Khurana", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_2fd82d461383447aa417cc5cf01ee284~mv2.jpg/v1/crop/x_557,y_484,w_2860,h_3745/fill/w_205,h_275,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5493_JPG.jpg" },
       { name: "Shrey Gupta", role: "Rapporteur", image: "https://static.wixstatic.com/media/9bbbe8_36d36a02fdf94cd992a3b554662ce6a3~mv2.jpg/v1/crop/x_262,y_29,w_3270,h_4282/fill/w_205,h_275,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5510_JPG.jpg" },
+      { name: "TBA", role: "Rapporteur", image: "" },
+      { name: "TBA", role: "Director", image: "" },
     ],
   },
   {
@@ -135,6 +139,8 @@ export const committees: CommitteeData[] = [
       { name: "Rakshit Bajaj", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_00b8ffe151de4a948dce9a1c83c4e013~mv2.jpg/v1/crop/x_498,y_457,w_2867,h_3765/fill/w_193,h_260,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5525_JPG.jpg" },
       { name: "Aarav Agarwal", role: "Rapporteur", image: "https://static.wixstatic.com/media/9bbbe8_d07822137f5f40e485ffc684316bcea0~mv2.jpg/v1/crop/x_179,y_308,w_3469,h_4560/fill/w_193,h_260,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5526_JPG.jpg" },
       { name: "Atharva Agrawal", role: "Rapporteur", image: "https://static.wixstatic.com/media/9bbbe8_9c88e9c2bfe84869ab7b2fa3201030fc~mv2.jpg/v1/crop/x_254,y_239,w_3394,h_4441/fill/w_194,h_260,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5517_JPG.jpg" },
+      { name: "TBA", role: "Director", image: "" },
+      { name: "TBA", role: "Director", image: "" },
     ],
   },
   {
@@ -154,6 +160,11 @@ export const committees: CommitteeData[] = [
     eb: [
       { name: "TBA", role: "Chairperson", image: "" },
       { name: "TBA", role: "Vice Chairperson", image: "" },
+      { name: "TBA", role: "Director", image: "" },
+      { name: "TBA", role: "Director", image: "" },
+      { name: "TBA", role: "Director", image: "" },
+      { name: "TBA", role: "Rapporteur", image: "" },
+      { name: "TBA", role: "Rapporteur", image: "" },
     ],
   },
   {
@@ -172,6 +183,11 @@ export const committees: CommitteeData[] = [
     eb: [
       { name: "TBA", role: "Chairperson", image: "" },
       { name: "TBA", role: "Vice Chairperson", image: "" },
+      { name: "TBA", role: "Director", image: "" },
+      { name: "TBA", role: "Director", image: "" },
+      { name: "TBA", role: "Director", image: "" },
+      { name: "TBA", role: "Rapporteur", image: "" },
+      { name: "TBA", role: "Rapporteur", image: "" },
     ],
   },
   {
