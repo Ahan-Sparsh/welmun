@@ -167,7 +167,6 @@ const SecretariatSection = () => {
               key={t.name}
               variants={i === 0 ? cardFromLeft : cardFromRight}
               className="hover-lift img-zoom bg-card p-8 text-center cursor-none overflow-hidden"
-              onClick={() => setModalRole(t.role)}
             >
               <div className="w-full h-[300px] bg-muted/30 mb-5 flex items-center justify-center">
                 <span className="text-muted-foreground/50 font-display text-lg">Coming Soon</span>
