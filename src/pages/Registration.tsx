@@ -10,7 +10,7 @@ import {
   HelpCircle,
   Download,
   Hotel,
-  Camera,
+  
 } from "lucide-react";
 
 const sections = [
