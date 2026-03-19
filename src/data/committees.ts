@@ -111,6 +111,8 @@ export const committees: CommitteeData[] = [
       { name: "Keshav Bhatia", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_5fc7ee5b049149a391194f7bcbe39b72~mv2.jpg/v1/crop/x_729,y_163,w_2631,h_3449/fill/w_205,h_275,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5498_JPG.jpg" },
       { name: "Angad Khurana", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_2fd82d461383447aa417cc5cf01ee284~mv2.jpg/v1/crop/x_557,y_484,w_2860,h_3745/fill/w_205,h_275,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5493_JPG.jpg" },
       { name: "Shrey Gupta", role: "Rapporteur", image: "https://static.wixstatic.com/media/9bbbe8_36d36a02fdf94cd992a3b554662ce6a3~mv2.jpg/v1/crop/x_262,y_29,w_3270,h_4282/fill/w_205,h_275,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5510_JPG.jpg" },
+      { name: "TBA", role: "Rapporteur", image: "" },
+      { name: "TBA", role: "Director", image: "" },
     ],
   },
   {
