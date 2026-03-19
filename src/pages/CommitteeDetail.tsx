@@ -100,11 +100,15 @@ const CommitteeDetail = () => {
               />
               {committee.eb[0] && (
                 <div className="flex flex-col items-center gap-2">
-                  <img
-                    src={committee.eb[0].image}
-                    alt={committee.eb[0].name}
-                    className="w-32 h-44 lg:w-36 lg:h-48 object-cover rounded-sm border border-primary/30"
-                  />
+                  {committee.eb[0].image ? (
+                    <img
+                      src={committee.eb[0].image}
+                      alt={committee.eb[0].name}
+                      className="w-32 h-44 lg:w-36 lg:h-48 object-cover rounded-sm border border-primary/30"
+                    />
+                  ) : (
+                    <div className="w-32 h-44 lg:w-36 lg:h-48 rounded-sm border border-primary/30 bg-muted" />
+                  )}
                   <p className="text-primary font-display text-sm font-medium text-center leading-tight">
                     {committee.eb[0].name}
                   </p>
