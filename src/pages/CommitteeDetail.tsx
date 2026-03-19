@@ -107,7 +107,9 @@ const CommitteeDetail = () => {
                       className="w-32 h-44 lg:w-36 lg:h-48 object-cover rounded-sm border border-primary/30"
                     />
                   ) : (
-                    <div className="w-32 h-44 lg:w-36 lg:h-48 rounded-sm border border-primary/30 bg-muted" />
+                    <div className="w-32 h-44 lg:w-36 lg:h-48 rounded-sm border border-primary/30 bg-muted/50 flex items-center justify-center">
+                      <span className="text-muted-foreground/60 font-display text-xs">TBA</span>
+                    </div>
                   )}
                   <p className="text-primary font-display text-sm font-medium text-center leading-tight">
                     {committee.eb[0].name}
@@ -208,7 +210,9 @@ const CommitteeDetail = () => {
                         loading="lazy"
                       />
                     ) : (
-                      <div className="w-28 h-36 rounded-sm border border-primary/20 bg-muted" />
+                      <div className="w-28 h-36 rounded-sm border border-primary/20 bg-muted/50 flex items-center justify-center">
+                        <span className="text-muted-foreground/60 font-display text-xs">TBA</span>
+                      </div>
                     )}
                     <p className="text-primary text-sm font-medium leading-tight">{member.name}</p>
                     <p className="text-accent text-xs italic">{member.role}</p>
