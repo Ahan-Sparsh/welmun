@@ -95,22 +95,6 @@ const Committees = () => {
         })}
       </div>
 
-      {/* Position Paper Deadline Note */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="mt-12 w-full max-w-6xl p-5 rounded-lg border border-primary/20 bg-primary/5"
-      >
-        <div className="flex items-start gap-3">
-          <AlertCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-          <p className="text-muted-foreground text-sm leading-relaxed">
-            <span className="text-primary font-display font-medium">Important:</span> All delegates must submit their Position Papers by{" "}
-            <span className="text-primary font-medium">July 20, 2025</span>. Guidelines are provided in each committee's Background Guide. Late submissions will not be considered for Best Position Paper awards.
-          </p>
-        </div>
-      </motion.div>
     </PageLayout>
   );
 };
