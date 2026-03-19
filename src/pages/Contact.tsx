@@ -99,7 +99,7 @@ const Contact = () => {
           <a href="https://maps.app.goo.gl/T9LFVLQLBteNxTXs5" target="_blank" rel="noopener noreferrer" className="block w-full aspect-[4/3] border border-primary/20 overflow-hidden cursor-none">
             <iframe
               title="Welham Boys' School Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.8!2d78.0302!3d30.3191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929da37ddd0c7%3A0x3c15a1e386b7e3b5!2sWelham%20Boys&#39;%20School!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              src="https://maps.google.com/maps?q=Welham+Boys+School+Dehradun&t=&z=15&ie=UTF8&iwloc=&output=embed"
               className="w-full h-full border-0 pointer-events-none"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
