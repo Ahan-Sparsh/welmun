@@ -117,7 +117,6 @@ const SecretariatSection = () => {
           <motion.div
             variants={cardFromBottom}
             className="hover-lift img-zoom bg-card p-4 sm:p-6 md:p-8 text-center cursor-none overflow-hidden self-end -translate-y-8 md:-translate-y-12"
-            onClick={() => setModalRole(secGen.role)}
           >
             <img src={secGen.img} alt={secGen.name} className="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover mb-5" loading="lazy" />
             <h3 className="font-display text-base sm:text-lg md:text-xl text-primary">{secGen.name}</h3>
