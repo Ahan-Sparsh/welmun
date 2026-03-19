@@ -98,38 +98,21 @@ const CommitteeDetail = () => {
                 alt={committee.name}
                 className="w-36 h-auto object-contain mb-2"
               />
-              <div className="flex gap-4">
-                {committee.eb[0] && (
-                  <div className="flex flex-col items-center gap-2">
-                    <img
-                      src={committee.eb[0].image}
-                      alt={committee.eb[0].name}
-                      className="w-32 h-44 lg:w-36 lg:h-48 object-cover rounded-sm border border-primary/30"
-                    />
-                    <p className="text-primary font-display text-sm font-medium text-center leading-tight">
-                      {committee.eb[0].name}
-                    </p>
-                    <p className="text-accent italic text-xs text-center">
-                      {committee.eb[0].role}
-                    </p>
-                  </div>
-                )}
-                {committee.eb[1] && (
-                  <div className="flex flex-col items-center gap-2">
-                    <img
-                      src={committee.eb[1].image}
-                      alt={committee.eb[1].name}
-                      className="w-32 h-44 lg:w-36 lg:h-48 object-cover rounded-sm border border-primary/30"
-                    />
-                    <p className="text-primary font-display text-sm font-medium text-center leading-tight">
-                      {committee.eb[1].name}
-                    </p>
-                    <p className="text-accent italic text-xs text-center">
-                      {committee.eb[1].role}
-                    </p>
-                  </div>
-                )}
-              </div>
+              {committee.eb[0] && (
+                <div className="flex flex-col items-center gap-2">
+                  <img
+                    src={committee.eb[0].image}
+                    alt={committee.eb[0].name}
+                    className="w-32 h-44 lg:w-36 lg:h-48 object-cover rounded-sm border border-primary/30"
+                  />
+                  <p className="text-primary font-display text-sm font-medium text-center leading-tight">
+                    {committee.eb[0].name}
+                  </p>
+                  <p className="text-accent italic text-xs text-center">
+                    {committee.eb[0].role}
+                  </p>
+                </div>
+              )}
 
               {/* Resource buttons */}
               <div className="flex flex-col gap-3 w-full mt-2">
