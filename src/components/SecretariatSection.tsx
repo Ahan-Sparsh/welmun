@@ -114,44 +114,26 @@ const SecretariatSection = () => {
           style={{ transformOrigin: "center" }}
         />
 
-        {/* Mobile: auto-swiping carousel */}
         {isMobile ? (
-          <div className="w-full mt-12 flex flex-col items-center">
-            <div className="relative w-[75%] max-w-xs overflow-hidden" style={{ minHeight: 420 }}>
-              <AnimatePresence initial={false} custom={direction} mode="wait">
-                <motion.div
-                  key={activeIndex}
-                  custom={direction}
-                  variants={slideVariants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                  className="bg-card p-6 text-center cursor-none overflow-hidden"
-                >
-                  <img
-                    src={allMembers[activeIndex].img}
-                    alt={allMembers[activeIndex].name}
-                    className="w-full h-auto aspect-[3/4] object-cover object-top mb-5 bg-secondary"
-                  />
-                  <h3 className="font-display text-lg text-primary">{allMembers[activeIndex].name}</h3>
-                  <p className="text-muted-foreground text-sm mt-1">{allMembers[activeIndex].role}</p>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-            {/* Dots */}
-            <div className="flex gap-2 mt-6">
-              {allMembers.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => { setDirection(i > activeIndex ? 1 : -1); setActiveIndex(i); }}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 cursor-none ${
-                    i === activeIndex ? "bg-primary w-6" : "bg-muted-foreground/30"
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
+          <motion.div
+            className="w-full mt-12 flex flex-col items-center gap-8"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
+            {allMembers.map((m, i) => (
+              <motion.div
+                key={m.name}
+                variants={cardFromBottom}
+                className="hover-lift img-zoom bg-card p-6 text-center cursor-none overflow-hidden w-[80%] max-w-xs"
+              >
+                <img src={m.img} alt={m.name} className="w-full h-auto aspect-[3/4] object-cover object-top mb-5 bg-secondary" loading="lazy" />
+                <h3 className="font-display text-lg text-primary">{m.name}</h3>
+                <p className="text-muted-foreground text-sm mt-1">{m.role}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         ) : (
           /* Desktop: side-by-side with elevated sec gen */
           <motion.div
