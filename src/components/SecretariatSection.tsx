@@ -167,7 +167,7 @@ const SecretariatSection = () => {
               variants={i === 0 ? cardFromLeft : cardFromRight}
               className="hover-lift img-zoom bg-card p-8 text-center cursor-none overflow-hidden"
             >
-              <img src={t.img} alt={t.name} className="w-full h-[300px] object-cover mb-5" loading="lazy" />
+              <img src={t.img} alt={t.name} className="w-full h-auto aspect-[3/4] object-cover object-top mb-5 bg-secondary" loading="lazy" />
               <h3 className="font-display text-xl text-primary">{t.name || t.role}</h3>
               <p className="text-muted-foreground text-sm mt-1">{t.role}</p>
             </motion.div>
