@@ -177,7 +177,7 @@ const SecretariatSection = () => {
         />
 
         <motion.div
-          className="w-full mt-16 grid grid-cols-1 md:grid-cols-2 gap-12"
+          className="w-full mt-16 flex flex-col md:flex-row items-center justify-center gap-10 lg:gap-16"
           variants={techContainer}
           initial="hidden"
           whileInView="visible"
@@ -187,7 +187,7 @@ const SecretariatSection = () => {
             <motion.div
               key={t.name}
               variants={i === 0 ? cardFromLeft : cardFromRight}
-              className="hover-lift bg-card p-8 text-center cursor-none overflow-hidden"
+              className="hover-lift bg-card p-6 text-center cursor-none overflow-hidden w-[80%] max-w-xs"
             >
               <div className="w-full aspect-[3/4] bg-secondary mb-5" />
               <h3 className="font-display text-xl text-primary">{t.name}</h3>
