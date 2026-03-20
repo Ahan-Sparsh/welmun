@@ -88,7 +88,7 @@ const SecretariatSection = () => {
     const timer = setInterval(() => {
       setDirection(1);
       setActiveIndex((prev) => (prev + 1) % allMembers.length);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(timer);
   }, [isMobile]);
 
