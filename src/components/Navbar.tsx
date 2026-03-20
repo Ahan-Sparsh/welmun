@@ -34,7 +34,7 @@ const Navbar = memo(() => {
       </div>
 
       {/* Desktop nav */}
-      <ul className="hidden lg:flex gap-4 flex-nowrap list-none mx-auto">
+      <ul className="hidden xl:flex gap-4 flex-nowrap list-none mx-auto">
         {navLinks.map((link) => (
           <li key={link.label}>
             <Link
@@ -52,7 +52,7 @@ const Navbar = memo(() => {
       <div className="flex items-center gap-3">
         {/* Hamburger button */}
         <button
-          className="lg:hidden text-primary cursor-none z-[110]"
+          className="xl:hidden text-primary cursor-none z-[110]"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -63,7 +63,7 @@ const Navbar = memo(() => {
 
       {/* Mobile/Tablet menu overlay */}
       <div
-        className={`fixed inset-0 w-full h-screen bg-background z-[105] flex flex-col items-center justify-center gap-5 lg:hidden transition-all duration-300 ${
+        className={`fixed inset-0 w-full h-screen bg-background z-[105] flex flex-col items-center justify-center gap-5 xl:hidden transition-all duration-300 ${
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
