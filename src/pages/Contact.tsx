@@ -84,7 +84,7 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="px-10 py-2.5 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors cursor-none font-display tracking-wider"
+                  className="px-10 py-2.5 border-2 border-blue-accent text-blue-accent hover:bg-blue-accent hover:text-blue-accent-foreground transition-colors cursor-none font-display tracking-wider"
                 >
                   Submit
                 </button>
