@@ -113,7 +113,7 @@ const SecretariatSection = () => {
               >
                 <img src={m.img} alt={m.name} className="w-full h-auto aspect-[3/4] object-cover object-top mb-5 bg-secondary" loading="lazy" />
                 <h3 className="font-display text-lg text-primary">{m.name}</h3>
-                <p className="text-blue-accent text-sm mt-1">{m.role}</p>
+                <p className="text-muted-foreground text-sm mt-1">{m.role}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -132,7 +132,7 @@ const SecretariatSection = () => {
             >
               <img src={allMembers[1].img} alt={allMembers[1].name} className="w-full h-auto aspect-[3/4] object-cover object-top mb-5 bg-secondary" loading="lazy" />
               <h3 className="font-display text-xl text-primary">{allMembers[1].name}</h3>
-              <p className="text-blue-accent text-sm mt-1">{allMembers[1].role}</p>
+              <p className="text-muted-foreground text-sm mt-1">{allMembers[1].role}</p>
             </motion.div>
 
             <motion.div
@@ -141,7 +141,7 @@ const SecretariatSection = () => {
             >
               <img src={allMembers[0].img} alt={allMembers[0].name} className="w-full h-auto aspect-[3/4] object-cover object-top mb-5 bg-secondary" loading="lazy" />
               <h3 className="font-display text-xl text-primary">{allMembers[0].name}</h3>
-              <p className="text-blue-accent text-sm mt-1">{allMembers[0].role}</p>
+              <p className="text-muted-foreground text-sm mt-1">{allMembers[0].role}</p>
             </motion.div>
 
             <motion.div
@@ -150,7 +150,7 @@ const SecretariatSection = () => {
             >
               <img src={allMembers[2].img} alt={allMembers[2].name} className="w-full h-auto aspect-[3/4] object-cover object-top mb-5 bg-secondary" loading="lazy" />
               <h3 className="font-display text-xl text-primary">{allMembers[2].name}</h3>
-              <p className="text-blue-accent text-sm mt-1">{allMembers[2].role}</p>
+              <p className="text-muted-foreground text-sm mt-1">{allMembers[2].role}</p>
             </motion.div>
           </motion.div>
         )}
@@ -191,7 +191,7 @@ const SecretariatSection = () => {
             >
               <div className="w-full aspect-[3/4] bg-secondary mb-5" />
               <h3 className="font-display text-xl text-primary">{t.name}</h3>
-              <p className="text-blue-accent text-sm mt-1">{t.role}</p>
+              <p className="text-muted-foreground text-sm mt-1">{t.role}</p>
             </motion.div>
           ))}
         </motion.div>
