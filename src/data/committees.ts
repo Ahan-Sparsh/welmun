@@ -38,7 +38,7 @@ export const committees: CommitteeData[] = [
     shortName: "UNSC",
     cardImage: unscImg,
     logo: "https://static.wixstatic.com/media/9bbbe8_7895e5b978fa4c238ab6c4962af9e9fc~mv2.png/v1/fill/w_346,h_282,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/UNSC%20Logo_edited_edited.png",
-    agenda: "Strengthening Regional Security Frameworks: Countering destabilization in the Panama Nexus and terror insurgencies across Latin-America.",
+    agenda: "De-escalating the Conflagration of the Israel–Iran Military Conflict.",
     freezeDate: "February 04, 2031",
     chairLetter: [
       "It gives me immense pleasure to welcome you all to the 11th edition of the Welham Model United Nations Conference. It is a great honor for me to serve as the Chairperson of the United Nations Security Council this year.",
