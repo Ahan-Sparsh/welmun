@@ -173,7 +173,7 @@ export const committees: CommitteeData[] = [
     shortName: "UNHRC",
     cardImage: unhcrImg,
     logo: "https://static.wixstatic.com/media/9bbbe8_01011cccbd1c434893d58de2d9b22db0~mv2.png/v1/crop/x_38,y_15,w_620,h_617/fill/w_264,h_262,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/unhcr-logo-png-transparent.png",
-    agenda: "To be announced.",
+    agenda: "Examining and Safeguarding the Human and Legal Rights of Asylum Seekers, Migrant Workers and Detained Individuals across the world.",
     chairLetter: [
       "Details for the United Nations Human Rights Council will be updated soon. Stay tuned for more information about the agenda, executive board, and background guides.",
     ],
