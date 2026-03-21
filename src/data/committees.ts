@@ -149,7 +149,7 @@ export const committees: CommitteeData[] = [
     shortName: "SPECPOL",
     cardImage: loksabhaImg,
     logo: "https://static.wixstatic.com/media/9bbbe8_7895e5b978fa4c238ab6c4962af9e9fc~mv2.png/v1/fill/w_346,h_282,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/UNSC%20Logo_edited_edited.png",
-    agenda: "To be announced.",
+    agenda: "Revisiting the Montevideo Convention and International Guidelines for the recognition of Secessionist Entities while limiting discretion of Parent States.",
     chairLetter: [
       "The Special Political and Decolonization Committee (SPECPOL) is the Fourth Committee of the United Nations General Assembly. It deals with a variety of subjects which include those related to decolonization, Palestinian refugees, human rights, peacekeeping, mine action, outer space, public information, atomic radiation, and the University for Peace.",
       "Details for this committee will be updated soon. Stay tuned for more information about the agenda, executive board, and background guides.",
