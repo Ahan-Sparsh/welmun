@@ -38,7 +38,7 @@ export const committees: CommitteeData[] = [
     shortName: "UNSC",
     cardImage: unscImg,
     logo: "https://static.wixstatic.com/media/9bbbe8_7895e5b978fa4c238ab6c4962af9e9fc~mv2.png/v1/fill/w_346,h_282,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/UNSC%20Logo_edited_edited.png",
-    agenda: "Strengthening Regional Security Frameworks: Countering destabilization in the Panama Nexus and terror insurgencies across Latin-America.",
+    agenda: "De-escalating the Conflagration of the Israel–Iran Military Conflict.",
     freezeDate: "February 04, 2031",
     chairLetter: [
       "It gives me immense pleasure to welcome you all to the 11th edition of the Welham Model United Nations Conference. It is a great honor for me to serve as the Chairperson of the United Nations Security Council this year.",
@@ -67,7 +67,7 @@ export const committees: CommitteeData[] = [
     shortName: "DISEC",
     cardImage: disecImg,
     logo: "https://static.wixstatic.com/media/9bbbe8_7895e5b978fa4c238ab6c4962af9e9fc~mv2.png/v1/fill/w_346,h_282,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/UNSC%20Logo_edited_edited.png",
-    agenda: "Combating the Illicit Trade of Small Arms and Light Weapons to Enhance Global Security.",
+    agenda: "Reassessing Global Security Architectures Governing Strategically Contested Territories amid intensifying Great Power Rivalry.",
     chairLetter: [
       "In the last few years, the world has undergone a lot of changes, most of which have been detrimental to humanity. Be it the innumerable conflicts and battles that rage on in different corners of the world, or the devastating effects of nature's wrath that we have incurred, the problems are miles away from ceasing.",
       "The illicit trade of small arms and light weapons, facilitated by growing technology, has only risen, proportional to the number of conflicts around the world. From small regional gang turf wars in South America to wars between countries in the Middle East and North Asia, these arms seem to have found their way everywhere.",
@@ -94,7 +94,7 @@ export const committees: CommitteeData[] = [
     shortName: "UNODC",
     cardImage: unodcImg,
     logo: "https://static.wixstatic.com/media/9bbbe8_01011cccbd1c434893d58de2d9b22db0~mv2.png/v1/crop/x_38,y_15,w_620,h_617/fill/w_264,h_262,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/unhcr-logo-png-transparent.png",
-    agenda: "The European Refugee crises and the transpiring migration trends due to conflict zones with special emphasis on external actors and role of EU policies.",
+    agenda: "Disrupting the Nexus Between Synthetic Narcotics Trafficking and Human Exploitation by Transnational Organised Crime Syndicates.",
     chairLetter: [
       "\"The true measure of any society is how it treats its most vulnerable.\" — Mahatma Gandhi",
       "In the narrative of our shared history, there are chapters not inked with pen, but stained with the red. The red of agony, the red of pain, and the red of displacement. The refugee crisis is not a distant issue—it is the ongoing erosion of civil order that follows every wind of war our world has weathered.",
@@ -121,7 +121,7 @@ export const committees: CommitteeData[] = [
     shortName: "Council of Hindustan",
     cardImage: viceroysImg,
     logo: "https://static.wixstatic.com/media/9bbbe8_7895e5b978fa4c238ab6c4962af9e9fc~mv2.png/v1/fill/w_293,h_239,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/UNSC%20Logo_edited_edited.png",
-    agenda: "Deliberating upon the Global Economic Turmoil of the 2008 Great Economic Recession with Special Emphasis on Housing Stabilisation and the Overall Degradation of the Worldwide GDP.",
+    agenda: "The Revolt of 1857.",
     freezeDate: "March 8, 2009",
     chairLetter: [
       "\"It ain't what you don't know that gets you into trouble. It's what you know for sure that just ain't so.\" — Mark Twain",
@@ -149,7 +149,7 @@ export const committees: CommitteeData[] = [
     shortName: "SPECPOL",
     cardImage: loksabhaImg,
     logo: "https://static.wixstatic.com/media/9bbbe8_7895e5b978fa4c238ab6c4962af9e9fc~mv2.png/v1/fill/w_346,h_282,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/UNSC%20Logo_edited_edited.png",
-    agenda: "To be announced.",
+    agenda: "Revisiting the Montevideo Convention and International Guidelines for the recognition of Secessionist Entities while limiting discretion of Parent States.",
     chairLetter: [
       "The Special Political and Decolonization Committee (SPECPOL) is the Fourth Committee of the United Nations General Assembly. It deals with a variety of subjects which include those related to decolonization, Palestinian refugees, human rights, peacekeeping, mine action, outer space, public information, atomic radiation, and the University for Peace.",
       "Details for this committee will be updated soon. Stay tuned for more information about the agenda, executive board, and background guides.",
@@ -173,7 +173,7 @@ export const committees: CommitteeData[] = [
     shortName: "UNHRC",
     cardImage: unhcrImg,
     logo: "https://static.wixstatic.com/media/9bbbe8_01011cccbd1c434893d58de2d9b22db0~mv2.png/v1/crop/x_38,y_15,w_620,h_617/fill/w_264,h_262,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/unhcr-logo-png-transparent.png",
-    agenda: "To be announced.",
+    agenda: "Examining and Safeguarding the Human and Legal Rights of Asylum Seekers, Migrant Workers and Detained Individuals across the world.",
     chairLetter: [
       "Details for the United Nations Human Rights Council will be updated soon. Stay tuned for more information about the agenda, executive board, and background guides.",
     ],
