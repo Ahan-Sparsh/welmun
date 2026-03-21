@@ -94,7 +94,7 @@ export const committees: CommitteeData[] = [
     shortName: "UNODC",
     cardImage: unodcImg,
     logo: "https://static.wixstatic.com/media/9bbbe8_01011cccbd1c434893d58de2d9b22db0~mv2.png/v1/crop/x_38,y_15,w_620,h_617/fill/w_264,h_262,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/unhcr-logo-png-transparent.png",
-    agenda: "The European Refugee crises and the transpiring migration trends due to conflict zones with special emphasis on external actors and role of EU policies.",
+    agenda: "Disrupting the Nexus Between Synthetic Narcotics Trafficking and Human Exploitation by Transnational Organised Crime Syndicates.",
     chairLetter: [
       "\"The true measure of any society is how it treats its most vulnerable.\" — Mahatma Gandhi",
       "In the narrative of our shared history, there are chapters not inked with pen, but stained with the red. The red of agony, the red of pain, and the red of displacement. The refugee crisis is not a distant issue—it is the ongoing erosion of civil order that follows every wind of war our world has weathered.",
