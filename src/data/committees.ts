@@ -117,8 +117,8 @@ export const committees: CommitteeData[] = [
   },
   {
     id: "viceroys-cabinet",
-    name: "Viceroy's Cabinet",
-    shortName: "Viceroy's Cabinet",
+    name: "Council of Hindustan",
+    shortName: "Council of Hindustan",
     cardImage: viceroysImg,
     logo: "https://static.wixstatic.com/media/9bbbe8_7895e5b978fa4c238ab6c4962af9e9fc~mv2.png/v1/fill/w_293,h_239,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/UNSC%20Logo_edited_edited.png",
     agenda: "Deliberating upon the Global Economic Turmoil of the 2008 Great Economic Recession with Special Emphasis on Housing Stabilisation and the Overall Degradation of the Worldwide GDP.",
