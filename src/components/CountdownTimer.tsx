@@ -29,7 +29,7 @@ const CountdownTimer = () => {
   ];
 
   return (
-    <div className="mt-8 px-6 py-4 bg-background/60 border border-blue-accent/20 inline-flex items-center gap-3 md:gap-5">
+    <div className="mt-8 px-6 py-4 bg-background/60 inline-flex items-center gap-3 md:gap-5">
       {boxes.map((b, i) => (
         <span key={b.label} className="flex items-center gap-3 md:gap-5">
           <span className="text-center">
@@ -39,7 +39,7 @@ const CountdownTimer = () => {
             <span className="text-[10px] md:text-xs text-light-gold ml-1">{b.label}</span>
           </span>
           {i < boxes.length - 1 && (
-            <span className="text-blue-accent/30 text-2xl md:text-4xl font-display select-none">:</span>
+            <span className="text-primary/30 text-2xl md:text-4xl font-display select-none">:</span>
           )}
         </span>
       ))}
