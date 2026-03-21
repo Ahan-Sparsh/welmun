@@ -12,7 +12,7 @@ const ContactBanner = () => {
         </h2>
         <Link
           to="/contact"
-          className="mt-8 px-10 py-3 border border-primary/60 rounded-full text-primary font-display text-sm md:text-base tracking-[4px] uppercase hover:bg-primary hover:text-primary-foreground transition-colors duration-300 cursor-none"
+          className="mt-8 px-10 py-3 border border-blue-accent/60 rounded-full text-blue-accent font-display text-sm md:text-base tracking-[4px] uppercase hover:bg-blue-accent hover:text-blue-accent-foreground transition-colors duration-300 cursor-none"
         >
           Contact Us
         </Link>
