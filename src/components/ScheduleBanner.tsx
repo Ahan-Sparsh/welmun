@@ -6,7 +6,7 @@ const ScheduleBanner = () => {
     <section
       className="w-full h-full flex flex-col justify-center items-center overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--background)) 45%, hsl(var(--muted)) 55%, hsl(var(--muted)) 100%)",
+        background: "linear-gradient(135deg, hsl(var(--background)) 0%, hsl(205 35% 52% / 0.08) 45%, hsl(var(--muted)) 55%, hsl(var(--muted)) 100%)",
       }}
     >
       <motion.h2
@@ -38,7 +38,7 @@ const ScheduleBanner = () => {
       >
         <Link
           to="/schedule"
-          className="mt-10 inline-block px-10 py-3 border border-primary/60 rounded-full text-primary font-display text-sm md:text-base tracking-[4px] uppercase hover:bg-primary hover:text-primary-foreground transition-colors duration-300 cursor-none"
+          className="mt-10 inline-block px-10 py-3 border border-blue-accent/60 rounded-full text-blue-accent font-display text-sm md:text-base tracking-[4px] uppercase hover:bg-blue-accent hover:text-blue-accent-foreground transition-colors duration-300 cursor-none"
         >
           Schedule
         </Link>

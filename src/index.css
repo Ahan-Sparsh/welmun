@@ -88,7 +88,7 @@
   .gold-divider {
     width: 120px;
     height: 3px;
-    background: linear-gradient(to right, transparent, hsl(var(--gold)), transparent);
+    background: linear-gradient(to right, transparent, hsl(var(--blue-accent)), hsl(var(--gold)), hsl(var(--blue-accent)), transparent);
     margin: 30px 0;
   }
 
@@ -120,7 +120,7 @@
   }
   .hover-lift:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 30px -8px hsl(var(--gold) / 0.15);
+    box-shadow: 0 12px 30px -8px hsl(var(--blue-accent) / 0.2);
   }
 
   /* Image zoom on hover */
