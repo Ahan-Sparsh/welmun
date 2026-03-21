@@ -67,7 +67,7 @@ export const committees: CommitteeData[] = [
     shortName: "DISEC",
     cardImage: disecImg,
     logo: "https://static.wixstatic.com/media/9bbbe8_7895e5b978fa4c238ab6c4962af9e9fc~mv2.png/v1/fill/w_346,h_282,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/UNSC%20Logo_edited_edited.png",
-    agenda: "Combating the Illicit Trade of Small Arms and Light Weapons to Enhance Global Security.",
+    agenda: "Reassessing Global Security Architectures Governing Strategically Contested Territories amid intensifying Great Power Rivalry.",
     chairLetter: [
       "In the last few years, the world has undergone a lot of changes, most of which have been detrimental to humanity. Be it the innumerable conflicts and battles that rage on in different corners of the world, or the devastating effects of nature's wrath that we have incurred, the problems are miles away from ceasing.",
       "The illicit trade of small arms and light weapons, facilitated by growing technology, has only risen, proportional to the number of conflicts around the world. From small regional gang turf wars in South America to wars between countries in the Middle East and North Asia, these arms seem to have found their way everywhere.",
