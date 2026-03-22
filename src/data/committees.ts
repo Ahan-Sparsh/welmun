@@ -46,7 +46,7 @@ export const committees: CommitteeData[] = [
       "You are tasked not only with addressing the immediate crisis at hand but also preventing the conflagrations of tomorrow. Will the Council succumb to the anarchial measures of the greatest country in the world, or will it reclaim its mandate to uphold global stability and justice?",
       "\"The decisions you make today will shape the world of tomorrow. History does not remember those who stood idle at its most critical junctures.\"",
     ],
-    chairName: "Divij Gupta",
+    chairName: "Ahan Sparsh",
     chairRole: "Chairperson",
     chairEmail: "chair.unsc@welhamboys.org",
     bgLink: "https://www.welhammun.org/_files/ugd/9bbbe8_b826bb68105845d9b1794b6a9f30ce7f.pdf",
