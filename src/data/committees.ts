@@ -52,8 +52,8 @@ export const committees: CommitteeData[] = [
     bgLink: "https://www.welhammun.org/_files/ugd/9bbbe8_b826bb68105845d9b1794b6a9f30ce7f.pdf",
     matrixLink: "https://www.welhammun.org/_files/ugd/9bbbe8_1a6c914129cb4ef78d39032161badd0f.pdf",
     eb: [
-      { name: "Divij Gupta", role: "Chairperson", image: "https://static.wixstatic.com/media/9bbbe8_31db70ea7e3b4189b1afade49653c118~mv2.jpg/v1/fill/w_278,h_278,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5548_edited_edited.jpg" },
-      { name: "Ahan Sparsh", role: "Vice Chairperson", image: "https://static.wixstatic.com/media/9bbbe8_3593fea72fc54c79954d792b7808238e~mv2.jpg/v1/crop/x_0,y_0,w_3648,h_4800/fill/w_175,h_237,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5542_JPG.jpg" },
+      { name: "Ahan Sparsh", role: "Chairperson", image: "https://static.wixstatic.com/media/9bbbe8_3593fea72fc54c79954d792b7808238e~mv2.jpg/v1/crop/x_0,y_0,w_3648,h_4800/fill/w_175,h_237,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5542_JPG.jpg" },
+      { name: "Divij Gupta", role: "Vice Chairperson", image: "https://static.wixstatic.com/media/9bbbe8_31db70ea7e3b4189b1afade49653c118~mv2.jpg/v1/fill/w_278,h_278,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5548_edited_edited.jpg" },
       { name: "Anagh Bajaj", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_d3dd9ee9557745328710aad26e00eb08~mv2.jpg/v1/crop/x_0,y_187,w_3648,h_4800/fill/w_175,h_237,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5538_JPG.jpg" },
       { name: "Shubh Sachet Prakash", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_d3dbdf1141d0436c848cbc73b6315544~mv2.jpg/v1/crop/x_0,y_261,w_3648,h_4800/fill/w_175,h_237,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5544_JPG.jpg" },
       { name: "Kushagra Gupta", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_dca912a8075b4a5a8a72983d08e78d56~mv2.jpg/v1/crop/x_293,y_0,w_3355,h_4422/fill/w_175,h_237,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5536_JPG.jpg" },
