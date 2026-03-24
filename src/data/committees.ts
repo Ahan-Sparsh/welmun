@@ -156,7 +156,7 @@ export const committees: CommitteeData[] = [
       "The Special Political and Decolonization Committee (SPECPOL) is the Fourth Committee of the United Nations General Assembly. It deals with a variety of subjects which include those related to decolonization, Palestinian refugees, human rights, peacekeeping, mine action, outer space, public information, atomic radiation, and the University for Peace.",
       "Details for this committee will be updated soon. Stay tuned for more information about the agenda, executive board, and background guides.",
     ],
-    chairName: "TBA",
+    chairName: "Kushagra Gupta",
     chairRole: "Chairperson",
     chairEmail: "chair.specpol@welhamboys.org",
     eb: [
