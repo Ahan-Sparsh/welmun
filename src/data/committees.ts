@@ -100,7 +100,7 @@ export const committees: CommitteeData[] = [
       "In the narrative of our shared history, there are chapters not inked with pen, but stained with the red. The red of agony, the red of pain, and the red of displacement. The refugee crisis is not a distant issue—it is the ongoing erosion of civil order that follows every wind of war our world has weathered.",
       "The agenda picks up an extremely important global issue to discuss the refugee crisis in Europe and each stakeholder in great detail. With well researched speeches, effective communication and deliberation, we can all make a small effort for a better future.",
     ],
-    chairName: "Vedant Singh",
+    chairName: "Aaryan Khanna",
     chairRole: "Chairperson",
     chairEmail: "chair.unhcr@welhamboys.org",
     bgLink: "https://www.welhammun.org/_files/ugd/9bbbe8_ef8d0e73bf5541cc8c56c877d65bb714.pdf",
