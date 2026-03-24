@@ -13,10 +13,10 @@ const RegistrationOverview = () => (
         </p>
         <div className="grid md:grid-cols-2 gap-4 mt-6">
           {[
-            { label: "Conference Dates", value: "July 28 – July 30, 2025" },
+            { label: "Conference Dates", value: "July 28 – July 30, 2026" },
             { label: "Venue", value: "Welham Boys' School, Dehradun" },
-            { label: "Registration & Fee Deadline", value: "July 1, 2025" },
-            { label: "Position Paper Deadline", value: "July 20, 2025" },
+            { label: "Registration & Fee Deadline", value: "July 1, 2026" },
+            { label: "Position Paper Deadline", value: "July 20, 2026" },
             { label: "Delegation Size", value: "7–12 delegates per delegation" },
             { label: "Age Group", value: "Classes 8–12 (13–18 years)" },
           ].map((item) => (

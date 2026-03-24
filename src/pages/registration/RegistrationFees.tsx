@@ -29,7 +29,7 @@ const RegistrationFees = () => (
         <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/10">
           <AlertCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
           <p className="text-muted-foreground text-sm">
-            Registration charges are <span className="text-primary">not applicable</span> for the Faculty Advisor. Last date to deposit fee: <span className="text-primary">July 1, 2025</span>.
+            Registration charges are <span className="text-primary">not applicable</span> for the Faculty Advisor. Last date to deposit fee: <span className="text-primary">July 1, 2026</span>.
           </p>
         </div>
 

@@ -25,7 +25,7 @@ const Addressals = () => {
             <p>
               I wish all participants a thought-provoking and enriching experience. May your voices echo with the conviction of change and cooperation.
             </p>
-            <p>We look forward to hosting you at Welham Boys' School for WELMUN 2025.</p>
+            <p>We look forward to hosting you at Welham Boys' School for WELMUN 2026.</p>
             <p className="mt-4">
               Warm regards<br />
               Sangeeta Kain<br />
