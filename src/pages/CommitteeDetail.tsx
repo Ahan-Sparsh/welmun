@@ -256,9 +256,7 @@ const CommitteeDetail = () => {
                           loading="lazy"
                         />
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center">
-                          <span className="text-muted-foreground/60 font-display text-xs">TBA</span>
-                        </div>
+                        <div className="w-full h-full bg-muted/30" />
                       )}
                     </div>
                     <p className="text-primary text-sm font-semibold leading-tight">{member.name}</p>
