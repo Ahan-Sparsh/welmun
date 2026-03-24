@@ -6,6 +6,7 @@ import loksabhaImg from "@/assets/committees/loksabha.jpg";
 import ipcImg from "@/assets/committees/ipc.jpg";
 import unhcrImg from "@/assets/committees/unhcr.jpg";
 import dirGenPhoto from "@/assets/dir-gen.png";
+import underSecPhoto from "@/assets/under-sec.png";
 
 export interface EBMember {
   name: string;
@@ -74,13 +75,13 @@ export const committees: CommitteeData[] = [
       "The illicit trade of small arms and light weapons, facilitated by growing technology, has only risen, proportional to the number of conflicts around the world. From small regional gang turf wars in South America to wars between countries in the Middle East and North Asia, these arms seem to have found their way everywhere.",
       "As the United Nations' disarmament body, it is your utmost prerogative and responsibility to treat the issue as important and discuss practical solutions through mutual respect and understanding.",
     ],
-    chairName: "Kushagra Gupta",
+    chairName: "Koustabh Gupta",
     chairRole: "Chairperson",
     chairEmail: "chair.disec@welhamboys.org",
     bgLink: "https://www.welhammun.org/_files/ugd/9bbbe8_ef0870397fba4a2c84c7171164e8a001.pdf",
     matrixLink: "https://www.welhammun.org/_files/ugd/9bbbe8_3ffae51adf4942b1a1758b8c40dbf3f3.pdf",
     eb: [
-      { name: "Kushagra Gupta", role: "Chairperson", image: "https://static.wixstatic.com/media/9bbbe8_dca912a8075b4a5a8a72983d08e78d56~mv2.jpg/v1/crop/x_293,y_0,w_3355,h_4422/fill/w_175,h_237,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5536_JPG.jpg" },
+      { name: "Koustabh Gupta", role: "Chairperson", image: underSecPhoto },
       { name: "Krishna Poddar", role: "Vice Chairperson", image: "https://static.wixstatic.com/media/9bbbe8_64dc49b7fd164b52b52b3ddd05762807~mv2.jpg/v1/crop/x_0,y_114,w_1740,h_2328/fill/w_190,h_261,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5477_edited.jpg" },
       { name: "Aaryan Khanna", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_6cc88ce16eb24e9d863d96cf105cf006~mv2.jpg/v1/crop/x_409,y_548,w_2837,h_3797/fill/w_190,h_261,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5552_JPG.jpg" },
       { name: "Yash Jalan", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_73b771d631c54462b2b2c91efcb2b349~mv2.jpg/v1/crop/x_243,y_0,w_3231,h_4328/fill/w_189,h_260,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5485_JPG.jpg" },
