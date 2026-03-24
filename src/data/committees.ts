@@ -81,12 +81,11 @@ export const committees: CommitteeData[] = [
     matrixLink: "https://www.welhammun.org/_files/ugd/9bbbe8_3ffae51adf4942b1a1758b8c40dbf3f3.pdf",
     eb: [
       { name: "Koustabh Gupta", role: "Chairperson", image: underSecPhoto },
-      { name: "Krishna Poddar", role: "Vice Chairperson", image: "https://static.wixstatic.com/media/9bbbe8_64dc49b7fd164b52b52b3ddd05762807~mv2.jpg/v1/crop/x_0,y_114,w_1740,h_2328/fill/w_190,h_261,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5477_edited.jpg" },
-      { name: "Aaryan Khanna", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_6cc88ce16eb24e9d863d96cf105cf006~mv2.jpg/v1/crop/x_409,y_548,w_2837,h_3797/fill/w_190,h_261,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5552_JPG.jpg" },
-      { name: "Yash Jalan", role: "Director", image: "https://static.wixstatic.com/media/9bbbe8_73b771d631c54462b2b2c91efcb2b349~mv2.jpg/v1/crop/x_243,y_0,w_3231,h_4328/fill/w_189,h_260,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5485_JPG.jpg" },
-      { name: "Aarav Bhimsaria", role: "Rapporteur", image: "https://static.wixstatic.com/media/9bbbe8_96b469b620f440019448f179c2f90fcd~mv2.jpg/v1/crop/x_537,y_222,w_3040,h_4068/fill/w_190,h_261,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5491_JPG.jpg" },
-      { name: "Eshaan Tiwari", role: "Rapporteur", image: "https://static.wixstatic.com/media/9bbbe8_ccd59c71a93b4181bcdc2928895da001~mv2.jpg/v1/crop/x_288,y_130,w_3274,h_4381/fill/w_190,h_261,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5554_JPG.jpg" },
+      { name: "TBA", role: "Vice Chairperson", image: "" },
       { name: "TBA", role: "Director", image: "" },
+      { name: "TBA", role: "Director", image: "" },
+      { name: "TBA", role: "Rapporteur", image: "" },
+      { name: "TBA", role: "Rapporteur", image: "" },
     ],
   },
   {
