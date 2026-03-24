@@ -31,7 +31,7 @@ const RegistrationProcess = () => (
         {
           step: "Step 5",
           title: "Submit Position Papers",
-          desc: "Each delegate must submit a position paper for their assigned committee by July 20, 2025. Guidelines are provided in each committee's Background Guide.",
+          desc: "Each delegate must submit a position paper for their assigned committee by July 20, 2026. Guidelines are provided in each committee's Background Guide.",
         },
       ].map((item, i) => (
         <Card key={i} className="bg-secondary/30 border-primary/20 hover-lift">
@@ -50,7 +50,7 @@ const RegistrationProcess = () => (
     <div className="mt-6 p-4 bg-primary/5 rounded-lg border border-primary/10">
       <p className="text-muted-foreground text-sm leading-relaxed">
         <span className="text-primary font-display">Note:</span> Registration will be considered complete on the receipt of duly filled forms, scanned copy of the Indemnity Form, and on the receipt of transaction details. Email all documents to{" "}
-        <a href="mailto:kirantripathi@welhamboys.org" className="text-primary hover:underline cursor-none">kirantripathi@welhamboys.org</a> latest by <span className="text-primary">July 1, 2025</span>.
+        <a href="mailto:kirantripathi@welhamboys.org" className="text-primary hover:underline cursor-none">kirantripathi@welhamboys.org</a> latest by <span className="text-primary">July 1, 2026</span>.
       </p>
     </div>
   </section>

@@ -44,7 +44,7 @@ const Registration = () => {
         </motion.h1>
         <div className="gold-divider" />
         <p className="text-muted-foreground text-lg text-center max-w-2xl">
-          Everything you need to know to register for WELMUN 2025.
+          Everything you need to know to register for WELMUN 2026.
         </p>
       </div>
 

@@ -69,11 +69,11 @@ const RegistrationKameraObscura = () => {
           <h3 className="font-display text-xl text-primary mb-4">Dates & Deadlines</h3>
           <div className="grid md:grid-cols-2 gap-3">
             {[
-              { label: "Registration Deadline", value: "Sunday, April 20, 2025" },
-              { label: "Travel Details Submission", value: "Thursday, July 10, 2025" },
-              { label: "Orientation & Topic Announcement", value: "Monday, July 28, 2025" },
-              { label: "Submission of Entries", value: "Tuesday, July 29, 2025" },
-              { label: "Declaration of Results", value: "Wednesday, July 30, 2025" },
+              { label: "Registration Deadline", value: "Sunday, April 20, 2026" },
+              { label: "Travel Details Submission", value: "Friday, July 10, 2026" },
+              { label: "Orientation & Topic Announcement", value: "Tuesday, July 28, 2026" },
+              { label: "Submission of Entries", value: "Wednesday, July 29, 2026" },
+              { label: "Declaration of Results", value: "Thursday, July 30, 2026" },
             ].map((item, i) => (
               <motion.div
                 key={item.label}
