@@ -128,7 +128,7 @@ export const committees: CommitteeData[] = [
       "ECOSOC is a cornerstone of the United Nations system, tasked with addressing global socio-economic issues. In this session, we will delve into one of the most defining economic crises of the 21st century: the Global Financial Crisis of 2008.",
       "As delegates in the Economic and Social Council, you will explore the aftermath of this crisis and the international responses that followed. Your task is not only to understand the causes and impacts but also to engage in diplomatic dialogue aimed at finding multilateral solutions.",
     ],
-    chairName: "Vishrut Khanna",
+    chairName: "Tanveer S. Madan",
     chairRole: "Chairperson",
     chairEmail: "chair.ecosoc@welhamboys.org",
     bgLink: "https://www.welhammun.org/_files/ugd/9bbbe8_54e7cb89272c413093a16b96bf674386.pdf",
