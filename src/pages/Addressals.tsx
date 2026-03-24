@@ -14,7 +14,7 @@ const Addressals = () => {
         <div className="flex flex-col md:flex-row gap-10">
           <div className="flex-1 space-y-5 text-muted-foreground leading-relaxed">
             <p>
-              It gives me immense pleasure to welcome you to the eleventh edition of the Welham Boys' School Model United Nations Conference – WELMUN 2025. Over the years, WELMUN has grown to become a platform that not only promotes global awareness and diplomacy among students but also nurtures values of empathy, leadership, and dialogue.
+              It gives me immense pleasure to welcome you to the eleventh edition of the Welham Boys' School Model United Nations Conference – WELMUN 2026. Over the years, WELMUN has grown to become a platform that not only promotes global awareness and diplomacy among students but also nurtures values of empathy, leadership, and dialogue.
             </p>
             <p>
               The theme this year, Ordo ab Chao – "Order from Chaos" – highlights the power of dialogue in shaping the world we live in. In these three days of deliberation, we hope to see young minds engage in meaningful debate, represent diverse perspectives, and seek solutions that transcend borders and differences. At WELMUN, every delegate has the opportunity to be heard and to make a difference.
