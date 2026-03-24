@@ -268,6 +268,9 @@ const CommitteeDetail = () => {
           )}
         </main>
       </div>
+
+      {/* Bottom cover to prevent the fixed montage video from showing after content */}
+      <div className="relative z-[3] h-1 bg-background" />
     </>
   );
 };
