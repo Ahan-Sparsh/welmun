@@ -63,7 +63,7 @@ const CommitteeStrip = ({
       to={`/committees/${committee.id}`}
       className="relative overflow-hidden cursor-none block h-full"
       style={{
-        flex: isActive ? 4 : 1,
+        flex: isActive ? 10 : 1,
         transition: "flex 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
       }}
       onMouseEnter={handleMouseEnter}
