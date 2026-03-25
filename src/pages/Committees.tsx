@@ -60,17 +60,24 @@ const CommitteeStrip = ({
   onLeave: () => void;
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const hoverTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const videoSrc = committeeVideos[committee.id];
 
   const handleMouseEnter = useCallback(() => {
-    onHover();
-    if (videoRef.current) {
-      videoRef.current.currentTime = 0;
-      videoRef.current.play().catch(() => {});
-    }
+    hoverTimer.current = setTimeout(() => {
+      onHover();
+      if (videoRef.current) {
+        videoRef.current.currentTime = 0;
+        videoRef.current.play().catch(() => {});
+      }
+    }, 200);
   }, [onHover]);
 
   const handleMouseLeave = useCallback(() => {
+    if (hoverTimer.current) {
+      clearTimeout(hoverTimer.current);
+      hoverTimer.current = null;
+    }
     onLeave();
     if (videoRef.current) {
       videoRef.current.pause();
