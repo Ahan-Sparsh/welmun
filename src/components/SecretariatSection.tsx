@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import secGenPhoto from "@/assets/sec-gen.png";
 import underSecPhoto from "@/assets/under-sec.png";
+import underSec2Photo from "@/assets/under-sec-2.png";
 import dirGenPhoto from "@/assets/dir-gen.png";
 import techDirector1Photo from "@/assets/tech-director-1.png";
 import techDirector2Photo from "@/assets/tech-director-2.png";
@@ -10,6 +11,7 @@ const allMembers = [
   { role: "Secretary General", name: "Ahan Sparsh", img: secGenPhoto },
   { role: "Director General", name: "Tanveer S. Madan", img: dirGenPhoto },
   { role: "Under Secretary", name: "Koustabh Gupta", img: underSecPhoto },
+  { role: "Under Secretary", name: "Aaryan Khanna", img: underSec2Photo },
 ];
 
 const techDirectors = [
