@@ -124,7 +124,7 @@ const SecretariatSection = () => {
         ) : (
           /* Desktop: side-by-side with elevated sec gen */
           <motion.div
-            className="w-full mt-12 max-w-6xl mx-auto flex flex-col items-center gap-10"
+            className="w-full mt-12 max-w-5xl mx-auto flex flex-col items-center gap-12"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -133,26 +133,41 @@ const SecretariatSection = () => {
             {/* Secretary General on top */}
             <motion.div
               variants={cardFromBottom}
-              className="hover-lift img-zoom bg-card border border-blue-accent/10 p-8 text-center cursor-none overflow-hidden w-64"
+              className="hover-lift img-zoom bg-card border border-blue-accent/10 p-6 text-center cursor-none overflow-hidden w-56"
             >
-              <img src={allMembers[0].img} alt={allMembers[0].name} className="w-full h-auto aspect-[3/4] object-cover object-top mb-5 bg-secondary" loading="lazy" />
-              <h3 className="font-display text-xl text-primary">{allMembers[0].name}</h3>
+              <img src={allMembers[0].img} alt={allMembers[0].name} className="w-full h-auto aspect-[3/4] object-cover object-top mb-4 bg-secondary" loading="lazy" />
+              <h3 className="font-display text-lg text-primary">{allMembers[0].name}</h3>
               <p className="text-muted-foreground text-sm mt-1">{allMembers[0].role}</p>
             </motion.div>
 
-            {/* Other members below */}
-            <div className="flex items-start justify-center gap-8 lg:gap-12">
-              {allMembers.slice(1).map((m, i) => (
-                <motion.div
-                  key={m.name}
-                  variants={i === 0 ? cardFromLeft : i === 2 ? cardFromRight : cardFromBottom}
-                  className="hover-lift img-zoom bg-card border border-blue-accent/10 p-8 text-center cursor-none overflow-hidden w-64"
-                >
-                  <img src={m.img} alt={m.name} className="w-full h-auto aspect-[3/4] object-cover object-top mb-5 bg-secondary" loading="lazy" />
-                  <h3 className="font-display text-xl text-primary">{m.name}</h3>
-                  <p className="text-muted-foreground text-sm mt-1">{m.role}</p>
-                </motion.div>
-              ))}
+            {/* Director General centered below */}
+            <div className="flex items-start justify-center gap-8">
+              <motion.div
+                variants={cardFromLeft}
+                className="hover-lift img-zoom bg-card border border-blue-accent/10 p-6 text-center cursor-none overflow-hidden w-56"
+              >
+                <img src={allMembers[1].img} alt={allMembers[1].name} className="w-full h-auto aspect-[3/4] object-cover object-top mb-4 bg-secondary" loading="lazy" />
+                <h3 className="font-display text-lg text-primary">{allMembers[1].name}</h3>
+                <p className="text-muted-foreground text-sm mt-1">{allMembers[1].role}</p>
+              </motion.div>
+
+              <motion.div
+                variants={cardFromBottom}
+                className="hover-lift img-zoom bg-card border border-blue-accent/10 p-6 text-center cursor-none overflow-hidden w-56"
+              >
+                <img src={allMembers[2].img} alt={allMembers[2].name} className="w-full h-auto aspect-[3/4] object-cover object-top mb-4 bg-secondary" loading="lazy" />
+                <h3 className="font-display text-lg text-primary">{allMembers[2].name}</h3>
+                <p className="text-muted-foreground text-sm mt-1">{allMembers[2].role}</p>
+              </motion.div>
+
+              <motion.div
+                variants={cardFromRight}
+                className="hover-lift img-zoom bg-card border border-blue-accent/10 p-6 text-center cursor-none overflow-hidden w-56"
+              >
+                <img src={allMembers[3].img} alt={allMembers[3].name} className="w-full h-auto aspect-[3/4] object-cover object-top mb-4 bg-secondary" loading="lazy" />
+                <h3 className="font-display text-lg text-primary">{allMembers[3].name}</h3>
+                <p className="text-muted-foreground text-sm mt-1">{allMembers[3].role}</p>
+              </motion.div>
             </div>
           </motion.div>
         )}
