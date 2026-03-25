@@ -90,8 +90,9 @@ const CommitteeStrip = ({
     >
       {/* Background image (always visible) */}
       <img
-        src={committee.cardImage}
+        src={portraitImages[committee.id] || committee.cardImage}
         alt={committee.name}
+        loading="lazy"
         className="absolute inset-0 w-full h-full object-cover object-center"
         style={{
           transition: "opacity 0.5s ease",
