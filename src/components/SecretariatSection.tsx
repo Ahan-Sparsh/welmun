@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import secGenPhoto from "@/assets/sec-gen.png";
 import underSecPhoto from "@/assets/under-sec.png";
+import underSec2Photo from "@/assets/under-sec-2.png";
 import dirGenPhoto from "@/assets/dir-gen.png";
 import techDirector1Photo from "@/assets/tech-director-1.png";
 import techDirector2Photo from "@/assets/tech-director-2.png";
@@ -10,6 +11,7 @@ const allMembers = [
   { role: "Secretary General", name: "Ahan Sparsh", img: secGenPhoto },
   { role: "Director General", name: "Tanveer S. Madan", img: dirGenPhoto },
   { role: "Under Secretary", name: "Koustabh Gupta", img: underSecPhoto },
+  { role: "Under Secretary", name: "Aaryan Khanna", img: underSec2Photo },
 ];
 
 const techDirectors = [
@@ -120,7 +122,7 @@ const SecretariatSection = () => {
         ) : (
           /* Desktop: side-by-side with elevated sec gen */
           <motion.div
-            className="w-full mt-12 max-w-5xl mx-auto flex items-end justify-center gap-10 lg:gap-16"
+            className="w-full mt-12 max-w-6xl mx-auto flex items-end justify-center gap-8 lg:gap-12"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -151,6 +153,15 @@ const SecretariatSection = () => {
               <img src={allMembers[2].img} alt={allMembers[2].name} className="w-full h-auto aspect-[3/4] object-cover object-top mb-5 bg-secondary" loading="lazy" />
               <h3 className="font-display text-xl text-primary">{allMembers[2].name}</h3>
               <p className="text-muted-foreground text-sm mt-1">{allMembers[2].role}</p>
+            </motion.div>
+
+            <motion.div
+              variants={cardFromRight}
+              className="hover-lift img-zoom bg-card border border-blue-accent/10 p-8 text-center cursor-none overflow-hidden flex-1 max-w-xs"
+            >
+              <img src={allMembers[3].img} alt={allMembers[3].name} className="w-full h-auto aspect-[3/4] object-cover object-top mb-5 bg-secondary" loading="lazy" />
+              <h3 className="font-display text-xl text-primary">{allMembers[3].name}</h3>
+              <p className="text-muted-foreground text-sm mt-1">{allMembers[3].role}</p>
             </motion.div>
           </motion.div>
         )}
