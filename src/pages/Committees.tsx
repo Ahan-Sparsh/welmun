@@ -5,6 +5,25 @@ import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import { committees } from "@/data/committees";
 
+// Portrait images for vertical strips
+import unscPortrait from "@/assets/committees/unsc-portrait.jpg";
+import disecPortrait from "@/assets/committees/disec-portrait.jpg";
+import unodcPortrait from "@/assets/committees/unodc-portrait.jpg";
+import viceroysPortrait from "@/assets/committees/viceroys-portrait.jpg";
+import specpolPortrait from "@/assets/committees/specpol-portrait.jpg";
+import unhrcPortrait from "@/assets/committees/unhrc-portrait.jpg";
+import ipcPortrait from "@/assets/committees/ipc-portrait.jpg";
+
+const portraitImages: Record<string, string> = {
+  unsc: unscPortrait,
+  disec: disecPortrait,
+  unodc: unodcPortrait,
+  "viceroys-cabinet": viceroysPortrait,
+  specpol: specpolPortrait,
+  unhrc: unhrcPortrait,
+  ipc: ipcPortrait,
+};
+
 // Video imports
 import unscVideo from "@/assets/committees/unsc-intro.mp4";
 import disecVideo from "@/assets/committees/disec-intro.mp4";
@@ -71,8 +90,9 @@ const CommitteeStrip = ({
     >
       {/* Background image (always visible) */}
       <img
-        src={committee.cardImage}
+        src={portraitImages[committee.id] || committee.cardImage}
         alt={committee.name}
+        loading="lazy"
         className="absolute inset-0 w-full h-full object-cover object-center"
         style={{
           transition: "opacity 0.5s ease",
