@@ -225,12 +225,52 @@ const Committees = () => {
         </div>
       </motion.div>
 
-      {/* Vertical Strips */}
+      {/* Mobile Card Layout */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="w-full max-w-6xl flex gap-4 rounded-2xl overflow-hidden"
+        className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden"
+      >
+        {orderedCommittees.map((c) => (
+          <Link
+            key={c.id}
+            to={`/committees/${c.id}`}
+            className="relative overflow-hidden rounded-xl group block"
+            style={{ height: "220px" }}
+          >
+            <img
+              src={portraitImages[c.id] || c.cardImage}
+              alt={c.name}
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background: "linear-gradient(to top, hsl(var(--background) / 0.9) 0%, hsl(var(--background) / 0.4) 60%, transparent 100%)",
+              }}
+            />
+            <div className="absolute inset-0 flex flex-col items-center justify-end p-4 pb-5 gap-2 z-10">
+              {c.logo && (
+                <img src={c.logo} alt={`${c.shortName} logo`} className="w-10 h-10 object-contain drop-shadow-lg" />
+              )}
+              <h2 className="font-display text-primary text-lg uppercase font-bold tracking-[4px]"
+                style={{ textShadow: "0 2px 12px hsl(15 30% 12% / 0.9)" }}>
+                {c.shortName}
+              </h2>
+              <p className="text-muted-foreground text-xs text-center tracking-wider uppercase">{c.name}</p>
+            </div>
+          </Link>
+        ))}
+      </motion.div>
+
+      {/* Desktop Vertical Strips */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+        className="w-full max-w-6xl hidden md:flex gap-4 rounded-2xl overflow-hidden"
         style={{ height: "70vh", minHeight: "500px" }}
       >
         {orderedCommittees.map((c) => (
