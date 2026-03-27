@@ -62,16 +62,20 @@
     @apply border-border;
   }
 
+  html, body {
+    cursor: none !important;
+  }
+
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
-    cursor: none;
     overflow-x: hidden;
   }
 
   *, *::before, *::after,
   a, button, input, textarea, select, label,
-  [role="button"], [tabindex] {
+  [role="button"], [tabindex],
+  ::-webkit-scrollbar, ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-track {
     cursor: none !important;
   }
 
