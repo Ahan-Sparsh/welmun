@@ -31,8 +31,22 @@ const CustomCursor = memo(({ isIntroVisible }: CustomCursorProps) => {
       }
     };
 
+    const forceHideSystemCursor = () => {
+      document.documentElement.style.setProperty("cursor", "none", "important");
+      document.body.style.setProperty("cursor", "none", "important");
+    };
+
+    forceHideSystemCursor();
+
     document.addEventListener("mousemove", onMove, { passive: true });
-    return () => document.removeEventListener("mousemove", onMove);
+    window.addEventListener("scroll", forceHideSystemCursor, { passive: true });
+    window.addEventListener("wheel", forceHideSystemCursor, { passive: true });
+
+    return () => {
+      document.removeEventListener("mousemove", onMove);
+      window.removeEventListener("scroll", forceHideSystemCursor);
+      window.removeEventListener("wheel", forceHideSystemCursor);
+    };
   }, []);
 
   return (
