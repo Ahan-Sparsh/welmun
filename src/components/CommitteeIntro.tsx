@@ -40,7 +40,7 @@ const CommitteeIntro = ({ committeeId, committeeName }: CommitteeIntroProps) => 
   return (
     <>
       {/* Fixed video that stays in place while content scrolls over it */}
-      <div className="fixed inset-x-0 top-[56px] bottom-0 z-0">
+      <div className="fixed inset-x-0 top-16 bottom-0 z-0">
         <video
           ref={videoRef}
           src={videoSrc}
