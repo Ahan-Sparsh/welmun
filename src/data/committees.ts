@@ -154,6 +154,8 @@ export const committees: CommitteeData[] = [
     chairName: "Kushagra Gupta",
     chairRole: "Chairperson",
     chairEmail: "chair.specpol@welhamboys.org",
+    bgLink: "#",
+    matrixLink: "#",
     eb: [
       { name: "Kushagra Gupta", role: "Chairperson", image: "https://static.wixstatic.com/media/9bbbe8_dca912a8075b4a5a8a72983d08e78d56~mv2.jpg/v1/crop/x_293,y_0,w_3355,h_4422/fill/w_175,h_237,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5536_JPG.jpg" },
       { name: "Adarsh Raj", role: "Vice Chairperson", image: "" },
@@ -175,6 +177,8 @@ export const committees: CommitteeData[] = [
     chairName: "Shashwat Singh",
     chairRole: "Chairperson",
     chairEmail: "chair.unhrc@welhamboys.org",
+    bgLink: "#",
+    matrixLink: "#",
     eb: [
       { name: "Shashwat Singh", role: "Chairperson", image: "" },
       { name: "Angad Khurana", role: "Vice Chairperson", image: "" },
