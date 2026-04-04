@@ -69,7 +69,7 @@ const RegistrationKameraObscura = () => {
           <h3 className="font-display text-xl text-primary mb-4">Dates & Deadlines</h3>
           <div className="grid md:grid-cols-2 gap-3">
             {[
-              { label: "Registration Deadline", value: "Sunday, April 20, 2026" },
+              { label: "Registration Deadline", value: "Saturday, April 25, 2026" },
               { label: "Travel Details Submission", value: "Friday, July 10, 2026" },
               { label: "Orientation & Topic Announcement", value: "Tuesday, July 28, 2026" },
               { label: "Submission of Entries", value: "Wednesday, July 29, 2026" },
