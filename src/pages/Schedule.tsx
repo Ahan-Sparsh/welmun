@@ -89,7 +89,7 @@ const Schedule = () => {
       {/* Contact Details */}
       <div className="mt-16 w-full max-w-4xl mx-auto">
         <h2 className="font-display text-2xl md:text-3xl text-primary mb-6 text-center">Contact Details</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
             { role: "Conference Director", name: "Ms. Kiran Tripathi", phone: "+91 7409809908" },
             { role: "Journey & Accommodation In-charge", name: "Mr. Rajesh Nautiyal", phone: "+91 8171033339" },
