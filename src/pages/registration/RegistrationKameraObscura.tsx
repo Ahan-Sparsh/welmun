@@ -101,7 +101,7 @@ const RegistrationKameraObscura = () => {
               <h3 className="font-display text-lg text-primary">Registration Links</h3>
               <div className="space-y-2">
                 <motion.a
-                  href="https://forms.gle/W85Qor3LpTeLTSwZ7"
+                  href="https://forms.gle/cpiANBnEWMAhbrXT9"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
@@ -109,10 +109,10 @@ const RegistrationKameraObscura = () => {
                   className="block p-3 bg-primary/5 rounded-lg border border-primary/10 hover:bg-primary/10 transition-colors cursor-none"
                 >
                   <p className="text-primary font-display text-sm">Registration Form →</p>
-                  <p className="text-muted-foreground text-xs">forms.gle/W85Qor3LpTeLTSwZ7</p>
+                  <p className="text-muted-foreground text-xs">forms.gle/cpiANBnEWMAhbrXT9</p>
                 </motion.a>
                 <motion.a
-                  href="https://forms.gle/Ze1DZQeseiaPeQUQ7"
+                  href="https://forms.gle/brqBPJBP7SLhnW9AA"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
@@ -120,7 +120,7 @@ const RegistrationKameraObscura = () => {
                   className="block p-3 bg-primary/5 rounded-lg border border-primary/10 hover:bg-primary/10 transition-colors cursor-none"
                 >
                   <p className="text-primary font-display text-sm">Travel Details Form →</p>
-                  <p className="text-muted-foreground text-xs">forms.gle/Ze1DZQeseiaPeQUQ7</p>
+                  <p className="text-muted-foreground text-xs">forms.gle/brqBPJBP7SLhnW9AA</p>
                 </motion.a>
               </div>
             </CardContent>
