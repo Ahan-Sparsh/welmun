@@ -86,6 +86,31 @@ const Schedule = () => {
         ))}
       </div>
 
+      {/* Contact Details */}
+      <div className="mt-16 w-full max-w-4xl mx-auto">
+        <h2 className="font-display text-2xl md:text-3xl text-primary mb-6 text-center">Contact Details</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {[
+            { role: "Conference Director", name: "Ms. Kiran Tripathi", phone: "+91 7409809908" },
+            { role: "Journey & Accommodation In-charge", name: "Mr. Rajesh Nautiyal", phone: "+91 8171033339" },
+            { role: "Head of Activities", name: "Mr. Rajeev Bhatia", phone: "+91 8755909040" },
+            { role: "E.A. to the Principal", name: "", phone: "+91 8979052222" },
+            { role: "Vice-Principal", name: "", phone: "+91 8755909037" },
+          ].map((c) => (
+            <div key={c.role} className="flex items-start gap-3 p-4 rounded-lg border border-primary/20 bg-secondary/30">
+              <User className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+              <div>
+                <p className="font-display text-xs text-primary tracking-wider">{c.role}</p>
+                {c.name && <p className="text-sm text-foreground">{c.name}</p>}
+                <p className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
+                  <Phone className="w-3 h-3" /> {c.phone}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="mt-12 mb-8">
         <a href={PDF_URL} target="_blank" rel="noopener noreferrer">
           <Button variant="outline" className="border-blue-accent text-blue-accent hover:bg-blue-accent/10 gap-2">
