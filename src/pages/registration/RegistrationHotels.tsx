@@ -1,4 +1,4 @@
-import { Hotel, Phone, Mail, Download, Info } from "lucide-react";
+import { Hotel, Phone, Mail, Info } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
