@@ -281,7 +281,7 @@ const RegistrationKameraObscura = () => {
                 <div className="flex flex-col md:flex-row gap-4 text-sm text-muted-foreground">
                   <span className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> <a href="mailto:kameraobscura@welhamboys.org" className="text-primary hover:underline cursor-none">kameraobscura@welhamboys.org</a></span>
                   <span className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> Mr. Sushant Portion — +91 9997166850</span>
-                  <span className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> Mr. Jai Ranjan Kagdee — +91 8755903327</span>
+                  <span className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> Mr. Jai Ranjan Kagdee — +91 9997660626</span>
                 </div>
               </CardContent>
             </Card>

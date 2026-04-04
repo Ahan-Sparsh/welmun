@@ -3,7 +3,7 @@ import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useStaggerReveal } from "@/hooks/useScrollReveal";
 
-const PDF_URL = "https://www.welhammun.org/_files/ugd/9bbbe8_6219df9038704fdcb163b0ce688182a2.pdf";
+const PDF_URL = "/docs/WELMUN-Conference_Schedule.docx";
 
 const day1 = [
   { time: "8:00 AM – 9:30 AM", event: "Registration", venue: "Riverside" },
