@@ -1,5 +1,5 @@
 import PageLayout from "@/components/PageLayout";
-import { Download } from "lucide-react";
+import { Download, Phone, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useStaggerReveal } from "@/hooks/useScrollReveal";
 
