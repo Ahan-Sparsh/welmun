@@ -43,7 +43,7 @@ const RegistrationKameraObscura = () => {
             transition={{ duration: 1, delay: 0.3 }}
             className="font-display text-lg text-primary/60 tracking-[4px] mt-2"
           >
-            8.0
+            9.0
           </motion.p>
           <div className="gold-divider" />
         </div>
