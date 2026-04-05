@@ -1,6 +1,6 @@
 import { Camera, Video, CheckCircle, Mail, Phone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import PageLayout from "@/components/PageLayout";
+
 import { motion } from "framer-motion";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import type { Easing } from "framer-motion";
