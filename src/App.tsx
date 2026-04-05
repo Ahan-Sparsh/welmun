@@ -6,13 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Addressals from "./pages/Addressals";
 import Registration from "./pages/Registration";
-import RegistrationOverview from "./pages/registration/RegistrationOverview";
-import RegistrationEligibility from "./pages/registration/RegistrationEligibility";
-import RegistrationProcess from "./pages/registration/RegistrationProcess";
-import RegistrationFees from "./pages/registration/RegistrationFees";
-import RegistrationHotels from "./pages/registration/RegistrationHotels";
 import RegistrationDownloads from "./pages/registration/RegistrationDownloads";
-import RegistrationFAQs from "./pages/registration/RegistrationFAQs";
 import RegistrationKameraObscura from "./pages/registration/RegistrationKameraObscura";
 import Schedule from "./pages/Schedule";
 import Committees from "./pages/Committees";
@@ -37,17 +31,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/addressals" element={<Addressals />} />
           <Route path="/registration" element={<Registration />}>
-            <Route index element={<RegistrationOverview />} />
-            <Route path="eligibility" element={<RegistrationEligibility />} />
-            <Route path="process" element={<RegistrationProcess />} />
-            <Route path="fees" element={<RegistrationFees />} />
-            <Route path="hotels" element={<RegistrationHotels />} />
-            <Route path="downloads" element={<RegistrationDownloads />} />
-            
-            <Route path="faqs" element={<RegistrationFAQs />} />
+            <Route index element={<RegistrationDownloads />} />
+            <Route path="kamera-obscura" element={<RegistrationKameraObscura />} />
           </Route>
           <Route path="/schedule" element={<Schedule />} />
-          <Route path="/kamera-obscura" element={<RegistrationKameraObscura />} />
           <Route path="/committees" element={<Committees />} />
           <Route path="/committees/:id" element={<CommitteeDetail />} />
           <Route path="/conference-details" element={<ConferenceDetails />} />

@@ -1,6 +1,6 @@
 import { Camera, Video, CheckCircle, Mail, Phone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import PageLayout from "@/components/PageLayout";
+
 import { motion } from "framer-motion";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import type { Easing } from "framer-motion";
@@ -25,8 +25,7 @@ const RegistrationKameraObscura = () => {
   const contactRef = useScrollReveal<HTMLDivElement>(0.1);
 
   return (
-    <PageLayout backgroundImage="/images/kamera-obscura-bg.jpeg">
-      <section className="space-y-8 w-full max-w-4xl">
+    <section className="space-y-8 w-full max-w-4xl">
         {/* Header */}
         <div ref={headerRef} className="reveal-section flex flex-col items-center mb-4">
           <motion.h1
@@ -287,8 +286,7 @@ const RegistrationKameraObscura = () => {
             </Card>
           </motion.div>
         </div>
-      </section>
-    </PageLayout>
+    </section>
   );
 };
 
