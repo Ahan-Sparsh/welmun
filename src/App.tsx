@@ -12,7 +12,7 @@ import Schedule from "./pages/Schedule";
 import Committees from "./pages/Committees";
 import CommitteeDetail from "./pages/CommitteeDetail";
 import ConferenceDetails from "./pages/ConferenceDetails";
-import ImportantDownloads from "./pages/ImportantDownloads";
+
 import PhotoGallery from "./pages/PhotoGallery";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
