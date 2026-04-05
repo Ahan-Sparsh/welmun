@@ -32,6 +32,27 @@ const PDF_URLS = {
   rop: "https://www.welhammun.org/_files/ugd/9bbbe8_2b0f20bed6084044a5450a4eee91ecd2.pdf",
 };
 
+const importantDownloads = [
+  {
+    title: "Conference Policy",
+    description: "Discipline, dress code, electronics policy, awards, and more.",
+    url: PDF_URLS.policy,
+    icon: <Shield className="w-5 h-5" />,
+  },
+  {
+    title: "Charter of the United Nations",
+    description: "Full text of the UN Charter & Statute of the International Court of Justice.",
+    url: PDF_URLS.charter,
+    icon: <Scale className="w-5 h-5" />,
+  },
+  {
+    title: "Rules of Procedure",
+    description: "Complete UNA-USA Rules of Procedure for all committees.",
+    url: PDF_URLS.rop,
+    icon: <BookOpen className="w-5 h-5" />,
+  },
+];
+
 const policyItems = [
   {
     icon: <Gavel className="w-5 h-5" />,
