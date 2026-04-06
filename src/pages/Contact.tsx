@@ -14,6 +14,16 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!form.firstName.trim() || !form.lastName.trim() || !form.email.trim() || !form.message.trim()) {
+      alert("Please fill in all fields.");
+      return;
+    }
+    if (!emailRegex.test(form.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
     const formData = new FormData();
     formData.append("entry.1905276668", form.firstName);
     formData.append("entry.1158082062", form.lastName);
