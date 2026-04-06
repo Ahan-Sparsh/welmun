@@ -27,6 +27,10 @@ const Contact = () => {
     });
 
     setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+      setForm({ firstName: "", lastName: "", email: "", message: "" });
+    }, 2000);
   };
 
   return (
