@@ -1,13 +1,17 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import PageLayout from "@/components/PageLayout";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const GOOGLE_FORM_ACTION =
   "https://docs.google.com/forms/d/e/1FAIpQLSdPpfT4pNf9llR0nNsoMwrBp_WtALr-xSj1Mk7coWs516WqXw/formResponse";
 
+const RATE_LIMIT_MS = 30_000; // 30 seconds between submissions
+
 const Contact = () => {
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [cooldown, setCooldown] = useState(false);
+  const lastSubmitRef = useRef<number>(0);
   const topRef = useScrollReveal<HTMLDivElement>(0.1);
   const bottomRef = useScrollReveal<HTMLDivElement>(0.1);
 
@@ -23,6 +27,15 @@ const Contact = () => {
       alert("Please enter a valid email address.");
       return;
     }
+
+    const now = Date.now();
+    if (now - lastSubmitRef.current < RATE_LIMIT_MS) {
+      alert("Please wait before submitting again.");
+      return;
+    }
+    lastSubmitRef.current = now;
+    setCooldown(true);
+    setTimeout(() => setCooldown(false), RATE_LIMIT_MS);
 
     const formData = new FormData();
     formData.append("entry.1905276668", form.firstName);
@@ -99,9 +112,10 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="px-10 py-2.5 border-2 border-blue-accent text-blue-accent hover:bg-blue-accent hover:text-blue-accent-foreground transition-colors cursor-none font-display tracking-wider"
+                  disabled={cooldown}
+                  className="px-10 py-2.5 border-2 border-blue-accent text-blue-accent hover:bg-blue-accent hover:text-blue-accent-foreground transition-colors cursor-none font-display tracking-wider disabled:opacity-50 disabled:pointer-events-none"
                 >
-                  Submit
+                  {cooldown ? "Please wait…" : "Submit"}
                 </button>
               </form>
             </div>
