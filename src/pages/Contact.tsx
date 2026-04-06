@@ -1,13 +1,17 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import PageLayout from "@/components/PageLayout";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const GOOGLE_FORM_ACTION =
   "https://docs.google.com/forms/d/e/1FAIpQLSdPpfT4pNf9llR0nNsoMwrBp_WtALr-xSj1Mk7coWs516WqXw/formResponse";
 
+const RATE_LIMIT_MS = 30_000; // 30 seconds between submissions
+
 const Contact = () => {
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [cooldown, setCooldown] = useState(false);
+  const lastSubmitRef = useRef<number>(0);
   const topRef = useScrollReveal<HTMLDivElement>(0.1);
   const bottomRef = useScrollReveal<HTMLDivElement>(0.1);
 
