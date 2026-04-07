@@ -52,6 +52,13 @@ const HeroSection = ({ animateIn = true }: HeroSectionProps) => {
           'Ordo ab Chao'
         </motion.p>
 
+        <motion.p
+          variants={fadeUp}
+          className="mt-2 text-muted-foreground text-sm md:text-lg tracking-wide"
+        >
+          — Order out of Chaos
+        </motion.p>
+
         <motion.div variants={slideFromLeft} className="mt-10">
           <CountdownTimer />
         </motion.div>
