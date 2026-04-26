@@ -16,6 +16,7 @@ import ipcNeiylPhoto from "@/assets/eb/ipc-neiyl.png";
 import ipcJaiPhoto from "@/assets/eb/ipc-jai.png";
 import ipcVaibbhavPhoto from "@/assets/eb/ipc-vaibbhav.png";
 import ipcRushilPhoto from "@/assets/eb/ipc-rushil.png";
+import ipcSiddharthPhoto from "@/assets/eb/ipc-siddharth.png";
 
 export interface EBMember {
   name: string;
@@ -228,7 +229,7 @@ export const committees: CommitteeData[] = [
       { name: "Neiyl Vasishta", role: "Editor-In-Chief", image: ipcNeiylPhoto },
       { name: "Jai Gagaliya", role: "Senior Editor", image: ipcJaiPhoto },
       { name: "Vaibbhav Yadav", role: "Senior Editor", image: ipcVaibbhavPhoto },
-      { name: "Siddharth Jindal", role: "Creative Editor", image: "" },
+      { name: "Siddharth Jindal", role: "Creative Editor", image: ipcSiddharthPhoto },
       { name: "Ealvis Tallang", role: "Creative Editor", image: "" },
       { name: "Rushil Singhal", role: "Rapporteur", image: ipcRushilPhoto },
     ],
