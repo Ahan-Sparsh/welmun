@@ -152,7 +152,6 @@ export const committees: CommitteeData[] = [
       { name: "Tanveer S. Madan", role: "Chairperson", image: tanveerPhoto },
       { name: "Eshaan Tiwari", role: "Vice Chairperson", image: eshaanTiwariPhoto },
       { name: "Tauhid Ali Hasan", role: "Director", image: "" },
-      { name: "Adwik Jhunjhunwala", role: "Director", image: "" },
       { name: "Archit Shekhar", role: "Rapporteur", image: architShekharPhoto },
       { name: "Priyansh Baluni", role: "Rapporteur", image: "" },
     ],
