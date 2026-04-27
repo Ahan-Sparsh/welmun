@@ -20,6 +20,7 @@ import ipcSiddharthPhoto from "@/assets/eb/ipc-siddharth.png";
 import eshaanTiwariPhoto from "@/assets/eb/eshaan-tiwari.jpg";
 import architShekharPhoto from "@/assets/eb/archit-shekhar.jpg";
 import tauhidPhoto from "@/assets/eb/tauhid-ali-hasan.jpg";
+import priyanshPhoto from "@/assets/eb/priyansh-baluni.jpg";
 
 export interface EBMember {
   name: string;
@@ -154,7 +155,7 @@ export const committees: CommitteeData[] = [
       { name: "Eshaan Tiwari", role: "Vice Chairperson", image: eshaanTiwariPhoto },
       { name: "Tauhid Ali Hasan", role: "Director", image: tauhidPhoto },
       { name: "Archit Shekhar", role: "Rapporteur", image: architShekharPhoto },
-      { name: "Priyansh Baluni", role: "Rapporteur", image: "" },
+      { name: "Priyansh Baluni", role: "Rapporteur", image: priyanshPhoto },
     ],
   },
   {
