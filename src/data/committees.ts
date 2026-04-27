@@ -17,6 +17,7 @@ import ipcJaiPhoto from "@/assets/eb/ipc-jai.png";
 import ipcVaibbhavPhoto from "@/assets/eb/ipc-vaibbhav.png";
 import ipcRushilPhoto from "@/assets/eb/ipc-rushil.png";
 import ipcSiddharthPhoto from "@/assets/eb/ipc-siddharth.png";
+import eshaanTiwariPhoto from "@/assets/eb/eshaan-tiwari.jpg";
 
 export interface EBMember {
   name: string;
@@ -148,7 +149,7 @@ export const committees: CommitteeData[] = [
     matrixLink: "https://www.welhammun.org/_files/ugd/9bbbe8_e212e0737dab4fa9b851a97fe79b5485.pdf",
     eb: [
       { name: "Tanveer S. Madan", role: "Chairperson", image: tanveerPhoto },
-      { name: "Eshaan Tiwari", role: "Vice Chairperson", image: "" },
+      { name: "Eshaan Tiwari", role: "Vice Chairperson", image: eshaanTiwariPhoto },
       { name: "Tauhid Ali Hasan", role: "Director", image: "" },
       { name: "Adwik Jhunjhunwala", role: "Director", image: "" },
       { name: "Archit Shekhar", role: "Rapporteur", image: "" },
