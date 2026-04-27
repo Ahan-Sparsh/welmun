@@ -28,6 +28,11 @@ import agastyaGuptaPhoto from "@/assets/eb/agastya-gupta.jpg";
 import viratGaganPhoto from "@/assets/eb/virat-gagan.jpg";
 import shivanshThapliyalPhoto from "@/assets/eb/shivansh-thapliyal.jpg";
 import koustabhGuptaPhoto from "@/assets/eb/koustabh-gupta.jpg";
+import harshitSachanPhoto from "@/assets/eb/harshit-sachan.png";
+import muazManzoorPhoto from "@/assets/eb/muaz-manzoor.png";
+import prayaanShobitVaishPhoto from "@/assets/eb/prayaan-shobit-vaish.png";
+import prahethVishalAggarwalPhoto from "@/assets/eb/praheth-vishal-aggarwal.png";
+import aaryanUnodcPhoto from "@/assets/eb/aaryan-khanna-unodc.png";
 
 export interface EBMember {
   name: string;
@@ -132,11 +137,11 @@ export const committees: CommitteeData[] = [
     bgLink: "https://www.welhammun.org/_files/ugd/9bbbe8_ef8d0e73bf5541cc8c56c877d65bb714.pdf",
     matrixLink: "https://www.welhammun.org/_files/ugd/9bbbe8_0cb03ee32e8f4f3d88af1b2f9e6762e1.pdf",
     eb: [
-      { name: "Aaryan Khanna", role: "Chairperson", image: aaryanPhoto },
-      { name: "Harshit Sachan", role: "Vice Chairperson", image: "" },
-      { name: "Muaz Manzoor", role: "Director", image: "" },
-      { name: "Prayaan Shobit Vaish", role: "Director", image: "" },
-      { name: "Praheth Vishal Aggarwal", role: "Rapporteur", image: "" },
+      { name: "Aaryan Khanna", role: "Chairperson", image: aaryanUnodcPhoto },
+      { name: "Harshit Sachan", role: "Vice Chairperson", image: harshitSachanPhoto },
+      { name: "Muaz Manzoor", role: "Director", image: muazManzoorPhoto },
+      { name: "Prayaan Shobit Vaish", role: "Director", image: prayaanShobitVaishPhoto },
+      { name: "Praheth Vishal Aggarwal", role: "Rapporteur", image: prahethVishalAggarwalPhoto },
     ],
   },
   {
