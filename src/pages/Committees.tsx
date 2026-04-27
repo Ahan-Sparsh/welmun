@@ -43,7 +43,7 @@ const committeeVideos: Record<string, string> = {
   ipc: ipcVideo,
 };
 
-const orderedIds = ["unsc", "disec", "unodc", "viceroys-cabinet", "specpol", "unhrc", "ipc"];
+const orderedIds = ["unsc", "viceroys-cabinet", "disec", "unodc", "specpol", "unhrc", "ipc"];
 const orderedCommittees = orderedIds
   .map((id) => committees.find((c) => c.id === id))
   .filter(Boolean) as typeof committees;
