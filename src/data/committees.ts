@@ -25,6 +25,7 @@ import vaibhavSharmaPhoto from "@/assets/eb/vaibhav-kumar-sharma.jpg";
 import yuvrajGuptaPhoto from "@/assets/eb/yuvraj-gupta.jpg";
 import chetanChopraPhoto from "@/assets/eb/chetan-chopra.jpg";
 import agastyaGuptaPhoto from "@/assets/eb/agastya-gupta.jpg";
+import viratGaganPhoto from "@/assets/eb/virat-gagan.jpg";
 
 export interface EBMember {
   name: string;
@@ -102,7 +103,7 @@ export const committees: CommitteeData[] = [
       { name: "Agastya Gupta", role: "Vice Chairperson", image: agastyaGuptaPhoto },
       { name: "Chetan Chopra", role: "Director", image: chetanChopraPhoto },
       { name: "Yuvraj Gupta", role: "Director", image: yuvrajGuptaPhoto },
-      { name: "Virat Gagan", role: "Rapporteur", image: "" },
+      { name: "Virat Gagan", role: "Rapporteur", image: viratGaganPhoto },
       { name: "Shivansh Thapliyal", role: "Rapporteur", image: "" },
     ],
   },
