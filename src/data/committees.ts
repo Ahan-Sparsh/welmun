@@ -254,3 +254,9 @@ export const committees: CommitteeData[] = [
     ],
   },
 ];
+
+export const committeeOrder = ["unsc", "viceroys-cabinet", "disec", "unodc", "specpol", "unhrc", "ipc"] as const;
+
+export const orderedCommittees = committeeOrder
+  .map((id) => committees.find((committee) => committee.id === id))
+  .filter(Boolean) as CommitteeData[];
