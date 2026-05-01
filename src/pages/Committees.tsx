@@ -1,6 +1,5 @@
 import { useRef, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { AlertCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
 import { committees, orderedCommittees } from "@/data/committees";
@@ -204,21 +203,7 @@ const Committees = () => {
         style={{ background: "linear-gradient(to right, transparent, hsl(var(--blue-accent)), hsl(var(--gold)), hsl(var(--blue-accent)), transparent)" }}
       />
 
-      {/* Position Paper Deadline Note */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.5 }}
-        className="mb-14 w-full max-w-5xl p-5 rounded-xl border border-red-500/30 bg-red-500/10 backdrop-blur-sm"
-      >
-        <div className="flex items-start gap-3">
-          <AlertCircle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
-          <p className="text-red-300/90 text-sm leading-relaxed">
-            <span className="text-red-400 font-display font-semibold">Important:</span> All delegates must submit their Position Papers by{" "}
-            <span className="text-red-300 font-semibold">July 20, 2026</span>. Guidelines are provided in each committee's Background Guide. Late submissions may lead to de-marking of Position Papers.
-          </p>
-        </div>
-      </motion.div>
+      <div className="mb-14" />
 
       {/* Mobile Card Layout */}
       <motion.div
