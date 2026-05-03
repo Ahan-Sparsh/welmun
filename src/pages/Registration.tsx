@@ -2,14 +2,10 @@ import { motion } from "framer-motion";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import PageLayout from "@/components/PageLayout";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import {
-  Download,
-  Camera,
-} from "lucide-react";
+import { Download } from "lucide-react";
 
 const sections = [
   { id: "downloads", label: "Downloads", icon: Download, path: "/registration" },
-  { id: "kamera-obscura", label: "Kamera Obscura", icon: Camera, path: "/registration/kamera-obscura" },
 ];
 
 const Registration = () => {
