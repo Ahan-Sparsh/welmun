@@ -9,7 +9,6 @@ import Index from "./pages/Index";
 import Addressals from "./pages/Addressals";
 import Registration from "./pages/Registration";
 import RegistrationDownloads from "./pages/registration/RegistrationDownloads";
-import RegistrationKameraObscura from "./pages/registration/RegistrationKameraObscura";
 import Schedule from "./pages/Schedule";
 import Committees from "./pages/Committees";
 import CommitteeDetail from "./pages/CommitteeDetail";
@@ -33,7 +32,6 @@ const App = () => (
             <Route path="/addressals" element={<Addressals />} />
             <Route path="/registration" element={<Registration />}>
               <Route index element={<RegistrationDownloads />} />
-              <Route path="kamera-obscura" element={<RegistrationKameraObscura />} />
             </Route>
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/committees" element={<Committees />} />
