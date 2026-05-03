@@ -45,12 +45,6 @@ const importantDownloads = [
     url: PDF_URLS.charter,
     icon: <Scale className="w-5 h-5" />,
   },
-  {
-    title: "Rules of Procedure",
-    description: "Complete UNA-USA Rules of Procedure for all committees.",
-    url: PDF_URLS.rop,
-    icon: <BookOpen className="w-5 h-5" />,
-  },
 ];
 
 const policyItems = [
