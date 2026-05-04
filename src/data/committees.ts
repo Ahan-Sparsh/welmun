@@ -148,7 +148,7 @@ export const committees: CommitteeData[] = [
     ],
     chairName: "Aaryan Khanna",
     chairRole: "Chairperson",
-    chairEmail: "chair.unhcr@welhamboys.org",
+    chairEmail: "chair.unodc@welhamboys.org",
     bgLink: "https://www.welhammun.org/_files/ugd/9bbbe8_ef8d0e73bf5541cc8c56c877d65bb714.pdf",
     matrixLink: "https://www.welhammun.org/_files/ugd/9bbbe8_0cb03ee32e8f4f3d88af1b2f9e6762e1.pdf",
     eb: [
