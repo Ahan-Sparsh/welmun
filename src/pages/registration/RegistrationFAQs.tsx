@@ -34,7 +34,7 @@ const RegistrationFAQs = () => (
         },
         {
           q: "How do I contact the organizers?",
-          a: "Secretary-General Ahan Sparsh: welmun@welhamboys.org / WhatsApp +91-7007800474. Conference Director Ms. Kiran Tripathi: kirantripathi@welhamboys.org / WhatsApp +91-7409809908.",
+          a: "Secretary-General Ahan Sparsh: welmun@welhamboys.org / WhatsApp +91-6204027206. Conference Director Ms. Kiran Tripathi: kirantripathi@welhamboys.org / WhatsApp +91-7409809908.",
         },
       ].map((item, i) => (
         <Card key={i} className="bg-secondary/30 border-primary/20">
