@@ -54,7 +54,7 @@ const RegistrationFAQs = () => (
           <p className="text-primary font-display text-xs mb-1">Secretary-General</p>
           <p>Ahan Sparsh</p>
           <a href="mailto:welmun@welhamboys.org" className="text-primary hover:underline cursor-none text-xs">welmun@welhamboys.org</a>
-          <p className="text-xs">WhatsApp: +91-7007800474</p>
+          <p className="text-xs">WhatsApp: +91-6204027206</p>
         </div>
         <div>
           <p className="text-primary font-display text-xs mb-1">Conference Director</p>
