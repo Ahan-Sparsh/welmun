@@ -7,7 +7,7 @@ const PDF_URLS = {
   policy: "../../public/docs/conference-policy.pdf",
   charter:
     "https://www.welhammun.org/_files/ugd/9bbbe8_d5a06f62464948b281210257dc716a48.pdf",
-  rop: "",
+  rop: "/welmun-2026-2027/public/docs/rop.pdf",
 };
 
 const importantDownloads = [
