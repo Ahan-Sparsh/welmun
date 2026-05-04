@@ -13,21 +13,29 @@ const Addressals = () => {
         <h1 className="font-display text-4xl md:text-5xl text-primary mb-8">Principal's Message</h1>
         <div className="flex flex-col md:flex-row gap-10">
           <div className="flex-1 space-y-5 text-muted-foreground leading-relaxed">
+            <blockquote className="border-l-2 border-primary/40 pl-4 italic text-primary/90">
+              "In all chaos there is a cosmos, in all disorder a secret order."
+              <br />
+              <span className="not-italic text-sm">— Carl Jung</span>
+            </blockquote>
             <p>
-              It gives me immense pleasure to welcome you to the eleventh edition of the Welham Boys' School Model United Nations Conference – WELMUN 2026. Over the years, WELMUN has grown to become a platform that not only promotes global awareness and diplomacy among students but also nurtures values of empathy, leadership, and dialogue.
+              The gavel falls for the twelfth time and on behalf of Welham Boys' School, I warmly welcome each one of you to WELMUN 2026.
             </p>
             <p>
-              The theme this year, Ordo ab Chao – "Order from Chaos" – highlights the power of dialogue in shaping the world we live in. In these three days of deliberation, we hope to see young minds engage in meaningful debate, represent diverse perspectives, and seek solutions that transcend borders and differences. At WELMUN, every delegate has the opportunity to be heard and to make a difference.
+              With every passing year, this conference has matured in its ambition and deepened in its purpose. What began as an exercise in academic diplomacy has evolved into a space where young delegates discover the weight of real-world responsibility and the courage it demands.
             </p>
             <p>
-              Each committee has been carefully curated to challenge delegates intellectually and inspire them to think critically about pressing global issues—past, present, and future.
+              This year's theme, Ordo ab Chao – "Order from Chaos", speaks to something far greater than geopolitics. It speaks to character. The world our delegates will inherit is one of extraordinary complexity, and it will not yield to hesitation. It rewards those who can hold their ground under pressure, reason through disagreement, and build consensus where none seemed possible. The committees this year have been curated with precisely that challenge in mind.
             </p>
             <p>
-              I wish all participants a thought-provoking and enriching experience. May your voices echo with the conviction of change and cooperation.
+              To every delegate, I say this: bring your conviction, sharpen your arguments, and above all, listen as keenly as you speak. The measure of a great diplomat has always been wisdom, not just wit.
+            </p>
+            <p>
+              May WELMUN 2026 be a conference worthy of the tradition that precedes it.
             </p>
             <p>We look forward to hosting you at Welham Boys' School for WELMUN 2026.</p>
             <p className="mt-4">
-              Warm regards<br />
+              Best Regards,<br />
               Sangeeta Kain<br />
               Principal
             </p>

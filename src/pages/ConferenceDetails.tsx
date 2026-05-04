@@ -1,12 +1,13 @@
 import PageLayout from "@/components/PageLayout";
 import { Card, CardContent } from "@/components/ui/card";
-import { Download, Shield, Scale } from "lucide-react";
+import { Download, Shield, Scale, BookOpen } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const PDF_URLS = {
-  policy: "/docs/conference-policy.pdf",
+  policy: "../../public/docs/conference-policy.pdf",
   charter:
     "https://www.welhammun.org/_files/ugd/9bbbe8_d5a06f62464948b281210257dc716a48.pdf",
+  rop: "",
 };
 
 const importantDownloads = [
@@ -21,6 +22,12 @@ const importantDownloads = [
     description: "Full text of the UN Charter & Statute of the International Court of Justice.",
     url: PDF_URLS.charter,
     icon: <Scale className="w-5 h-5" />,
+  },
+  {
+    title: "Rules of Procedure",
+    description: "Complete UNA-USA Rules of Procedure for all committees.",
+    url: PDF_URLS.rop,
+    icon: <BookOpen className="w-5 h-5" />,
   },
 ];
 
@@ -41,7 +48,7 @@ const ConferenceDetails = () => {
           <h2 className="font-display text-2xl text-primary mb-6 flex items-center gap-3">
             <Download className="w-6 h-6" /> Important Downloads
           </h2>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-3">
             {importantDownloads.map((item, i) => (
               <a key={i} href={item.url} target="_blank" rel="noopener noreferrer" className="block group">
                 <Card className="bg-secondary/20 border-primary/15 hover:border-primary/40 hover:bg-secondary/40 transition-colors duration-300 hover-lift h-full">

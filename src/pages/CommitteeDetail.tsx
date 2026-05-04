@@ -157,26 +157,22 @@ const CommitteeDetail = () => {
               {/* Resource Buttons */}
               <div className="flex flex-col gap-2.5 w-full mt-3">
                 {committee.bgLink && (
-                  <a
-                    href={committee.bgLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to={`/committees/${committee.id}/background-guide`}
                     className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg border border-blue-accent/40 text-blue-accent text-sm hover:bg-blue-accent hover:text-blue-accent-foreground transition-all duration-300 cursor-none"
                   >
                     <FileText className="w-4 h-4" />
                     Background Guide
-                  </a>
+                  </Link>
                 )}
                 {committee.matrixLink && (
-                  <a
-                    href={committee.matrixLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to={`/committees/${committee.id}/matrix`}
                     className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg border border-blue-accent/40 text-blue-accent text-sm hover:bg-blue-accent hover:text-blue-accent-foreground transition-all duration-300 cursor-none"
                   >
                     <Grid3X3 className="w-4 h-4" />
                     Matrix
-                  </a>
+                  </Link>
                 )}
                 {committee.ropLink && (
                   <a
