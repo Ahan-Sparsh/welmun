@@ -83,7 +83,6 @@ export const committees: CommitteeData[] = [
     logo: "https://static.wixstatic.com/media/9bbbe8_7895e5b978fa4c238ab6c4962af9e9fc~mv2.png/v1/fill/w_346,h_282,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/UNSC%20Logo_edited_edited.png",
     agenda:
       "De-escalating the Conflagration of the Israel–Iran Military Conflict.",
-    freezeDate: "February 04, 2031",
     chairLetter: [
       "Dear Delegates,",
       "It is my utmost privilege to welcome you all to the 12th edition of the Welham Boys' School Model United Nations Conference 2026 as the Secretary-General and Chairperson of the United Nations Security Council, in what we look forward to as a decisive and intense committee. As we convene under the agenda, 'De-escalating the Conflagration of the Israel–Iran Military Conflict', we are stepping into a chamber of resolutions and diplomatic deliberation at a moment where history stands on the brink of being rewritten.",
@@ -114,7 +113,7 @@ export const committees: CommitteeData[] = [
   },
   {
     id: "disec",
-    name: "United Nations General Assembly I - DISEC",
+    name: "UNGA I - Disarmament and International Security Committee",
     shortName: "DISEC",
     cardImage: disecImg,
     logo: "/images/logos/disec.png",
