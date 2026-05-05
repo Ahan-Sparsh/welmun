@@ -2,6 +2,7 @@ import PageLayout from "@/components/PageLayout";
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 import secGenPhoto from "@/assets/sec-gen.png";
+import principalPhoto from "@/assets/principal.png";
 
 interface Addressal {
   label: string;
@@ -21,8 +22,7 @@ const addressals: Addressal[] = [
     title: "Principal's Message",
     name: "Ms. Sangeeta Kain",
     role: "Principal, Welham Boys' School",
-    photo:
-      "https://static.wixstatic.com/media/9bbbe8_794ddc299c444cddab7caf98ad6d1e16~mv2.jpg/v1/crop/x_0,y_55,w_576,h_603/fill/w_268,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Principal's%20Photo%20for%20WELMUM%2022_JPG.jpg",
+    photo: principalPhoto,
     quote: {
       text: "In all chaos there is a cosmos, in all disorder a secret order.",
       author: "Carl Jung",
@@ -85,7 +85,7 @@ const AddressalLetter = ({ data, index }: { data: Addressal; index: number }) =>
         <img
           src={data.photo}
           alt={data.name}
-          className="relative w-44 h-44 md:w-52 md:h-52 object-cover rounded-full border-2 border-primary/30 shadow-2xl"
+          className="relative w-44 h-44 md:w-52 md:h-52 object-cover object-top rounded-full border-2 border-primary/30 shadow-2xl"
           loading={index === 0 ? "eager" : "lazy"}
         />
       </div>

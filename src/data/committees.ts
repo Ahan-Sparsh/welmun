@@ -212,8 +212,13 @@ export const committees: CommitteeData[] = [
     agenda:
       "Revisiting the Montevideo Convention and International Guidelines for the recognition of Secessionist Entities while limiting discretion of Parent States.",
     chairLetter: [
-      "The Special Political and Decolonization Committee (SPECPOL) is the Fourth Committee of the United Nations General Assembly. It deals with a variety of subjects which include those related to decolonization, Palestinian refugees, human rights, peacekeeping, mine action, outer space, public information, atomic radiation, and the University for Peace.",
-      "Details for this committee will be updated soon. Stay tuned for more information about the agenda, executive board, and background guides.",
+      '"The ones who are crazy enough to think they can change the world are the ones who do." — Steve Jobs',
+      "To everyone reading this: my intent is not only to share what I expect of this committee, but also to express my gratitude for the privilege of serving as your Chair.",
+      "When you step into the committee room, walk in with the confidence that you can articulate every fact and idea you have prepared. Do not hesitate — not in your speeches, not in lobbying, not in the positions you choose to defend. Rather than asking whether you are doing something wrong, ask whether it serves the interests of the committee and the world it represents.",
+      "You have prepared extensively for these three days; use that preparation to its fullest, because these three days will not come again. Take this opportunity not just to debate and deliberate, but to grow — as a speaker, a diplomat, and an individual. Listen as much as you speak. Respect perspectives that differ from your own. Recognise that every challenge you encounter here is quietly shaping a more capable version of you.",
+      "Make meaningful connections. Embrace the experience wholeheartedly. And above all, leave this committee knowing you gave it everything you had.",
+      "Remember: Model United Nations is not about winning awards. It is about the exchange of ideas, the art of negotiation, and the ability to collaborate across difference. The knowledge you bring is valuable — wield it wisely. These three days are fleeting, but the skills, memories, and friendships you build here will stay with you long after the conference ends.",
+      "In expectancy of your endeavour,",
     ],
     chairName: "Kushagra Gupta",
     chairRole: "Chairperson",

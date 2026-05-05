@@ -6,6 +6,7 @@ import aaryanPhoto from "@/assets/aaryan-khanna.png";
 import dirGenPhoto from "@/assets/dir-gen.png";
 import techDirector1Photo from "@/assets/tech-director-1.png";
 import techDirector2Photo from "@/assets/tech-director-2.png";
+import techDirector3Photo from "@/assets/tech-director-3.png";
 
 const secGen = { role: "Secretary General", name: "Ahan Sparsh", img: secGenPhoto };
 const supportingMembers = [
@@ -17,7 +18,7 @@ const supportingMembers = [
 const techDirectors: { role: string; name: string; img: string | null }[] = [
   { role: "Technical Director", name: "Arnav Mittal", img: techDirector1Photo },
   { role: "Technical Director", name: "Stavya Kumar", img: techDirector2Photo },
-  { role: "Technical Director", name: "Piyush Singhal", img: null },
+  { role: "Technical Director", name: "Piyush Singhal", img: techDirector3Photo },
 ];
 
 const SectionHeading = ({
