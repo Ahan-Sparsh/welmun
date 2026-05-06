@@ -42,7 +42,7 @@ const Welmun2025Recap = () => {
         transition={{ duration: 0.6, delay: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
       >
         <iframe
-          src="https://www.youtube.com/embed/VXu5pa1jDUg"
+          src="https://www.youtube.com/embed/VXu5pa1jDUg?autoplay=1&mute=1&loop=1&playlist=VXu5pa1jDUg&controls=1&playsinline=1"
           title="WELMUN 2025 — Welham Newz Recap"
           className="w-full h-full"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
