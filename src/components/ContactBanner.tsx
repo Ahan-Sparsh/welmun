@@ -31,7 +31,7 @@ const ContactBanner = () => {
             </a>
           </div>
           <div className="flex gap-5 items-center">
-            <a href="https://www.instagram.com/welhamboysschool/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-blue-accent transition-colors cursor-none">
+            <a href="https://www.instagram.com/welmun.official/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-blue-accent transition-colors cursor-none">
               <Instagram className="w-6 h-6" />
             </a>
             <a href="https://www.facebook.com/WelhamBoys/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-blue-accent transition-colors cursor-none">
