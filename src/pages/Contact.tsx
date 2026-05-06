@@ -11,7 +11,6 @@ import {
   Loader2,
   User2,
   Crown,
-  Inbox,
 } from "lucide-react";
 
 const GOOGLE_FORM_ACTION =
@@ -31,15 +30,8 @@ const PEOPLE = [
     role: "Secretary-General",
     name: "Ahan Sparsh",
     phone: "+91 6204027206",
-    email: "secretarygeneral@welhamboys.org",
-    icon: User2,
-  },
-  {
-    role: "General Inbox",
-    name: "WELMUN Secretariat",
-    phone: null,
     email: "welmun@welhamboys.org",
-    icon: Inbox,
+    icon: User2,
   },
 ];
 
@@ -153,7 +145,7 @@ const Contact = () => {
       </motion.div>
 
       {/* People cards */}
-      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mb-14 md:mb-20">
+      <div className="w-full max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mb-14 md:mb-20 justify-items-center">
         {PEOPLE.map((p, i) => {
           const Icon = p.icon;
           return (

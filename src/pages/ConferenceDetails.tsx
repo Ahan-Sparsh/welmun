@@ -8,14 +8,12 @@ import {
   Calendar,
   MapPin,
   Award,
-  Users,
 } from "lucide-react";
 
 const QUICK_FACTS = [
   { icon: Award, label: "Edition", value: "12th" },
   { icon: Calendar, label: "Dates", value: "28–30 July 2026" },
   { icon: MapPin, label: "Venue", value: "Welham Boys' School" },
-  { icon: Users, label: "Format", value: "UNA-USA Rules" },
 ];
 
 interface DocItem {
@@ -67,7 +65,7 @@ const ConferenceDetails = () => {
 
       {/* Quick Facts */}
       <motion.div
-        className="w-full max-w-5xl mx-auto mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4"
+        className="w-full max-w-4xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 justify-items-center"
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
@@ -77,7 +75,7 @@ const ConferenceDetails = () => {
           return (
             <motion.div
               key={f.label}
-              className="flex flex-col items-start p-5 rounded-xl border border-primary/15 bg-secondary/25 backdrop-blur-sm hover:border-blue-accent/40 transition-colors"
+              className="w-full max-w-xs flex flex-col items-center text-center p-5 rounded-xl border border-primary/15 bg-secondary/25 backdrop-blur-sm hover:border-blue-accent/40 transition-colors"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 + i * 0.06, ease: "easeOut" }}
