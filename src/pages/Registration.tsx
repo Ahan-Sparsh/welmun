@@ -31,29 +31,6 @@ const kameraDocs: DocItem[] = [
   { title: "Kamera Obscura Guidelines", desc: "Photography & Movie Making competition guidelines.", file: "/docs/Kamera_Obscura_Guidelines_2026.pdf", icon: FileText },
 ];
 
-const STEPS = [
-  {
-    n: "01",
-    title: "Review the Invite",
-    body: "Read the invitation letter and conference policy carefully with your faculty advisor.",
-  },
-  {
-    n: "02",
-    title: "Submit the Forms",
-    body: "Fill out the Delegate Information and Indemnity Forms and send them via email.",
-  },
-  {
-    n: "03",
-    title: "Confirm Allocations",
-    body: "We respond with country/portfolio allocations and accommodation details.",
-  },
-  {
-    n: "04",
-    title: "Travel to Dehradun",
-    body: "Arrive on the morning of 28 July 2026. Registration begins at 8:00 AM.",
-  },
-];
-
 const KEY_DATES = [
   { label: "Registration Opens", value: "Available now" },
   { label: "Registration Deadline", value: "25 April 2026" },
@@ -113,43 +90,7 @@ const Registration = () => {
           Registration
         </h1>
         <div className="gold-divider mx-auto" />
-        <p className="text-muted-foreground max-w-2xl text-sm md:text-base italic mt-2">
-          Four steps from interest to delegate.
-        </p>
       </motion.div>
-
-      {/* How to Register — 4 steps */}
-      <motion.section
-        className="w-full max-w-5xl mx-auto mt-16"
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-      >
-        <SectionDivider label="How to Register" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-          {STEPS.map((step, i) => (
-            <motion.div
-              key={step.n}
-              className="relative p-5 md:p-6 rounded-xl border border-primary/15 bg-secondary/20 hover:border-blue-accent/40 transition-colors"
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.4, delay: i * 0.08, ease: "easeOut" }}
-            >
-              <span className="font-display text-3xl md:text-4xl text-blue-accent/50 leading-none block mb-3">
-                {step.n}
-              </span>
-              <h3 className="font-display text-base md:text-lg text-primary mb-2 leading-tight">
-                {step.title}
-              </h3>
-              <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
-                {step.body}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
 
       {/* Key Dates */}
       <motion.section
