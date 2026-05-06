@@ -74,10 +74,21 @@ const SecretariatSection = () => {
         </div>
 
         {/* Supporting members */}
-        <div className="flex flex-wrap justify-center gap-8 md:gap-12 max-w-5xl mx-auto">
-          {supportingMembers.map((m, i) => (
-            <PortraitCard key={m.name} member={m} size="md" delay={i * 0.08} />
-          ))}
+        <div className="max-w-5xl mx-auto">
+          {/* Mobile: triangle (Tanveer top, Koustabh + Aaryan below) */}
+          <div className="grid grid-cols-2 gap-8 justify-items-center md:hidden">
+            <div className="col-span-2 flex justify-center">
+              <PortraitCard member={supportingMembers[1]} size="md" />
+            </div>
+            <PortraitCard member={supportingMembers[0]} size="md" delay={0.08} />
+            <PortraitCard member={supportingMembers[2]} size="md" delay={0.16} />
+          </div>
+          {/* Desktop: single row */}
+          <div className="hidden md:flex flex-wrap justify-center gap-12">
+            {supportingMembers.map((m, i) => (
+              <PortraitCard key={m.name} member={m} size="md" delay={i * 0.08} />
+            ))}
+          </div>
         </div>
       </section>
 
