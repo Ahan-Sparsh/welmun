@@ -22,26 +22,28 @@ const CountdownTimer = () => {
   }, []);
 
   const boxes = [
-    { val: time.d, label: "D" },
-    { val: time.h, label: "H" },
-    { val: time.m, label: "M" },
-    { val: time.s, label: "S" },
+    { val: time.d, label: "Days" },
+    { val: time.h, label: "Hours" },
+    { val: time.m, label: "Minutes" },
+    { val: time.s, label: "Seconds" },
   ];
 
+  const pad = (n: number) => n.toString().padStart(2, "0");
+
   return (
-    <div className="px-6 py-3 inline-flex items-center gap-3 md:gap-5">
-      {boxes.map((b, i) => (
-        <span key={b.label} className="flex items-center gap-3 md:gap-5">
-          <span className="text-center">
-            <span className="text-primary text-3xl md:text-5xl font-display leading-none">
-              {b.val}
-            </span>
-            <span className="text-[10px] md:text-xs text-light-gold ml-1">{b.label}</span>
+    <div className="inline-flex items-center gap-2 md:gap-4">
+      {boxes.map((b) => (
+        <div
+          key={b.label}
+          className="flex flex-col items-center justify-center min-w-[64px] md:min-w-[96px] px-3 md:px-5 py-3 md:py-4 rounded-xl border border-primary/20 bg-secondary/30 backdrop-blur-sm"
+        >
+          <span className="text-primary text-3xl md:text-5xl font-display leading-none tabular-nums">
+            {pad(b.val)}
           </span>
-          {i < boxes.length - 1 && (
-            <span className="text-blue-accent/30 text-2xl md:text-4xl font-display select-none">:</span>
-          )}
-        </span>
+          <span className="text-[9px] md:text-[11px] tracking-[3px] uppercase text-light-gold mt-2">
+            {b.label}
+          </span>
+        </div>
       ))}
     </div>
   );

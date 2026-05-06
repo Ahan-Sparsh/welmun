@@ -151,22 +151,22 @@ const Contact = () => {
           return (
             <motion.div
               key={p.role}
-              className="group p-6 rounded-xl border border-primary/15 bg-secondary/25 backdrop-blur-sm hover:border-blue-accent/40 transition-colors"
+              className="group w-full max-w-sm flex flex-col items-center text-center p-6 rounded-xl border border-primary/15 bg-secondary/25 backdrop-blur-sm hover:border-blue-accent/40 transition-colors"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.4, delay: i * 0.08, ease: "easeOut" }}
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className="w-10 h-10 rounded-lg bg-blue-accent/15 flex items-center justify-center text-blue-accent">
+              <div className="flex flex-col items-center mb-4">
+                <div className="w-12 h-12 rounded-lg bg-blue-accent/15 flex items-center justify-center text-blue-accent mb-3">
                   <Icon className="w-5 h-5" />
                 </div>
                 <span className="text-[10px] tracking-[3px] uppercase text-muted-foreground">
                   {p.role}
                 </span>
               </div>
-              <h3 className="font-display text-lg text-primary mb-3">{p.name}</h3>
-              <div className="space-y-2 text-sm">
+              <h3 className="font-display text-lg text-primary mb-4">{p.name}</h3>
+              <div className="space-y-2 text-sm flex flex-col items-center">
                 {p.phone && (
                   <a
                     href={`tel:${p.phone.replace(/\s/g, "")}`}
