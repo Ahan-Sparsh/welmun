@@ -44,11 +44,10 @@ const ContactBanner = () => {
           Get in touch
         </span>
         <h2 className="font-display text-5xl md:text-7xl lg:text-8xl text-primary tracking-wide leading-none uppercase">
-          Let's Talk
+          CONTACT US
         </h2>
         <div className="gold-divider mx-auto" />
         <p className="text-muted-foreground max-w-xl text-sm md:text-base italic mt-2 mb-8">
-          Questions, partnerships, or press — we'd love to hear from you.
         </p>
         <Link
           to="/contact"

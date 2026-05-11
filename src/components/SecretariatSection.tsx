@@ -8,7 +8,7 @@ import techDirector1Photo from "@/assets/tech-director-1.png";
 import techDirector2Photo from "@/assets/tech-director-2.png";
 import techDirector3Photo from "@/assets/tech-director-3.png";
 
-const secGen = { role: "Secretary General", name: "Ahan Sparsh", img: secGenPhoto };
+const secGen = { role: "Secretary-General", name: "Ahan Sparsh", img: secGenPhoto };
 const supportingMembers = [
   { role: "Under Secretary General", name: "Koustabh Gupta", img: underSecPhoto },
   { role: "Director General", name: "Tanveer Singh Madan", img: dirGenPhoto },
