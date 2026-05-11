@@ -21,7 +21,7 @@ interface DocItem {
 
 const welmunDocs: DocItem[] = [
   { title: "Invitation Letter", desc: "Official invitation from the Principal of Welham Boys' School.", file: "/docs/WELMUN-Invite.docx", icon: Mail },
-  { title: "Delegate Information", desc: "Delegates, teacher escorts, and committee preferences.", file: "/docs/WELMUN-Delegate_Information.docx", icon: FileText },
+  { title: "Delegate Information Form", desc: "Delegates, teacher escorts, and committee preferences.", file: "/docs/WELMUN-Delegate_Information.docx", icon: FileText },
   { title: "Indemnity Form", desc: "Consent form to be signed and sealed by the Principal.", file: "/docs/WELMUN-Indemnity_Form.docx", icon: ClipboardSignature },
   { title: "Hotel Tariff", desc: "Partner hotels with rates and contact details.", file: "/docs/WELMUN-Hotel_Tariff.pdf", icon: Hotel },
 ];

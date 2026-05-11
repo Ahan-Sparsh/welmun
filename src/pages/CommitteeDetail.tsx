@@ -119,7 +119,7 @@ const CommitteeDetail = () => {
           </motion.div>
 
           {/* Main Content: Chair + Letter side by side */}
-          <div ref={headerRef} className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-10 lg:gap-14 items-start mb-20 reveal-section">
+          <div ref={headerRef} className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-[350px_1fr] gap-10 lg:gap-14 items-start mb-20 reveal-section">
             {/* Left — Chair Photo + Resources */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -130,7 +130,7 @@ const CommitteeDetail = () => {
               {/* Chair Photo */}
               {committee.eb[0] && (
                 <div className="flex flex-col items-center gap-3 w-full">
-                  <div className="w-48 h-64 lg:w-56 lg:h-72 rounded-xl overflow-hidden border-2 border-primary/20 shadow-lg">
+                  <div className="w-60 h-80 lg:w-[17.5rem] lg:h-[22.5rem] rounded-xl overflow-hidden border-2 border-primary/20 shadow-lg">
                     {committee.eb[0].image ? (
                       <img
                         src={committee.eb[0].image}
