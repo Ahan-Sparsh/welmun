@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const EASE = [0.25, 0.46, 0.45, 0.94] as const;
 
@@ -9,6 +10,7 @@ interface PortraitCardProps {
 }
 
 const PortraitCard = ({ member, size = "md", delay = 0 }: PortraitCardProps) => {
+  const [loaded, setLoaded] = useState(false);
   const dims =
     size === "lg"
       ? "w-56 sm:w-64 md:w-72"
@@ -28,12 +30,22 @@ const PortraitCard = ({ member, size = "md", delay = 0 }: PortraitCardProps) => 
         <div className="absolute inset-0 rounded-xl bg-blue-accent/15 blur-2xl scale-95" />
         <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl border border-primary/20 bg-secondary/40 shadow-2xl group">
           {member.img ? (
-            <img
-              src={member.img}
-              alt={member.name}
-              className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
-              loading="lazy"
-            />
+            <>
+              {!loaded && (
+                <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-secondary/60">
+                  <span className="font-display text-primary/40 text-xs tracking-[3px]">
+                    Loading…
+                  </span>
+                </div>
+              )}
+              <img
+                src={member.img}
+                alt={member.name}
+                onLoad={() => setLoaded(true)}
+                className={`w-full h-full object-cover object-top transition duration-700 ${loaded ? "opacity-100" : "opacity-0"} group-hover:scale-[1.04]`}
+                loading="lazy"
+              />
+            </>
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-secondary/60">
               <span className="font-display text-primary/40 text-xs tracking-[3px] uppercase">

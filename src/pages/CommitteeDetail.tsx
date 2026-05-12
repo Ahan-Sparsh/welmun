@@ -11,6 +11,34 @@ import ParticleCanvas from "@/components/ParticleCanvas";
 import CustomCursor from "@/components/CustomCursor";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
+const ChairPortrait = ({ image, name }: { image?: string; name: string }) => {
+  const [loaded, setLoaded] = useState(false);
+
+  if (!image) {
+    return (
+      <div className="w-full h-full bg-muted/50 flex items-center justify-center">
+        <span className="text-muted-foreground/60 font-display text-xs">TBA</span>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      {!loaded && (
+        <div className="absolute inset-0 w-full h-full bg-muted/50 flex items-center justify-center">
+          <span className="text-muted-foreground/60 font-display text-xs">Loading…</span>
+        </div>
+      )}
+      <img
+        src={image}
+        alt={name}
+        onLoad={() => setLoaded(true)}
+        className={`w-full h-full object-cover transition-opacity duration-300 ${loaded ? "opacity-100" : "opacity-0"}`}
+      />
+    </>
+  );
+};
+
 const ComingSoonButton = ({ icon: Icon, label }: { icon: typeof FileText; label: string }) => {
   const [open, setOpen] = useState(false);
   const wrapperRef = useRef<HTMLSpanElement>(null);
@@ -175,18 +203,12 @@ const CommitteeDetail = () => {
               {/* Chair Photo */}
               {committee.eb[0] && (
                 <div className="flex flex-col items-center gap-3 w-full">
-                  <div className="w-60 h-80 lg:w-[17.5rem] lg:h-[22.5rem] rounded-xl overflow-hidden border-2 border-primary/20 shadow-lg">
-                    {committee.eb[0].image ? (
-                      <img
-                        src={committee.eb[0].image}
-                        alt={committee.eb[0].name}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-muted/50 flex items-center justify-center">
-                        <span className="text-muted-foreground/60 font-display text-xs">TBA</span>
-                      </div>
-                    )}
+                  <div className="relative w-60 h-80 lg:w-[17.5rem] lg:h-[22.5rem] rounded-xl overflow-hidden border-2 border-primary/20 shadow-lg">
+                    <ChairPortrait
+                      key={committee.id}
+                      image={committee.eb[0].image}
+                      name={committee.eb[0].name}
+                    />
                   </div>
                   <div className="text-center">
                     <p className="text-primary font-display text-base font-semibold leading-tight">
@@ -278,7 +300,7 @@ const CommitteeDetail = () => {
               <div className="flex flex-wrap justify-center items-start gap-8 md:gap-12">
                 {committee.eb.slice(1).map((member, i) => (
                   <PortraitCard
-                    key={`${member.role}-${i}`}
+                    key={`${committee.id}-${member.role}-${i}`}
                     member={{ role: member.role, name: member.name, img: member.image ?? null }}
                     size="md"
                     delay={i * 0.06}
