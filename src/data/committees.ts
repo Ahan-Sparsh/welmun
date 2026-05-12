@@ -283,7 +283,7 @@ export const committees: CommitteeData[] = [
     name: "Council of Hindustan",
     shortName: "Council of Hindustan",
     cardImage: viceroysImg,
-    logo: "/public/images/logos/image.png",
+    logo: "/images/logos/image.png",
     agenda: "The Revolt of 1857",
     freezeDate: "15 June, 1857",
     note: "Note: This is a bilingual and a constant crisis committee.\nThis committee does not follow the traditional timeline and is based on a series of fictional events.",
