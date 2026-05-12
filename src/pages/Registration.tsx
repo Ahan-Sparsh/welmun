@@ -5,10 +5,8 @@ import {
   FileText,
   Camera,
   Mail,
-  Calendar,
   ClipboardSignature,
   Send,
-  CheckCircle2,
   Hotel,
 } from "lucide-react";
 
@@ -29,13 +27,6 @@ const welmunDocs: DocItem[] = [
 const kameraDocs: DocItem[] = [
   { title: "Kamera Obscura Invite", desc: "Official invitation for Kamera Obscura 9.0.", file: "/docs/Kamera_Obscura_Invite_2026.pdf", icon: Mail },
   { title: "Kamera Obscura Guidelines", desc: "Photography & Movie Making competition guidelines.", file: "/docs/Kamera_Obscura_Guidelines_2026.pdf", icon: FileText },
-];
-
-const KEY_DATES = [
-  { label: "Registration Opens", value: "Available now" },
-  { label: "Registration Deadline", value: "25 April 2026" },
-  { label: "Travel Details Due", value: "10 July 2026" },
-  { label: "Conference Dates", value: "28–30 July 2026" },
 ];
 
 const DocCard = ({ doc, i }: { doc: DocItem; i: number }) => {
@@ -92,33 +83,17 @@ const Registration = () => {
         <div className="gold-divider mx-auto" />
       </motion.div>
 
-      {/* Key Dates */}
+      {/* Registrations Open */}
       <motion.section
-        className="w-full max-w-5xl mx-auto mt-16"
+        className="w-full max-w-5xl mx-auto mt-16 text-center"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <SectionDivider label="Key Dates" icon={Calendar} />
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {KEY_DATES.map((d, i) => (
-            <motion.div
-              key={d.label}
-              className="p-4 rounded-xl border border-primary/15 bg-secondary/25 backdrop-blur-sm flex items-start gap-3"
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.35, delay: i * 0.06, ease: "easeOut" }}
-            >
-              <CheckCircle2 className="w-4 h-4 text-blue-accent shrink-0 mt-0.5" />
-              <div className="min-w-0">
-                <p className="text-[10px] tracking-[2px] uppercase text-muted-foreground">{d.label}</p>
-                <p className="font-display text-sm md:text-base text-primary mt-0.5 leading-tight">{d.value}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <p className="font-display text-2xl md:text-3xl text-blue-accent tracking-wide">
+          Registrations open now!
+        </p>
       </motion.section>
 
       {/* WELMUN Forms */}
