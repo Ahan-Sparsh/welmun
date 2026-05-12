@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { orderedCommittees } from "@/data/committees";
 import { ChevronLeft, ChevronRight, FileText, Grid3X3, BookOpen } from "lucide-react";
@@ -8,6 +9,50 @@ import CommitteeIntro from "@/components/CommitteeIntro";
 import Navbar from "@/components/Navbar";
 import ParticleCanvas from "@/components/ParticleCanvas";
 import CustomCursor from "@/components/CustomCursor";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+
+const ComingSoonButton = ({ icon: Icon, label }: { icon: typeof FileText; label: string }) => {
+  const [open, setOpen] = useState(false);
+  const wrapperRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const handleAway = (e: PointerEvent) => {
+      if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("pointerdown", handleAway);
+    return () => document.removeEventListener("pointerdown", handleAway);
+  }, [open]);
+
+  return (
+    <Tooltip open={open} onOpenChange={setOpen} delayDuration={150}>
+      <TooltipTrigger asChild>
+        <span
+          ref={wrapperRef}
+          tabIndex={0}
+          role="button"
+          aria-disabled="true"
+          onClick={() => setOpen((v) => !v)}
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
+          onFocus={() => setOpen(true)}
+          onBlur={() => setOpen(false)}
+          className="block w-full"
+        >
+          <span className="w-full flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg border border-muted-foreground/40 bg-muted-foreground/5 text-muted-foreground text-sm cursor-not-allowed select-none">
+            <Icon className="w-4 h-4" />
+            {label}
+          </span>
+        </span>
+      </TooltipTrigger>
+      <TooltipContent side="top" className="bg-background/95 border-muted-foreground/40 text-muted-foreground font-medium tracking-wide">
+        Coming Soon
+      </TooltipContent>
+    </Tooltip>
+  );
+};
 
 const CommitteeDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -157,22 +202,10 @@ const CommitteeDetail = () => {
               {/* Resource Buttons */}
               <div className="flex flex-col gap-2.5 w-full mt-3">
                 {committee.bgLink && (
-                  <Link
-                    to={`/committees/${committee.id}/background-guide`}
-                    className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg border border-blue-accent/40 text-blue-accent text-sm hover:bg-blue-accent hover:text-blue-accent-foreground transition-all duration-300 cursor-none"
-                  >
-                    <FileText className="w-4 h-4" />
-                    Background Guide
-                  </Link>
+                  <ComingSoonButton icon={FileText} label="Background Guide" />
                 )}
                 {committee.matrixLink && (
-                  <Link
-                    to={`/committees/${committee.id}/matrix`}
-                    className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg border border-blue-accent/40 text-blue-accent text-sm hover:bg-blue-accent hover:text-blue-accent-foreground transition-all duration-300 cursor-none"
-                  >
-                    <Grid3X3 className="w-4 h-4" />
-                    Matrix
-                  </Link>
+                  <ComingSoonButton icon={Grid3X3} label="Matrix" />
                 )}
                 {committee.ropLink && (
                   <a
