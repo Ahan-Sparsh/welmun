@@ -25,7 +25,6 @@ import vaibhavSharmaPhoto from "@/assets/eb/vaibhav-kumar-sharma.jpg";
 import yuvrajGuptaPhoto from "@/assets/eb/yuvraj-gupta.jpg";
 import chetanChopraPhoto from "@/assets/eb/chetan-chopra.jpg";
 import agastyaGuptaPhoto from "@/assets/eb/agastya-gupta.jpg";
-import viratGaganPhoto from "@/assets/eb/virat-gagan.jpg";
 import shivanshThapliyalPhoto from "@/assets/eb/shivansh-thapliyal.jpg";
 import koustabhGuptaPhoto from "@/assets/eb/koustabh-gupta.jpg";
 import harshitSachanPhoto from "@/assets/eb/harshit-sachan.png";
@@ -34,7 +33,6 @@ import prayaanShobitVaishPhoto from "@/assets/eb/prayaan-shobit-vaish.png";
 import prahethVishalAggarwalPhoto from "@/assets/eb/praheth-vishal-aggarwal.png";
 import aaryanUnodcPhoto from "@/assets/eb/aaryan-khanna-unodc.png";
 import kushagraGuptaPhoto from "@/assets/eb/kushagra-gupta.jpg";
-import angadSinghPhoto from "@/assets/eb/angad-singh.jpg";
 import adarshRajPhoto from "@/assets/eb/adarsh-raj.jpg";
 import ayanChoudharyPhoto from "@/assets/eb/ayan-choudhary.jpg";
 import ealvisTallangPhoto from "@/assets/eb/ealvis-tallang.png";
@@ -125,7 +123,7 @@ export const committees: CommitteeData[] = [
     chairLetter: [
       '"Every territorial settlement involved in this war must be made in the interest and for the benefit of the populations concerned." – 28th President of the United States, Woodrow Wilson',
       "Dear Delegates,",
-      "It is with immense pleasure and the distinct privilege as Chairperson of the First Committee that I welcome you to the Disarmament and International Security Committee. Accompanying me as Vice Chairperson is Agastya Gupta, assisted by the Directors Chetan Chopra and Yuvraj Gupta, and the Rapporteurs Shivaansh Thapliyal and Virat Gagan.",
+      "It is with immense pleasure and the distinct privilege as Chairperson of the First Committee that I welcome you to the Disarmament and International Security Committee. Accompanying me as Vice Chairperson is Agastya Gupta, assisted by the Directors Chetan Chopra and Yuvraj Gupta, and the Rapporteur Shivaansh Thapliyal.",
       'Delegates, in this defining moment of history, the previous world order is dead. The post-Cold War security architectures and strategic moral compass that once restrained unchecked power are now gyrating uncontrollably, succumbing to the magnetic influence of emerging powers. Convening on January 20, 2029, at the zenith of the "Pax Multipolaris World," DISEC must navigate through rising military invasions and breaches of sovereignty that undermine global territorial integrity and peace.',
       'As this "Pax Multipolaris World" unfolds into political destabilization and armed conflicts, human lives in warzones are reduced to numbers history forgets. The "War of Hormuz" between Iran and the US continues, provoking questions on whether foreign military presence in strategic maritime straits ensures stability or perpetuates coercion, unregulated weapons trade, and military dependency. The "Gaza Genocide" has been reduced— not because of mutual consensus, but because lights from bombs replaced those of "Hanukkah." Entire civilisations died that night.',
       "Across East Asia, maritime conflicts have escalated, with the Chinese Premier declaring that \"The Chinese Motherland\" would be restored before Beijing's 90th Independence Day Celebrations. Sovereignty is no longer merely a legal construct but a function of military capability, economic leverage, and geopolitical will. Meanwhile, as the American military's focus shifts toward a destabilised South America, the Arctic Frontier faces strategic disputes and maritime claims—particularly in Greenland—that threaten to fracture institutions such as NATO, especially after the expiration of key military treaties, and rapid naval and military developments.",
@@ -150,7 +148,6 @@ export const committees: CommitteeData[] = [
       },
       { name: "Chetan Chopra", role: "Director", image: chetanChopraPhoto },
       { name: "Yuvraj Gupta", role: "Director", image: yuvrajGuptaPhoto },
-      { name: "Virat Gagan", role: "Rapporteur", image: viratGaganPhoto },
       {
         name: "Shivansh Thapliyal",
         role: "Rapporteur",
@@ -230,7 +227,6 @@ export const committees: CommitteeData[] = [
         image: kushagraGuptaPhoto,
       },
       { name: "Adarsh Raj", role: "Vice Chairperson", image: adarshRajPhoto },
-      { name: "Angad Singh", role: "Director", image: angadSinghPhoto },
       { name: "Ayan Choudhary", role: "Director", image: ayanChoudharyPhoto },
       { name: "Gitansh Pawar", role: "Director", image: gitanshPawarPhoto },
       {
