@@ -11,6 +11,7 @@ WELMUN 2026 is the website for the 12th edition of Welham Boys' School Model Uni
 ```bash
 npm run dev        # Start dev server on port 8080
 npm run build      # Production build
+npm run build:dev  # Build in development mode (unminified)
 npm run lint       # ESLint
 npm test           # Run Vitest once
 npm run test:watch # Vitest in watch mode
@@ -19,9 +20,9 @@ npm run preview    # Preview production build locally
 
 ## Architecture
 
-**Routing**: React Router v6 in [src/App.tsx](src/App.tsx). Routes: `/`, `/addressals`, `/registration`, `/schedule`, `/committees`, `/committees/:id`, `/conference-details`, `/gallery`, `/contact`.
+**Routing**: React Router v6 in [src/App.tsx](src/App.tsx). Routes: `/`, `/addressals`, `/registration`, `/schedule`, `/committees`, `/committees/:id`, `/conference-details`, `/gallery`, `/contact`, plus a `*` catch-all → `NotFound`. `/registration` is a single page ([src/pages/Registration.tsx](src/pages/Registration.tsx)). Note: [src/pages/registration/](src/pages/registration/) (8 `Registration*` sub-pages) and [src/pages/ImportantDownloads.tsx](src/pages/ImportantDownloads.tsx) exist but are **not imported or routed anywhere** — treat them as dead/legacy unless you wire them up.
 
-**Launch gate**: The site shows a countdown until May 12, 2026 15:00 UTC (controlled in [src/App.tsx](src/App.tsx)); session storage persists the unlocked state.
+**Launch gate**: [src/App.tsx](src/App.tsx) holds `LAUNCH_AT` (`2026-05-12T15:00:00`, parsed as **local** time — no `Z`/UTC). Before that moment the `<Countdown>` overlay from [src/pages/Countdown.tsx](src/pages/Countdown.tsx) renders over the app; unlocking is in-memory `useState` only and is **not** persisted, so a reload re-gates until `LAUNCH_AT` passes. (Separately, [src/pages/Index.tsx](src/pages/Index.tsx) uses `sessionStorage["welmun-intro-seen"]` to show the one-time `IntroScreen` per tab session — unrelated to the launch gate.)
 
 **Committee data**: All committee metadata, chair letters, executive board members, and document links live in [src/data/committees.ts](src/data/committees.ts). This is the single source of truth — pages consume it directly, no backend queries involved.
 

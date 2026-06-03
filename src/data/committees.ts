@@ -97,8 +97,8 @@ export const committees: CommitteeData[] = [
     chairName: "Ahan Sparsh",
     chairRole: "Chairperson",
     chairEmail: "chair.unsc@welhamboys.org",
-    bgLink: "#",
-    matrixLink: "#",
+    bgLink: "/bg/Bg%20UNSC%2026%20copy.pdf",
+    matrixLink: "/matrix/UNSC%20-%20Matrix%20copy.pdf",
     eb: [
       { name: "Ahan Sparsh", role: "Chairperson", image: ahanPhoto },
       {
@@ -134,8 +134,8 @@ export const committees: CommitteeData[] = [
     chairName: "Koustabh Gupta",
     chairRole: "Chairperson",
     chairEmail: "chair.disec@welhamboys.org",
-    bgLink: "#",
-    matrixLink: "#",
+    bgLink: "/bg/Bg%20DISEC%2026%20finall%20copy.pdf",
+    matrixLink: "/matrix/DISEC%20Matrix%20copy.pdf",
     eb: [
       {
         name: "Koustabh Gupta",
@@ -182,8 +182,8 @@ export const committees: CommitteeData[] = [
     chairName: "Aaryan Khanna",
     chairRole: "Chairperson",
     chairEmail: "chair.unodc@welhamboys.org",
-    bgLink: "#",
-    matrixLink: "#",
+    bgLink: "/bg/Bg%20UNODC%20redesigned%20copy.pdf",
+    matrixLink: "/matrix/matrix%20odc%20copy.pdf",
     eb: [
       { name: "Aaryan Khanna", role: "Chairperson", image: aaryanUnodcPhoto },
       {
@@ -225,7 +225,7 @@ export const committees: CommitteeData[] = [
     chairRole: "Chairperson",
     chairEmail: "chair.specpol@welhamboys.org",
     bgLink: "#",
-    matrixLink: "#",
+    matrixLink: "/matrix/specpol%20matrix%20copy.pdf",
     eb: [
       {
         name: "Kushagra Gupta",
@@ -263,7 +263,7 @@ export const committees: CommitteeData[] = [
     chairRole: "Chairperson",
     chairEmail: "chair.unhrc@welhamboys.org",
     bgLink: "#",
-    matrixLink: "#",
+    matrixLink: "/matrix/HRC%20matrix%20copy.pdf",
     eb: [
       { name: "Shashwat Singh", role: "Chairperson", image: shashwatPhoto },
       {
@@ -303,8 +303,8 @@ export const committees: CommitteeData[] = [
     chairName: "Tanveer Singh Madan",
     chairRole: "Chairperson",
     chairEmail: "chair.councilofhindustan@welhamboys.org",
-    bgLink: "#",
-    matrixLink: "#",
+    bgLink: "/bg/Council%20of%20Hindustan%20BG%20copy.pdf",
+    matrixLink: "/matrix/Council%20of%20Hindustan%20-%20Matrix%20copy.pdf",
     eb: [
       {
         name: "Tanveer Singh Madan",
@@ -359,8 +359,8 @@ export const committees: CommitteeData[] = [
     chairName: "Neiyl Vasishta",
     chairRole: "Editor-In-Chief",
     chairEmail: "chair.ipc@welhamboys.org",
-    bgLink: "#",
-    matrixLink: "#",
+    bgLink: "/bg/IPC%20bg%202026%20copy.pdf",
+    matrixLink: "/matrix/IPC%20MATRIX%20copy.pdf",
     eb: [
       { name: "Neiyl Vasishta", role: "Editor-In-Chief", image: ipcNeiylPhoto },
       {

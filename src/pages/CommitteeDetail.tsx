@@ -82,6 +82,26 @@ const ComingSoonButton = ({ icon: Icon, label }: { icon: typeof FileText; label:
   );
 };
 
+const ResourceLinkButton = ({
+  href,
+  icon: Icon,
+  label,
+}: {
+  href: string;
+  icon: typeof FileText;
+  label: string;
+}) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg border border-primary/40 text-primary text-sm hover:bg-primary hover:text-primary-foreground transition-all duration-300 cursor-none"
+  >
+    <Icon className="w-4 h-4" />
+    {label}
+  </a>
+);
+
 const CommitteeDetail = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
@@ -223,12 +243,26 @@ const CommitteeDetail = () => {
 
               {/* Resource Buttons */}
               <div className="flex flex-col gap-2.5 w-full mt-3">
-                {committee.bgLink && (
-                  <ComingSoonButton icon={FileText} label="Background Guide" />
-                )}
-                {committee.matrixLink && (
-                  <ComingSoonButton icon={Grid3X3} label="Matrix" />
-                )}
+                {committee.bgLink &&
+                  (committee.bgLink !== "#" ? (
+                    <ResourceLinkButton
+                      href={committee.bgLink}
+                      icon={FileText}
+                      label="Background Guide"
+                    />
+                  ) : (
+                    <ComingSoonButton icon={FileText} label="Background Guide" />
+                  ))}
+                {committee.matrixLink &&
+                  (committee.matrixLink !== "#" ? (
+                    <ResourceLinkButton
+                      href={committee.matrixLink}
+                      icon={Grid3X3}
+                      label="Matrix"
+                    />
+                  ) : (
+                    <ComingSoonButton icon={Grid3X3} label="Matrix" />
+                  ))}
                 {committee.ropLink && (
                   <a
                     href={committee.ropLink}
