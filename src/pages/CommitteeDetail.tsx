@@ -181,6 +181,19 @@ const CommitteeDetail = () => {
             </div>
           </div>
 
+          {/* Release Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="w-full max-w-5xl mb-10 flex items-center justify-center gap-3 px-5 py-3 rounded-xl border border-gold/40 bg-gold/10 text-center"
+          >
+            <FileText className="w-5 h-5 text-gold shrink-0" />
+            <p className="text-primary text-sm md:text-base tracking-wide">
+              Background Guides and Committee Matrices have been released
+            </p>
+          </motion.div>
+
           {/* Hero: Logo + Committee Name + Agenda */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}

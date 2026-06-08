@@ -1,6 +1,7 @@
 import { useRef, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { FileText } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import { committees, orderedCommittees } from "@/data/committees";
 
@@ -217,7 +218,18 @@ const Committees = () => {
         style={{ background: "linear-gradient(to right, transparent, hsl(var(--blue-accent)), hsl(var(--gold)), hsl(var(--blue-accent)), transparent)" }}
       />
 
-      <div className="mb-12" />
+      {/* Release Banner */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+        className="w-full max-w-3xl mb-12 flex items-center justify-center gap-3 px-5 py-3 rounded-xl border border-gold/40 bg-gold/10 text-center"
+      >
+        <FileText className="w-5 h-5 text-gold shrink-0" />
+        <p className="text-primary text-sm md:text-base tracking-wide">
+          Background Guides and Committee Matrices have been released
+        </p>
+      </motion.div>
 
       {/* Mobile Card Layout */}
       <motion.div
