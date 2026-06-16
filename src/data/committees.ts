@@ -48,6 +48,7 @@ import keshavPoddarPhoto from "@/assets/eb/keshav-poddar.jpg";
 import nirvaanAgrawalPhoto from "@/assets/eb/nirvaan-agrawal.jpg";
 import divijPrajapatiPhoto from "@/assets/eb/divij-prajapati.png";
 import adityaMahipalPhoto from "@/assets/eb/aditya-mahipal.png";
+import ranveerMadanPhoto from "@/assets/eb/ranveer-madan.jpeg";
 
 export interface EBMember {
   name: string;
@@ -277,6 +278,11 @@ export const committees: CommitteeData[] = [
         name: "Siddhartha Shrivastava",
         role: "Rapporteur",
         image: siddharthaShrivastavaPhoto,
+      },
+      {
+        name: "Ranveer Madan",
+        role: "Rapporteur",
+        image: ranveerMadanPhoto,
       },
     ],
   },
