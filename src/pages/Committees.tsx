@@ -227,7 +227,7 @@ const Committees = () => {
       >
         <FileText className="w-5 h-5 text-gold shrink-0" />
         <p className="text-primary text-sm md:text-base tracking-wide">
-          Background Guides and Committee Matrices have been released
+          The deadline for position paper submissions of all committees is <strong className="font-semibold">July 18</strong>. Delegates must submit the position papers to their respective chairperson's email accordingly.
         </p>
       </motion.div>
 
